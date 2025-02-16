@@ -1,0 +1,21 @@
+{
+  "name": "itech-briefly-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass --watch static/scss:static/css",
+    "django": "python manage.py runserver",
+    "dev": "concurrently \"npm run scss\" \"npm run django\""
+
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "sass": "^1.85.0"
+  }
+  
+}
