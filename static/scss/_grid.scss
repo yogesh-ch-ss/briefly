@@ -14,6 +14,11 @@
     margin : 0 auto;
 }
 
+.index{
+    grid-column: 1 / -1;
+    @include ColJustifyCenterFlexbox
+}
+
 //navbar grid
 .navbar {
     grid-column: 1 / -1;
