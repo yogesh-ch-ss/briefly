@@ -35,6 +35,15 @@ body img {
   margin: 0 auto;
 }
 
+.index {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .navbar {
   grid-column: 1/-1;
   grid-row: 1;
@@ -478,8 +487,12 @@ input[type=checkbox]:checked + .category-label {
 .article--info--publisher {
   margin-right: 1rem;
 }
+.article--info--date {
+  margin-right: 1rem;
+}
 .article--content p {
   margin-bottom: 1rem;
+  background-position: 0%;
 }
 
 /*# sourceMappingURL=styles.css.map */

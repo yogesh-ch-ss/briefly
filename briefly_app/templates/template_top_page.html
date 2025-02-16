@@ -1,0 +1,20 @@
+{% extends "./briefly_layout.html" %}
+{% load static %}
+{% block body %}
+<div class="banner">
+    <div class=banner--message>
+        <div class="banner--message--headline">
+            <h2>Find,</h2>
+            <h2>Read,</h2>
+            <h2>Leave.</h2>
+        </div>
+        <div class="banner--message--subheadline">
+            <h3 class="banner--message--subheadline--text">Away from the mess of the word. Start of your day with less than 25 articles.</h3>
+        </div>
+        <div>
+            <a href="#" class="button">Login</a>
+        </div>
+    </div>
+    {% include "template_article.html" %}
+</div>
+{% endblock %} 
