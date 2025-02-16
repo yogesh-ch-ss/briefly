@@ -33,6 +33,7 @@
     &--content{
         p{
             @include MarginBottom1rem;
+            background-position: 0%;
         }
     }
 }
