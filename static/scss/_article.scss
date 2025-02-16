@@ -25,9 +25,9 @@
         &--publisher{
             @include MarginRight1rem;
         }
-        
-        &--date{
 
+        &--date{
+            @include MarginRight1rem;
         }
     }
 
