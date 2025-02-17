@@ -2,15 +2,19 @@
 <!DOCTYPE html>
 {% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
-    <title>Briefly.</title>
-</head>
-<body class="container">
-    {% include "briefly_navbar.html" %}
-    {% block body %}
-    {% endblock %}
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/styles.css' %}"
+    />
+    <a href="/template_top_page">
+      <title>Briefly.</title>
+    </a>
+  </head>
+  <body class="container">
+    {% include "briefly_navbar.html" %} {% block body %} {% endblock %}
+  </body>
 </html>
