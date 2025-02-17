@@ -92,6 +92,10 @@ DATABASES = {
     }
 }
 
+# To use the BrieflyUser Model for admin access as well.
+AUTH_USER_MODEL = "briefly_app.BrieflyUser"
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
