@@ -1,0 +1,13 @@
+{% extends "./briefly_layout.html" %} {% load static %} {% block body %}
+<div class="login">
+  <h3>Sign up</h3>
+  <div class="login--form">
+    <form method="POST" action="{% url 'briefly:signup' %}" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="login--form--input">
+      {{ user_signup_form.as_p }}
+      <input class="button" type="submit" value="signup" />
+    </form>
+  </div>
+</div>
+{% endblock %}
