@@ -21,7 +21,7 @@ class BrieflyUserSignupForm(forms.ModelForm):
 class BrieflyUserLoginForm(forms.ModelForm):
     class Meta:
         model = BrieflyUser
-        fields = ['email', 'password']
+        fields = ['username', 'password']
         widgets = {
             'password': forms.PasswordInput(),
         }

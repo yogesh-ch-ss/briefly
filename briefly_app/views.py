@@ -11,7 +11,7 @@ from briefly_app.models import UserCategory
 # Signup, Login, Logout, Signout
 # check if user is authenticated or not
 
-def signup(request):
+def user_signup(request):
     # if user is authenticated, redirect to top_page
     if request.user.is_authenticated:
         return redirect('briefly:top_page')
@@ -21,24 +21,30 @@ def signup(request):
             user = user_signup_form.save()            
             user.set_password(user.password)
             user.save()
+            print(user)
             # when the sign up is successful, redirect to login page
-            return redirect('briefly:login')
+            return redirect('briefly:user_login')
         else:
             print(user_signup_form.errors)
     else:
         user_signup_form = BrieflyUserSignupForm()
-    return render(request, 'signup.html', {'user_signup_form': user_signup_form})
+    return render(request, 'signup.html', {
+        'user_signup_form': user_signup_form,
+        'type' : 'signup',
+        })
 
-def login(request):
+def user_login(request):
     # if user is authenticated, redirect to top_page
     if request.user.is_authenticated:
         return redirect('briefly:top_page')
     if request.method == 'POST':
         user_login_form = BrieflyUserLoginForm(data=request.POST)
         if user_login_form.is_valid():
-            email = user_login_form.cleaned_data['email']
+            username = user_login_form.cleaned_data['username']
             password = user_login_form.cleaned_data['password']
-            user = authenticate(email=email, password=password)
+            print(username, password)
+            user = authenticate(username=username, password=password)
+            print(user)
             if user:
                 if user.is_active:
                     login(request, user)
@@ -49,6 +55,7 @@ def login(request):
                 return HttpResponse("Invalid login details.")
         else:
             print(user_login_form.errors)
+            return redirect('briefly:top_page')
     else:
         user_login_form = BrieflyUserLoginForm()
         return render(request, 'login.html', {'user_login_form': user_login_form})
@@ -56,14 +63,17 @@ def login(request):
 # !!!need to implement it in user profile page
 @require_POST
 @login_required
-def logout(request):
-    logout(request)
+def user_logout(request):
+    if request.user.is_authenticated:
+        logout(request)
+        # redirect to top_page
+        return redirect('briefly:top_page')
     return redirect('briefly:top_page')
 
 # !!!need to implement it in user profile page
 @login_required
 @require_POST
-def delete_account(request):
+def user_delete_account(request):
     if request.user.is_authenticated:
         request.user.delete()
     return redirect('briefly:top_page')
@@ -71,7 +81,7 @@ def delete_account(request):
 # choose and update category
 # to choose category, user must be logged in
 @login_required
-def category_preference(request):
+def user_category_preference(request):
     user = request.user
     if request.method == 'POST':
         category_form = CategoryForm(request.POST)
@@ -84,6 +94,38 @@ def category_preference(request):
         category_form = CategoryForm(initial=initial_data)
     return render(request, 'category_preference.html', {'category_form': category_form})
 
+
+# get profile_setting page
+@login_required
+def user_profile_setting(request):
+    user = request.user
+    if request.method == 'POST':
+        user_signup_form = BrieflyUserSignupForm(request.POST, instance=user)
+        if user_signup_form.is_valid():
+            if user_signup_form.cleaned_data['username'] != user.username:
+                user.username = user_signup_form.cleaned_data['username']
+            if user_signup_form.cleaned_data['email'] != user.email:
+                user.email = user_signup_form.cleaned_data['email']
+            if user_signup_form.cleaned_data['country'] != user.country:
+                user.country = user_signup_form.cleaned_data['country']
+            user.save()
+            # login user with new credential
+            user = authenticate(email=user.email, password=user.password)
+            login(request, user)
+    else:
+        user_signup_form = BrieflyUserSignupForm(instance=user)
+    return render(request, 'user_profile.html', {
+        'type' : 'update',
+        'user_signup_form': user_signup_form
+        })
+
+
+# function to check if the user is authenticated
+def get_authenticated_user(request):
+    if request.user.is_authenticated:
+        return request.user
+    return None
+
 #views
 #02/17/2025 Yongwoo - Deleted template_views, incorporated into views.
 #Planning to remove 'template'
@@ -91,7 +133,8 @@ def index(request):
     return render(request, './template_index.html')
 
 def top_page(request):
-    return render(request, './template_top_page.html')
+    user = get_authenticated_user(request)
+    return render(request, './template_top_page.html', {'user': user})
 
 # def login(request):
 #     return render(request, './template_login.html')

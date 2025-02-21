@@ -2,7 +2,7 @@
 <div class="login">
   <h3>Login</h3>
   <div class="login--form">
-    <form method="POST" action="{% url 'briefly:login' %}" enctype="multipart/form-data">
+    <form method="POST" action="{% url 'briefly:user_category_preference' %}" enctype="multipart/form-data">
       {% csrf_token %}
       <div class="login--form--input">
       {{ category_form.as_p }}
