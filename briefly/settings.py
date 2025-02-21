@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 import os
 from pathlib import Path
+#import News API
+from newsapi import NewsApiClient
+import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -33,6 +36,11 @@ MEDIA_ROOT = MEDIA_DIR
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-^p2^&_5ba2e7tz=ive+8_nd_%j81*em7#xk1$m^%&6gpgap*f9'
 
+# SECURITY WARNING: API key must NOT be shared
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+NEWS_API_KEY = NewsApiClient(env("NEWS_API_KEY", default=None))
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -49,6 +57,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'briefly_app',
+    #YW: Rest
+    'rest_framework',
+    #YW: NewsAPI Integration
+    # 'newsapi-python',
 ]
 
 MIDDLEWARE = [
