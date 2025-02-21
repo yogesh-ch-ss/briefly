@@ -5,6 +5,11 @@ from django.conf import settings
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from newsapi import NewsApiClient
+import environ
+import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 #views
 #02/17/2025 Yongwoo - Deleted template_views, incorporated into views.
@@ -33,7 +38,10 @@ def view_article(request):
 #Sample API Call
 @api_view(['GET'])
 def fetch_news(request):
-    newsapi = NewsApiClient(api_key='d837b10b971a49949f9887d5f216055b')
+    env = environ.Env()
+    env.read_env(os.path.join(BASE_DIR, '.env'))
+    NEWS_API_KEY = env("NEWS_API_KEY", default=None)
+    newsapi = NewsApiClient(api_key=NEWS_API_KEY)
     
     top_headlines = newsapi.get_top_headlines(
         sources='CNN'
