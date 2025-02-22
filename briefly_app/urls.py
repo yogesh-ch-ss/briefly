@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 #API Integration with .views
-from .views import fetch_news
+from .views import fetch_news, fetch_news_day_headlines
 
 app_name = 'briefly'
 urlpatterns = [
@@ -14,4 +14,5 @@ urlpatterns = [
     path('template_headlines/template_view_article', views.view_article, name='view_article'),
     #sample endpoint
     path('api/news', fetch_news, name='fetch_news'),
+    path('api/news/day_headlines', fetch_news_day_headlines, name='fetch_news_day_headlines'),
 ]

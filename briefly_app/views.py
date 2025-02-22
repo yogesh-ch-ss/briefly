@@ -9,7 +9,16 @@ import environ
 import os
 from pathlib import Path
 
+from briefly_app.models import NewsArticle, UserCategory
+
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+# Setting up NEWS API
+env = environ.Env()
+env.read_env(os.path.join(BASE_DIR, '.env'))
+NEWS_API_KEY = env("NEWS_API_KEY", default=None)
+newsapi = NewsApiClient(api_key=NEWS_API_KEY)
 
 #views
 #02/17/2025 Yongwoo - Deleted template_views, incorporated into views.
@@ -38,17 +47,30 @@ def view_article(request):
 #Sample API Call
 @api_view(['GET'])
 def fetch_news(request):
-    env = environ.Env()
-    env.read_env(os.path.join(BASE_DIR, '.env'))
-    NEWS_API_KEY = env("NEWS_API_KEY", default=None)
-    newsapi = NewsApiClient(api_key=NEWS_API_KEY)
     
-    top_headlines = newsapi.get_top_headlines(
-        sources='CNN'
-    )
+    # top_headlines = newsapi.get_top_headlines(
+    #     sources='CNN'
+    # )
 
     sample_query = 'bitcoin'
-    sample_everything = newsapi.get_everything(q=sample_query)
+    # sample_everything = newsapi.get_everything(q=sample_query)
+    # return Response(sample_everything)
 
+    sample_top_headlines = newsapi.get_top_headlines()
+    return Response(sample_top_headlines)
 
-    return Response(sample_everything)
+def fetch_news_day_headlines(request):
+    user = request.user
+
+    # Get categories selected by the user
+    user_categories = UserCategory.objects.filter(UserID=user).values_list("CategoryID", flat=True)
+
+    if not user_categories:
+        return Response({"message": "No categories selected"}, status=400)
+
+    # Fetch news articles that match the user’s categories
+    articles = NewsArticle.objects.filter(CategoryID__in=user_categories).values(
+        "Title", "Date", "Content", "Source"
+    )
+
+    return Response({"articles": list(articles)})
