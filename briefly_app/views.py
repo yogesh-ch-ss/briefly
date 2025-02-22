@@ -5,6 +5,16 @@ from django.conf import settings
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from newsapi import NewsApiClient
+import environ
+import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent.parent
+#Rest and News API integration into views
+from django.conf import settings
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+from newsapi import NewsApiClient
 from briefly_app.forms import BrieflyUserSignupForm, BrieflyUserLoginForm, CategoryForm, BrieflyUserProfileForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
@@ -154,6 +164,24 @@ def headlines(request):
 
 def view_article(request):
     return render(request, './template_view_article.html')
+
+#Sample API Call
+@api_view(['GET'])
+def fetch_news(request):
+    env = environ.Env()
+    env.read_env(os.path.join(BASE_DIR, '.env'))
+    NEWS_API_KEY = env("NEWS_API_KEY", default=None)
+    newsapi = NewsApiClient(api_key=NEWS_API_KEY)
+    
+    top_headlines = newsapi.get_top_headlines(
+        sources='CNN'
+    )
+
+    sample_query = 'bitcoin'
+    sample_everything = newsapi.get_everything(q=sample_query)
+
+
+    return Response(sample_everything)
 
 #Sample API Call
 @api_view(['GET'])
