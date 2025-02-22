@@ -4,7 +4,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'briefly.settings')
 import django
 django.setup()
 
-from briefly_app.models import Category, NewsArticle, SavedNews, UserCategory, ViewedNews
+from briefly_app.models import BrieflyUser, Category, NewsArticle, SavedNews, UserCategory, ViewedNews
 
 # Sample data for News Articles.
 news_data = [
@@ -117,9 +117,38 @@ def clear_existing_data():
     SavedNews.objects.all().delete()
 
 
-    
+def create_dummy_user():
+    print("Creating a dummy user...")
 
-def populate():
+    # Create a dummy user
+    user, created = BrieflyUser.objects.get_or_create(
+        username="dummyuser",
+        defaults={
+            "email": "dummyuser@example.com",
+            "country": "United Kingdom"
+        }
+    )
+
+    if created:
+        print(f"User created: {user.username}")
+    else:
+        print(f"User already exists: {user.username}")
+
+    # Retrieve Categories
+    sports_category = Category.objects.get(CategoryName="Sports")
+    tech_category = Category.objects.get(CategoryName="Technology")
+
+    # Assign categories to the user
+    for category in [sports_category, tech_category]:
+        user_category, cat_created = UserCategory.objects.get_or_create(UserID=user, CategoryID=category)
+        if cat_created:
+            print(f"Assigned category '{category.CategoryName}' to {user.username}")
+        else:
+            print(f"Category '{category.CategoryName}' is already assigned to {user.username}")
+
+
+
+def populate_news():
     print("Starting population script...")
 
     # Populate Categories
@@ -158,4 +187,7 @@ if __name__ == '__main__':
     clear_existing_data()
     
     print('Starting population script...')
-    populate()
+    populate_news()
+
+    print('Crating dummy user...')
+    create_dummy_user()
