@@ -159,7 +159,8 @@ def fetch_news(request):
         sources='CNN'
     )
 
-    sample_everything = newsapi.get_everything(q='bitcoin')
+    sample_query = 'bitcoin'
+    sample_everything = newsapi.get_everything(q=sample_query)
 
 
     return Response(sample_everything)
