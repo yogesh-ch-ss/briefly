@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from briefly_app.forms import BrieflyUserSignupForm, BrieflyUserLoginForm, CategoryForm
+from briefly_app.forms import BrieflyUserSignupForm, BrieflyUserLoginForm, CategoryForm, BrieflyUserProfileForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 
-from briefly_app.models import UserCategory
+from briefly_app.models import Category, UserCategory
 
 # Signup, Login, Logout, Signout
 # check if user is authenticated or not
@@ -18,10 +18,8 @@ def user_signup(request):
     if request.method == 'POST':
         user_signup_form = BrieflyUserSignupForm(data=request.POST)
         if user_signup_form.is_valid():
-            user = user_signup_form.save()            
-            user.set_password(user.password)
-            user.save()
-            print(user)
+            user_signup_form.save()  # Save the user and related categories in one go
+            print('User created')
             # when the sign up is successful, redirect to login page
             return redirect('briefly:user_login')
         else:
@@ -30,32 +28,24 @@ def user_signup(request):
         user_signup_form = BrieflyUserSignupForm()
     return render(request, 'signup.html', {
         'user_signup_form': user_signup_form,
-        'type' : 'signup',
-        })
+    })
 
 def user_login(request):
     # if user is authenticated, redirect to top_page
     if request.user.is_authenticated:
         return redirect('briefly:top_page')
-    if request.method == 'POST':
-        user_login_form = BrieflyUserLoginForm(data=request.POST)
-        if user_login_form.is_valid():
-            username = user_login_form.cleaned_data['username']
-            password = user_login_form.cleaned_data['password']
-            print(username, password)
-            user = authenticate(username=username, password=password)
-            print(user)
-            if user:
-                if user.is_active:
-                    login(request, user)
-                    return redirect('briefly:top_page')
-                else:
-                    return HttpResponse("Your account is disabled.")
+    if request.method == 'POST':        
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(username=username, password=password)
+        if user:
+            if user.is_active:
+                login(request, user)
+                return redirect('briefly:top_page')
             else:
-                return HttpResponse("Invalid login details.")
+                return HttpResponse("Your account is disabled.")
         else:
-            print(user_login_form.errors)
-            return redirect('briefly:top_page')
+            return HttpResponse("Invalid login details.")
     else:
         user_login_form = BrieflyUserLoginForm()
         return render(request, 'login.html', {'user_login_form': user_login_form})
@@ -100,23 +90,27 @@ def user_category_preference(request):
 def user_profile_setting(request):
     user = request.user
     if request.method == 'POST':
-        user_signup_form = BrieflyUserSignupForm(request.POST, instance=user)
-        if user_signup_form.is_valid():
-            if user_signup_form.cleaned_data['username'] != user.username:
-                user.username = user_signup_form.cleaned_data['username']
-            if user_signup_form.cleaned_data['email'] != user.email:
-                user.email = user_signup_form.cleaned_data['email']
-            if user_signup_form.cleaned_data['country'] != user.country:
-                user.country = user_signup_form.cleaned_data['country']
-            user.save()
-            # login user with new credential
-            user = authenticate(email=user.email, password=user.password)
-            login(request, user)
+        # get name, email, country, and categories from the form
+        # not using is_valid() because the form is not valid when the user does not select any category
+        username = request.POST.get('username')
+        email = request.POST.get('email')
+        country = request.POST.get('country')
+        categories = request.POST.getlist('categories')
+        print(categories)
+        user.username = username
+        user.email = email
+        user.country = country
+        user.save()
+        
+        UserCategory.objects.filter(UserID=user).delete()
+        for category in categories:
+            category, created = Category.objects.get_or_create(CategoryName=category)
+            UserCategory.objects.create(UserID=user, CategoryID=category)
+        return redirect('briefly:user_profile_setting')
     else:
-        user_signup_form = BrieflyUserSignupForm(instance=user)
-    return render(request, 'user_profile.html', {
-        'type' : 'update',
-        'user_signup_form': user_signup_form
+        user_profile_form = BrieflyUserProfileForm(instance=user)
+        return render(request, 'user_profile.html', {
+        'user_profile_form': user_profile_form
         })
 
 

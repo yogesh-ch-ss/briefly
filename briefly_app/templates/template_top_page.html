@@ -1,4 +1,9 @@
-{% extends "./briefly_layout.html" %} {% load static %} {% block body %}
+{% extends "./briefly_layout.html" %} 
+{% load static %} 
+{% block body %}
+{% if user.is_authenticated %}
+{% include "template_headlines.html" %}
+{% else %}
 <div class="banner">
   <div class="banner--message">
     <div class="banner--message--headline">
@@ -18,4 +23,6 @@
   </div>
   {% include "template_article.html" %}
 </div>
+{% endif %}
+
 {% endblock %}

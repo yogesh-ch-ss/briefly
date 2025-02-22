@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+from django.core.exceptions import ValidationError
 
 from django.contrib.auth.models import AbstractUser # Django's built-in User model - Abstract Class
 # By default, Django's User model (from django.contrib.auth.models) has these important fields:
@@ -46,13 +47,17 @@ class Category(models.Model):
     # List of Categories available for the user to choose from to receive news.
     CategoryID = models.AutoField(primary_key=True)
     # there are 7 categories in newsapi - business, entertainment, general, health, science, sports, technology
-    CategoryName = models.CharField(max_length=20, unique=True, choices=CATEGORY_CHOICES) 
+    CategoryName = models.CharField(max_length=20, choices=CATEGORY_CHOICES, unique=True)
+
+    def clean(self):
+        if self.CategoryName not in dict(CATEGORY_CHOICES):
+            raise ValidationError(f"{self.CategoryName} is not a valid category.")
     
     class Meta:
         verbose_name_plural = "Categories"
     
     def __str__(self):
-        return self.CategoryID
+        return self.CategoryName
     
 
 class UserCategory(models.Model):

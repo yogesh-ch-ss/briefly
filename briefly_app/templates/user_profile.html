@@ -5,13 +5,19 @@
     <form method="POST" action="{% url 'briefly:user_profile_setting' %}" enctype="multipart/form-data">
       {% csrf_token %}
       <div class="login--form--input">
-      {{ user_signup_form.as_p }}
+      {{ user_profile_form.as_p }}
       <input class="button" type="submit" value="Update" />  
     </form>
   </div>
-  <form method="POST" action="{% url 'briefly:user_logout' %}" enctype="multipart/form-data">
-    {% csrf_token %}
-    <input class="button" type="submit" value="Logout" />  
-  </form>
+  <div class="account--action">
+    <form method="POST" action="{% url 'briefly:user_logout' %}" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input class="button" type="submit" value="Logout" />  
+    </form>
+    <form method="POST" action="{% url 'briefly:user_delete_account' %}" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input class="button" type="submit" value="Delete Account" />  
+    </form>
+  </div>
 </div>
 {% endblock %}

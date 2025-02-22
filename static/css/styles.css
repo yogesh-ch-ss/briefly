@@ -118,7 +118,7 @@ body img {
   flex-wrap: wrap;
   margin-bottom: 2rem;
 }
-.signup--form--input > input, .signup--form--input label, .login--form--input > input, .login--form--input label, .logout--form--input > input, .logout--form--input label, .profile--form--input > input, .profile--form--input label {
+.signup--form--input > p, .signup--form--input input, .signup--form--input label, .login--form--input > p, .login--form--input input, .login--form--input label, .logout--form--input > p, .logout--form--input input, .logout--form--input label, .profile--form--input > p, .profile--form--input input, .profile--form--input label {
   width: 100%;
 }
 @media (max-width: 900px) {
@@ -129,6 +129,15 @@ body img {
     align-items: center;
     flex-wrap: wrap;
   }
+}
+
+.account--action {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .category {
@@ -366,15 +375,16 @@ input, button, label {
 }
 
 input {
-  margin: 1rem 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 1rem;
   background: transparent;
   border: transparent;
   box-shadow: 0 0 7px rgba(58, 62, 70, 0.35);
 }
 
-input:focus-visible {
-  border-color: #3a3e46;
+input:focus:not([type=checkbox]) {
+  outline: 2px solid #3a3e46;
 }
 
 label {
@@ -382,44 +392,24 @@ label {
   display: block;
 }
 
-input[type=checkbox] {
-  display: none;
-}
-
-.category-label {
-  padding: 1rem 2rem;
-  color: #fcfaf1;
-  background-color: #3a3e46;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  color: #3a3e46;
-  padding: 1rem 2rem;
-  cursor: pointer;
-  box-shadow: 0 0 7px rgba(58, 62, 70, 0.35);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-input[type=checkbox]:checked + .category-label {
-  background-color: #3a3e46;
-  color: #fcfaf1;
-}
-
-.category-label :hover {
-  background-color: transparent;
-}
-
-.selectbox {
+select {
   width: 100%;
   display: inline-flex;
   align-items: center;
   position: relative;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   box-shadow: 0 0 7px rgba(58, 62, 70, 0.35);
+  appearance: none;
+  padding: 1rem;
+  border: none;
+  background-color: transparent;
+  color: #3a3e46;
+  font-size: 1em;
+  cursor: pointer;
 }
 
-.selectbox::after {
+select::after {
   position: absolute;
   right: 15px;
   width: 10px;
@@ -430,18 +420,34 @@ input[type=checkbox]:checked + .category-label {
   pointer-events: none;
 }
 
-.selectbox select {
-  appearance: none;
-  padding: 1rem;
-  border: none;
-  background-color: transparent;
-  color: #3a3e46;
-  font-size: 1em;
-  cursor: pointer;
+input[type=checkbox]:checked {
+  accent-color: #3a3e46;
 }
 
-.selectbox-5 select:focus {
+select:focus {
   outline: none;
+}
+
+#id_categories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+}
+#id_categories div {
+  width: 100%;
+}
+#id_categories div label {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#id_categories div label > input {
+  width: min-content;
+  margin-right: 1rem;
 }
 
 .ul {
