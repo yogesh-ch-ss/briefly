@@ -9,7 +9,7 @@ import environ
 import os
 from pathlib import Path
 
-from briefly_app.models import NewsArticle, UserCategory
+from briefly_app.models import BrieflyUser, NewsArticle, UserCategory
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -74,3 +74,20 @@ def fetch_news_day_headlines(request):
     )
 
     return Response({"articles": list(articles)})
+
+@api_view(['GET'])
+def get_user_news(request, username):
+    try:
+        # Get the user
+        user = BrieflyUser.objects.get(username=username)
+
+        # Get categories chosen by the user
+        user_categories = UserCategory.objects.filter(UserID=user).values_list('CategoryID', flat=True)
+
+        # Fetch news articles in the user's selected categories
+        news_articles = NewsArticle.objects.filter(CategoryID__in=user_categories).values("Title", "CategoryID__CategoryName", "Source", "Content")
+
+        return Response({"news": list(news_articles)})
+
+    except BrieflyUser.DoesNotExist:
+        return Response({"error": f"User '{username}' does not exist."}, status=404)
