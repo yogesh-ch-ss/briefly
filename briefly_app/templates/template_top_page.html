@@ -1,4 +1,9 @@
-{% extends "./briefly_layout.html" %} {% load static %} {% block body %}
+{% extends "./briefly_layout.html" %} 
+{% load static %} 
+{% block body %}
+{% if user.is_authenticated %}
+{% include "template_headlines.html" %}
+{% else %}
 <div class="banner">
   <div class="banner--message">
     <div class="banner--message--headline">
@@ -13,9 +18,11 @@
       </h3>
     </div>
     <div>
-      <a href="/template_login" class="button">Login</a>
+      <a href="{% url 'briefly:user_login' %}" class="button">Login</a>
     </div>
   </div>
   {% include "template_article.html" %}
 </div>
+{% endif %}
+
 {% endblock %}

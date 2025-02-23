@@ -73,7 +73,7 @@
             width: 100%;
             @include ColJustifyStartFlexbox;
             @include MarginBottom2rem;
-            >input, label{
+            >p, input, label{
                 width: 100%;
             }
         }
@@ -82,6 +82,12 @@
     @include smartphone{
         @include ColJustifyCenterFlexbox;
     }
+}
+
+.account--action{
+    width: 100%;
+    @include RowJustifySpaceBetweenFlexbox;
+    gap: 1rem;
 }
 
 //category grid
