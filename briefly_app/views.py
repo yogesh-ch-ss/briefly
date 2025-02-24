@@ -289,12 +289,12 @@ def fetch_news(request):
     sample_top_headlines = newsapi.get_top_headlines()
     return Response(sample_top_headlines)
 
+@api_view(['GET'])
 def fetch_news_day_headlines(request):
     user = request.user
 
     # Get categories selected by the user
     user_categories = UserCategory.objects.filter(User=user).values_list("Category", flat=True)
-
 
     if not user_categories:
         return Response({"message": "No categories selected"}, status=400)
@@ -311,14 +311,27 @@ def get_user_news(request, username):
     try:
         # Get the user
         user = BrieflyUser.objects.get(username=username)
+        print(user)
+        # Get all categories the user is subscribed to
+        user_categories = UserCategory.objects.filter(User=user)
+        print("User Categories:", user_categories)
 
-        # Get categories chosen by the user
-        user_categories = UserCategory.objects.filter(User=user).values_list('CategoryID', flat=True)
+        # Extract category names properly
+        category_names = user_categories.values_list('Category__CategoryName', flat=True)
+        print("Category Names:", list(category_names))  # Debugging
 
-        # Fetch news articles in the user's selected categories
-        news_articles = NewsArticle.objects.filter(CategoryID__in=user_categories).values("Title", "CategoryID__CategoryName", "Source", "Content")
+        # Get the corresponding categories
+        categories = Category.objects.filter(CategoryName__in=category_names)
+        print("Categories:", categories)
 
+        print("All News Articles:", list(NewsArticle.objects.all().values("Title", "Category_id", "Category__CategoryName")))
+
+        # Fetch news articles related to those categories
+        news_articles = NewsArticle.objects.filter(Category__in=categories).values(
+            "Title", "Date", "Content", "Source"
+        )
+        print("News Articles:", news_articles)
         return Response({"news": list(news_articles)})
-
+    
     except BrieflyUser.DoesNotExist:
         return Response({"error": f"User '{username}' does not exist."}, status=404)

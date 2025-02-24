@@ -45,12 +45,13 @@ class BrieflyUser(AbstractUser):
 
 class Category(models.Model):
     # List of Categories available for the user to choose from to receive news.
-    CategoryID = models.AutoField(primary_key=True)
     # there are 7 categories in newsapi - business, entertainment, general, health, science, sports, technology
     CategoryName = models.CharField(max_length=20, choices=CATEGORY_CHOICES, unique=True)
+    
     def clean(self):
-        if self.CategoryName not in dict(CATEGORY_CHOICES):
+        if self.CategoryName.lower() not in dict(CATEGORY_CHOICES):
             raise ValidationError(f"{self.CategoryName} is not a valid category.")
+        
     class Meta:
         verbose_name_plural = "Categories"
     
