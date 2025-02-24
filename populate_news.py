@@ -10,13 +10,13 @@ from briefly_app.models import BrieflyUser, Category, NewsArticle, SavedNews, Us
 news_data = [
     # Business
     {
-        'category_name': 'Business',
+        'category_name': 'business',
         'title': 'Stock Market Update',
         'content': 'The stock market saw a major dip today as companies report quarterly earnings...',
         'source': 'Business Insider'
     },
     {
-        'category_name': 'Business',
+        'category_name': 'business',
         'title': 'Entrepreneurship Tips',
         'content': 'Learn how to start your own business with these essential entrepreneurship tips...',
         'source': 'Forbes'
@@ -24,13 +24,13 @@ news_data = [
     
     # Entertainment
     {
-        'category_name': 'Entertainment',
+        'category_name': 'entertainment',
         'title': 'Movie Release This Week',
         'content': 'The latest blockbuster movie hits theaters this weekend. Here’s what you need to know...',
         'source': 'Variety'
     },
     {
-        'category_name': 'Entertainment',
+        'category_name': 'entertainment',
         'title': 'Celebrity News',
         'content': 'Famous actor announces new film project. Fans are excited for the upcoming release...',
         'source': 'Hollywood Reporter'
@@ -38,13 +38,13 @@ news_data = [
     
     # General
     {
-        'category_name': 'General',
+        'category_name': 'general',
         'title': 'Global News Update',
         'content': 'In today\’s world news, there are important updates regarding climate change and geopolitics...',
         'source': 'BBC News'
     },
     {
-        'category_name': 'General',
+        'category_name': 'general',
         'title': 'Breaking News',
         'content': 'A major incident has occurred, and the authorities are working to control the situation...',
         'source': 'Reuters'
@@ -52,13 +52,13 @@ news_data = [
     
     # Health
     {
-        'category_name': 'Health',
+        'category_name': 'health',
         'title': 'Mental Health Awareness',
         'content': 'In observance of Mental Health Awareness Month, we focus on the importance of self-care...',
         'source': 'Psychology Today'
     },
     {
-        'category_name': 'Health',
+        'category_name': 'health',
         'title': 'Nutrition Tips',
         'content': 'Eating healthy doesn’t have to be hard. Here are some easy nutrition tips for everyday life...',
         'source': 'WebMD'
@@ -66,13 +66,13 @@ news_data = [
     
     # Science
     {
-        'category_name': 'Science',
+        'category_name': 'science',
         'title': 'Space Exploration Update',
         'content': 'NASA is preparing for a new mission to Mars, aimed at discovering signs of life...',
         'source': 'NASA News'
     },
     {
-        'category_name': 'Science',
+        'category_name': 'science',
         'title': 'New Particle Discovered',
         'content': 'Scientists have discovered a new subatomic particle that could change our understanding of physics...',
         'source': 'Science Journal'
@@ -80,13 +80,13 @@ news_data = [
     
     # Sports
     {
-        'category_name': 'Sports',
+        'category_name': 'sports',
         'title': 'Football Championship Finals',
         'content': 'The final match of the football championship is set to take place this weekend, with teams vying for the title...',
         'source': 'ESPN'
     },
     {
-        'category_name': 'Sports',
+        'category_name': 'sports',
         'title': 'Olympics 2024 Preparations',
         'content': 'Athletes from around the world are gearing up for the upcoming Olympics in Paris...',
         'source': 'Sports Illustrated'
@@ -94,13 +94,13 @@ news_data = [
     
     # Technology
     {
-        'category_name': 'Technology',
+        'category_name': 'technology',
         'title': 'New Smartphone Release',
         'content': 'The latest smartphone model promises groundbreaking features that will change the tech landscape...',
         'source': 'TechCrunch'
     },
     {
-        'category_name': 'Technology',
+        'category_name': 'technology',
         'title': 'AI in Healthcare',
         'content': 'AI is transforming healthcare with new tools that improve patient care and diagnosis...',
         'source': 'Wired'
@@ -112,7 +112,7 @@ def clear_existing_data():
     # Delete existing data in relevant models
     Category.objects.all().delete()
     NewsArticle.objects.all().delete()
-    UserCategory.objects.all().delete()
+    # UserCategory.objects.all().delete()
     ViewedNews.objects.all().delete()
     SavedNews.objects.all().delete()
 
@@ -135,12 +135,12 @@ def create_dummy_user():
         print(f"User already exists: {user.username}")
 
     # Retrieve Categories
-    sports_category = Category.objects.get(CategoryName="Sports")
-    tech_category = Category.objects.get(CategoryName="Technology")
+    sports_category = Category.objects.get(CategoryName="sports")
+    tech_category = Category.objects.get(CategoryName="technology")
 
     # Assign categories to the user
     for category in [sports_category, tech_category]:
-        user_category, cat_created = UserCategory.objects.get_or_create(UserID=user, CategoryID=category)
+        user_category, cat_created = UserCategory.objects.get_or_create(User=user, Category=category)
         if cat_created:
             print(f"Assigned category '{category.CategoryName}' to {user.username}")
         else:
@@ -170,7 +170,7 @@ def populate_news():
         content = entry['content']
         source = entry['source']
         news_article, created = NewsArticle.objects.get_or_create(
-            CategoryID=category,
+            Category=category,
             Title=title,
             Content=content,
             Source=source

@@ -11,10 +11,10 @@ class CategoryForm(forms.Form):
 
     def save(self, user, commit=True):
         selected_categories = self.cleaned_data['categories']
-        UserCategory.objects.filter(UserID=user).delete()
+        UserCategory.objects.filter(User=user).delete()
         for category_name in selected_categories:
             category = Category.objects.get(CategoryName=category_name)
-            UserCategory.objects.create(UserID=user, CategoryID=category)
+            UserCategory.objects.create(User=user, Category=category)
 
 class BrieflyUserSignupForm(forms.ModelForm):
     password_confirmation = forms.CharField(widget=forms.PasswordInput())
@@ -55,7 +55,7 @@ class BrieflyUserSignupForm(forms.ModelForm):
             selected_categories = self.cleaned_data['categories']
             for category_name in selected_categories:
                 category, created = Category.objects.get_or_create(CategoryName=category_name)
-                UserCategory.objects.create(UserID=user, CategoryID=category)
+                UserCategory.objects.create(User=user, Category=category)
         return user
 
 class BrieflyUserProfileForm(forms.ModelForm):
@@ -78,7 +78,7 @@ class BrieflyUserProfileForm(forms.ModelForm):
         user = kwargs.pop('instance', None)
         super().__init__(*args, **kwargs)
         if user:
-            user_categories = UserCategory.objects.filter(UserID=user).values_list('CategoryID__CategoryName', flat=True)
+            user_categories = UserCategory.objects.filter(User=user).values_list('Category__CategoryName', flat=True)
             self.fields['categories'].initial = list(user_categories)
             self.fields['username'].initial = user.username
             self.fields['email'].initial = user.email

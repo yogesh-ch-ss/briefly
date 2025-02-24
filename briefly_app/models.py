@@ -45,14 +45,13 @@ class BrieflyUser(AbstractUser):
 
 class Category(models.Model):
     # List of Categories available for the user to choose from to receive news.
-    CategoryID = models.AutoField(primary_key=True)
     # there are 7 categories in newsapi - business, entertainment, general, health, science, sports, technology
     CategoryName = models.CharField(max_length=20, choices=CATEGORY_CHOICES, unique=True)
-
-    def clean(self):
-        if self.CategoryName not in dict(CATEGORY_CHOICES):
-            raise ValidationError(f"{self.CategoryName} is not a valid category.")
     
+    def clean(self):
+        if self.CategoryName.lower() not in dict(CATEGORY_CHOICES):
+            raise ValidationError(f"{self.CategoryName} is not a valid category.")
+        
     class Meta:
         verbose_name_plural = "Categories"
     
@@ -63,8 +62,8 @@ class Category(models.Model):
 
 class UserCategory(models.Model):
     # User - Category mapping. Categories selected by the user.
-    UserID = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    CategoryID = models.ForeignKey(Category, on_delete=models.CASCADE)
+    User = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    Category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name_plural = "UserCategories"
@@ -72,7 +71,7 @@ class UserCategory(models.Model):
 class NewsArticle(models.Model):
     # List of News Articles fetched from the API.
     NewsID = models.AutoField(primary_key=True)
-    CategoryID = models.ForeignKey(Category, on_delete=models.CASCADE)
+    Category = models.ForeignKey(Category, on_delete=models.CASCADE)
     Title = models.CharField(max_length=255)
     Date = models.DateField(auto_now_add=True)
     Content = models.TextField()
@@ -87,16 +86,16 @@ class NewsArticle(models.Model):
 
 class ViewedNews(models.Model):
     # User - NewsArticle mapping. NewsArticles read by the user.
-    UserID = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    NewsID = models.ForeignKey(NewsArticle, on_delete=models.CASCADE)
+    User = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    News = models.ForeignKey(NewsArticle, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name_plural = "ViewedNews"
 
 class SavedNews(models.Model):
     # User - NewsArticle mapping. NewsArticles saved by the user.
-    UserID = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    NewsID = models.ForeignKey(NewsArticle, on_delete=models.CASCADE)
+    User = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    News = models.ForeignKey(NewsArticle, on_delete=models.CASCADE)
 
     class Meta:
         verbose_name_plural = "SavedNews"
