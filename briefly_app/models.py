@@ -57,6 +57,7 @@ class Category(models.Model):
         verbose_name_plural = "Categories"
     
     def __str__(self):
+        # return self.CategoryID
         return self.CategoryName
     
 
@@ -81,7 +82,8 @@ class NewsArticle(models.Model):
         verbose_name_plural = "NewsArticles"
 
     def __str__(self):
-        return self.NewsID
+        # return self.NewsID
+        return self.Title
 
 class ViewedNews(models.Model):
     # User - NewsArticle mapping. NewsArticles read by the user.
