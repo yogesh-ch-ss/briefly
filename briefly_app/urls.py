@@ -18,9 +18,12 @@ urlpatterns = [
     path('template_headlines', views.headlines, name='headlines'),
     # path('template_login/template_signup', views.signup, name='sign_up'),
     path('template_headlines/template_add_category', views.add_category, name='add_category'),
-    path('template_headlines/template_view_article', views.view_article, name='view_article'),
+    # path('template_headlines/template_view_article', views.view_article, name='view_article'),
     #sample endpoint
     path('api/news', fetch_news, name='fetch_news'),
     path('api/news/day_headlines', fetch_news_day_headlines, name='fetch_news_day_headlines'),
     path('news/<str:username>/', get_user_news, name="user_news"),
+    # saved articles
+    path('view_article/<int:article_id>/', views.view_article, name='view_article'),
+    path('saved_articles', views.saved_articles, name='saved_articles'),
 ]

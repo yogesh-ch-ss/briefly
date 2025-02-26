@@ -1,0 +1,12 @@
+{% extends "./briefly_layout.html" %}
+{% load static %}
+{% block body %}
+    <div class="view_article">
+        {% include "./template_article.html" %}
+        {% if type == "saved_article" %}
+            <a class="button" href="{% url 'briefly:saved_articles' %}">Finish Reading</a>
+        {% else %}
+            <a class="button" href="">Finish Reading</a>    
+        {% endif %}
+    </div>
+{% endblock %} 

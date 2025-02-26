@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
-from briefly_app.models import Category, UserCategory, BrieflyUser, NewsArticle, UserCategory
+from briefly_app.models import Category, SavedNews, UserCategory, BrieflyUser, NewsArticle, UserCategory
 
 #Rest and News API integration into views
 from django.conf import settings
@@ -175,7 +175,6 @@ def user_login(request):
         user_login_form = BrieflyUserLoginForm()
         return render(request, 'login.html', {'user_login_form': user_login_form})
 
-# !!!need to implement it in user profile page
 @require_POST
 @login_required
 def user_logout(request):
@@ -185,7 +184,6 @@ def user_logout(request):
         return redirect('briefly:top_page')
     return redirect('briefly:top_page')
 
-# !!!need to implement it in user profile page
 @login_required
 @require_POST
 def user_delete_account(request):
@@ -238,12 +236,36 @@ def user_profile_setting(request):
         'user_profile_form': user_profile_form
         })
 
-
 # function to check if the user is authenticated
 def get_authenticated_user(request):
     if request.user.is_authenticated:
         return request.user
     return None
+
+
+# view saved articles separately to the headlines page
+@login_required
+def saved_articles(request):
+    user = request.user
+    if user:    
+        # Get SavedNews objects for the user
+        saved_articles = SavedNews.objects.filter(User=user)
+        saved_articles = [saved_article.News for saved_article in saved_articles]
+        # Get NewsArticle objects related to the SavedNews objects
+        return render(request, 'saved_articles.html', {'saved_articles': saved_articles})
+    else:
+        return redirect('briefly:user_login')
+
+@login_required
+def view_article(request, article_id):
+    try:
+        article = NewsArticle.objects.get(NewsID=article_id)
+        return render(request, './view_article.html', {
+            'article': article,
+            "type" : "saved_article"
+            })
+    except NewsArticle.DoesNotExist:
+        return HttpResponse("Article not found.", status=404)
 
 #views
 #02/17/2025 Yongwoo - Deleted template_views, incorporated into views.
@@ -253,7 +275,11 @@ def index(request):
 
 def top_page(request):
     user = get_authenticated_user(request)
-    return render(request, './template_top_page.html', {'user': user})
+    random_article = NewsArticle.objects.order_by('?').first()
+    return render(request, './template_top_page.html', {
+        'user': user,
+        'article': random_article
+    })
 
 # def login(request):
 #     return render(request, './template_login.html')
@@ -266,11 +292,6 @@ def add_category(request):
 
 def headlines(request):
     return render(request, './template_headlines.html')
-
-def view_article(request):
-    return render(request, './template_view_article.html')
-
-
 
 
 
