@@ -7,7 +7,7 @@ from briefly_app.models import BrieflyUser, Category, UserCategory, NewsArticle
 
 class UserViewsTestCases(TestCase):
     def setUp(self):
-        self.user = BrieflyUser.objects.create_user(username="testuser", email="test@gmail.com", password="testpassword")
+        self.user = BrieflyUser.objects.create_user(username="testuser", email="test@email.com", password="testpassword")
         self.category = Category.objects.create(CategoryName="Technology")
 
         self.client.login(username='testuser', password='testpassword')
@@ -73,3 +73,16 @@ class UserViewsTestCases(TestCase):
 
         print("\n---\nSUCCESS: test_get_user_news \n---")
 
+    def test_get_user_news_other_user(self):
+        other_user = BrieflyUser.objects.create_user(username="otheruser", email="other@email.com", password="otherpassword")
+        self.client.login(username='otheruser', password='otherpassword')
+        print("\n|- other user logged in, trying to access self user url \n")
+
+
+        url = reverse('briefly:user_news', kwargs={'username': self.user.username}) # other user trying to access self user url
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 403) # 403 - forbidden
+        response_data = response.json()
+        self.assertIn('error', response_data)
+
+        print("\n---\nSUCCESS: test_get_user_news_other_user \n---")
