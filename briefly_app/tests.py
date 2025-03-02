@@ -9,7 +9,17 @@ class UserViewsTestCases(TestCase):
     def setUp(self):
         self.user = BrieflyUser.objects.create_user(username="testuser", email="test@gmail.com", password="testpassword")
         self.category = Category.objects.create(CategoryName="Technology")
+
+        self.client.login(username='testuser', password='testpassword')
+        
         UserCategory.objects.create(User=self.user, Category=self.category)
+
+        NewsArticle.objects.create(
+            Title="Tech News",
+            Content="Latest in tech.",
+            Source="TechSource",
+            Category=self.category
+        )
 
     # def test_user_signup(self):
 
@@ -40,11 +50,26 @@ class UserViewsTestCases(TestCase):
         }
 
         response = self.client.post(url, form_data)
-        self.assertEqual(response.status_code, 302)  # Should redirect after successful login
+        self.assertEqual(response.status_code, 302)  # 302 - redirect after successful login
         self.assertRedirects(response, reverse('briefly:top_page'))
+
+        print("\n---\nSUCCESS: test_user_login \n---")
 
     def test_user_logout(self):
         self.client.login(username="testuser", password="testpassword")
         url = reverse('briefly:user_logout')
         response = self.client.post(url)
         self.assertRedirects(response, reverse('briefly:top_page'))
+
+        print("\n---\nSUCCESS: test_user_logout \n---")
+
+
+    def test_get_user_news(self):
+        url = reverse('briefly:user_news', kwargs={'username': self.user.username})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        response_data = response.json()
+        self.assertIn('news', response_data)
+
+        print("\n---\nSUCCESS: test_get_user_news \n---")
+
