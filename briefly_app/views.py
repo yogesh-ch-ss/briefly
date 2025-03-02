@@ -7,6 +7,10 @@ from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 from briefly_app.models import Category, SavedNews, UserCategory, BrieflyUser, NewsArticle, UserCategory
 
+
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+
 #Rest and News API integration into views
 from django.conf import settings
 from briefly.settings import BASE_DIR
@@ -328,7 +332,12 @@ def fetch_news_day_headlines(request):
     return Response({"articles": list(articles)})
 
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def get_user_news(request, username):
+
+    if request.user.username != username:
+        return Response({"error": "Unauthorized access. You can only fetch your own news."}, status=403)
+    
     try:
         # Get the user
         user = BrieflyUser.objects.get(username=username)
