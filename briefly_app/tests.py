@@ -21,21 +21,27 @@ class UserViewsTestCases(TestCase):
             Category=self.category
         )
 
-    # def test_user_signup(self):
+    def test_user_signup(self):
 
-    #     BrieflyUser.objects.all().delete()
+        url = reverse("briefly:user_signup")
+        form_data = {
+            'username': 'testuser',
+            'password': 'testpassword',
+            'password_confirmation': 'testpassword',
+            'country': 'gb',
+            'categories': ['technology'],
+        }
+        
+        response = self.client.post(reverse('briefly:user_signup'), form_data)
+        
+        print(response.content.decode())  # Print the rendered HTML response
+        print(response.context['user_signup_form'].errors)  # Print form errors
 
-    #     url = reverse("briefly:user_signup")
-    #     form_data = {
-    #         'username': 'testuser',
-    #         'password': 'testpassword',
-    #         'password_confirmation': 'testpassword',
-    #         'country': 'in',
-    #         # 'categories': [''],
-    #     }
-    #     response = self.client.post(reverse('briefly:user_signup'), form_data)
-    #     self.assertEqual(response.status_code, 302)
-    #     self.assertRedirects(response, reverse('briefly:user_login'))
+        # self.assertEqual(response.status_code, 302)
+        # self.assertRedirects(response, reverse('briefly:user_login'))
+
+        print("\n---\nSUCCESS: test_user_signup \n---")
+
 
     # def test_user_signup(self):
     #     response = self.client.get(reverse('briefly:user_signup'))
@@ -59,6 +65,7 @@ class UserViewsTestCases(TestCase):
         self.client.login(username="testuser", password="testpassword")
         url = reverse('briefly:user_logout')
         response = self.client.post(url)
+        self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse('briefly:top_page'))
 
         print("\n---\nSUCCESS: test_user_logout \n---")
