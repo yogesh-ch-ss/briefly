@@ -22,25 +22,27 @@ class UserViewsTestCases(TestCase):
             Category=self.category
         )
 
-    @unittest.skip("Skipping this test (test_user_signup) temporarily")
+    # @unittest.skip("Skipping this test (test_user_signup) temporarily")
     def test_user_signup(self):
+
+        self.client.logout()
 
         url = reverse("briefly:user_signup")
         form_data = {
-            'username': 'testuser',
-            'password': 'testpassword',
-            'password_confirmation': 'testpassword',
+            'username': 'newuser',
+            'password': 'newpassword',
+            'password_confirmation': 'newpassword',
             'country': 'gb',
             'categories': ['technology'],
         }
         
         response = self.client.post(reverse('briefly:user_signup'), form_data)
         
-        print(response.content.decode())  # Print the rendered HTML response
-        print(response.context['user_signup_form'].errors)  # Print form errors
+        # print(response.content.decode())  # Print the rendered HTML response
+        # print(response.context['user_signup_form'].errors)  # Print form errors
 
-        # self.assertEqual(response.status_code, 302)
-        # self.assertRedirects(response, reverse('briefly:user_login'))
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('briefly:user_login'))
 
         print("\n---\nSUCCESS: test_user_signup \n---")
 
