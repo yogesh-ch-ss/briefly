@@ -1,7 +1,7 @@
 import unittest
 from django.test import TestCase
 from django.urls import reverse
-from briefly_app.models import BrieflyUser, Category, UserCategory, NewsArticle
+from briefly_app.models import BrieflyUser, Category, SavedNews, UserCategory, NewsArticle
 
 
 # Create your tests here.
@@ -110,3 +110,22 @@ class UserViewsTestCases(TestCase):
         self.assertIn('error', response_data)
 
         print("\n---\nSUCCESS: test_get_user_news_other_user \n---")
+
+
+    def test_saved_articles(self):
+
+        self.client.login(username="testuser", password="testpassword")
+        saved_article = NewsArticle.objects.create(
+            Title="Sample News",
+            Content="Saple content",
+            Source="SampleSource",
+            Category=self.category
+        )
+
+        SavedNews.objects.create(User=self.user, News=saved_article)
+        url = reverse('briefly:saved_articles')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        self.assertContains(response, "Sample News")
+
+        print("\n---\nSUCCESS: test_saved_articles \n---")
