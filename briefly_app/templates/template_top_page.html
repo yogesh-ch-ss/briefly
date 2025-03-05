@@ -2,7 +2,8 @@
 {% load static %} 
 {% block body %}
 {% if user.is_authenticated %}
-{% include "template_headlines.html" %}
+<!-- {% include "template_headlines.html" %} -->
+{% include "headlines.html" %}
 {% else %}
 <div class="banner">
   <div class="banner--message">
