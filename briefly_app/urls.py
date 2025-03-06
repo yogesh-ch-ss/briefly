@@ -24,5 +24,6 @@ urlpatterns = [
     path('news/', get_user_news, name="user_news"),
     # saved articles
     path('view_article/<int:article_id>/', views.view_article, name='view_article'),
+    path('save_article', views.save_article, name='save_article'),
     path('saved_articles', views.saved_articles, name='saved_articles'),
 ]

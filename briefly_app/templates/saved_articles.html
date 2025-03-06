@@ -1,4 +1,6 @@
-{% extends "./briefly_layout.html" %} {% load static %} {% block body %}
+{% extends "./briefly_layout.html" %}
+{% load static %}
+{% block body %}
 <div class="headlines headlines--saved">
   <div class="headlines--category">
     <h3 class="headlines--category--name">&#9724; Saved Articles</h3>
@@ -19,4 +21,5 @@
   </div>
 </div>
 <script src="{% static 'javascript/saved_article.js' %}"></script>
+
 {% endblock %}
