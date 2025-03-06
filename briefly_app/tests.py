@@ -90,11 +90,12 @@ class UserViewsTestCases(TestCase):
 
     def test_get_user_news(self):
 
+        self.client.login(username="testuser", password="testpassword")
         url = reverse('briefly:user_news', kwargs={'username': self.user.username})
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         response_data = response.json()
-        self.assertIn('news', response_data)
+        self.assertIn('grouped_news', response_data)
 
         print("\n---\nSUCCESS: test_get_user_news \n---")
 

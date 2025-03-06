@@ -11,7 +11,9 @@
                 </a>
                 <div class="headlines--category--titles--info">
                     <span class="publisher">{{ article.Source }}</span>
+                    {% if category != "Saved News" %}
                     <a class="button" href="#">Save</a>
+                    {% endif %}
                 </div>
             </div>
             {% endfor %}

@@ -62,7 +62,7 @@ def user_login(request):
         if user:
             if user.is_active:
                 login(request, user)
-                return redirect('briefly:user_news', username=username)
+                return redirect('briefly:user_news')
             else:
                 return HttpResponse("Your account is disabled.")
         else:
@@ -176,7 +176,7 @@ def index(request):
 def top_page(request):
     user = get_authenticated_user(request)
     if user and user.is_authenticated:
-        return redirect('briefly:user_news', username=user.username)
+        return redirect('briefly:user_news')
 
     random_article = NewsArticle.objects.order_by('?').first()
     return render(request, './top_page.html', {
@@ -231,14 +231,16 @@ def fetch_news_day_headlines(request):
     return Response({"articles": list(articles)})
 
 @api_view(['GET'])
-@permission_classes([IsAuthenticated])
-def get_user_news(request, username):
-    if request.user.username != username:
-        return Response({"error": "Unauthorized access. You can only fetch your own news."}, status=403)
+# @permission_classes([IsAuthenticated])
+@login_required
+def get_user_news(request):
+    # if request.user.username != username:
+    #     return Response({"error": "Unauthorized access. You can only fetch your own news."}, status=403)
 
     try:
         # Get the user
-        user = BrieflyUser.objects.get(username=username)
+        # user = BrieflyUser.objects.get(username=request.u)
+        user = request.user
 
         # Get all categories the user is subscribed to
         user_categories = UserCategory.objects.filter(User=user)
@@ -267,11 +269,11 @@ def get_user_news(request, username):
         grouped_news["Saved News"] = saved_articles_data
 
         context = {
-            "username": username,
+            "username": user.username,
             "grouped_news": dict(grouped_news),  # grouped news contains "saved_articles" as a category
         }
         # return Response(context)
         return render(request, "headlines.html", context)
     
     except BrieflyUser.DoesNotExist:
-        return Response({"error": f"User '{username}' does not exist."}, status=404)
+        return Response({"error": f"User '{user.username}' does not exist."}, status=404)
