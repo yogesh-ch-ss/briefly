@@ -38,13 +38,11 @@ def qa(request):
     if request.method == 'POST':
         question_form = QuestionForm(request.POST)
         if question_form.is_valid():
-            print('Question created')
-            # print content
-            print(question_form.cleaned_data['email'])
-            print(question_form.cleaned_data['question'])
+            user_email = question_form.cleaned_data['email']
+            question = question_form.cleaned_data['question']
             # send email to the admin and the user
-            send_to_admin('New question', question_form.cleaned_data['question'])
-            send_to_user('Your question has been received', 'Thank you for your question', question_form.cleaned_data['email'])
+            send_to_admin(question, question,user_email)
+            send_to_user(question, user_email)
             # Send email to admin
             return redirect(original_source_url)
         else:

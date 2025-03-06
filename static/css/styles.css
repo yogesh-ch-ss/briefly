@@ -51,6 +51,7 @@ body img {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  align-items: baseline;
   gap: 2rem;
 }
 @media (max-width: 900px) {
@@ -59,6 +60,8 @@ body img {
     justify-content: start;
     align-items: center;
     flex-wrap: wrap;
+    gap: 1rem;
+    align-items: baseline;
   }
 }
 

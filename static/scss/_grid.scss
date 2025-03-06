@@ -25,11 +25,15 @@
     grid-column: 1 / -1;
     grid-row: 1;
     @include RowJustifyCenterFlexbox;
+    align-items: baseline;
+
     gap: 2rem;
 
     // For widths greater than smartphone
     @include smartphone{
         @include RowJustifyStartFlexbox;
+        gap: 1rem;
+        align-items: baseline;
     }
 }
 
@@ -143,7 +147,7 @@
     }
     &--questions{
         .question{
-            @include MarginBottom2rem
+            @include MarginBottom2rem;
         }
         @include ColJustifyStartFlexbox;
         @include MarginBottom3rem;
@@ -156,8 +160,8 @@
             line-height: 2.0;
         }
 
-        .anwer{
-
+        .answer{
+            // @include BoxShadow;
         }
     }
     &--email{
