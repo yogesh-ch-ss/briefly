@@ -63,17 +63,18 @@
 
 //signup, login, logout, 
 .signup, .login, .logout, .profile {
-
     @include Padding5rem;
     h3{
         @include MarginBottom3rem;
     }
     grid-column: 1 / -1;
     @include ColJustifyStartFlexbox;
-
     &--form{
+        width: 40rem;
+        @include smartphone{
+            width: auto;
+        }
         &--input{
-            width: 100%;
             @include ColJustifyStartFlexbox;
             @include MarginBottom2rem;
             >p, input, label{
@@ -114,6 +115,7 @@
     align-items: center;
     a {
         font-size: 1.35rem; // 90% of 1.5rem
+        font-weight: bold;
         position: absolute;
         bottom: -9px; // 90% of -10px
         left: 9px; // 90% of 10px
@@ -129,7 +131,12 @@
 
 .q-and-a{
     @include Padding5rem;
-    grid-column: 1 / -1;
+    grid-column: 3 / 11;
+
+    // For widths smaller than smartphone
+    @include smartphone {
+        grid-column: 1 / -1;
+    }
     max-width: 80rem;
     .headline{
         @include MarginBottom3rem;

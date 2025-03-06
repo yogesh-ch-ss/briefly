@@ -46,7 +46,7 @@
 
 // box shadow using text-color variable
 @mixin BoxShadow {
-    box-shadow: 0 0 7px rgba($text-color, 0.35);
+    box-shadow: 0 0 7px rgba($text-color, 0.40);
 }
 
 // button down and up

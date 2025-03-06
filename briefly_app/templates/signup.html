@@ -1,7 +1,15 @@
-{% extends "./briefly_layout.html" %} {% load static %} {% block body %}
+{% extends "./briefly_layout.html" %} 
+{% load static %} 
+{% block body %}
 <div class="login">
   <h3>Sign up</h3>
   <div class="login--form">
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+    {% if success %}
+      <p class="success">{{ success }}</p>
+    {% endif %}
     <form method="POST" action="{% url 'briefly:user_signup' %}" enctype="multipart/form-data">
       {% csrf_token %}
       <div class="login--form--input">
