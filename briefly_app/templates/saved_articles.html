@@ -1,6 +1,8 @@
 {% extends "./briefly_layout.html" %}
 {% load static %}
 {% block body %}
+<meta name="user-id" content="{{ user.id }}">
+{% csrf_token %}
 <div class="headlines headlines--saved">
   <div class="headlines--category">
     <h3 class="headlines--category--name">&#9724; Saved Articles</h3>
@@ -10,7 +12,7 @@
         <a class="title" href="{% url 'briefly:view_article' article.NewsID %}">{{ article.Title }}</a>
         <div class="headlines--category--titles--info">
           <span class="publisher">{{article.Source}}</span>
-          <a id={article.NewsID} class="button remove-saved-article" href="">remove</a>
+          <a id="{{article.NewsID}}" class="button remove-saved-article" data-user-id="{{ user.id }}" href="">remove</a>
         </div>
       </div>
     {% empty %}

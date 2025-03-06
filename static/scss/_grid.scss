@@ -1,3 +1,4 @@
+@use "base" as *;
 @use "mixins" as *;
 
 // create grid system
@@ -50,8 +51,10 @@
         &--subheadline{
             max-width: 40rem;
             @include MarginBottom3rem;
+            &--text{
+                font-size: 3.0rem;
+            }
         }
-
     }
     &--article{
         @include ColJustifyStartFlexbox;
@@ -86,8 +89,82 @@
 
 .account--action{
     width: 100%;
-    @include RowJustifySpaceBetweenFlexbox;
-    gap: 1rem;
+    @include ColJustifyStartFlexbox;
+    form{
+        width: 100%;
+        input {
+            width: 100%;
+            color: $text-color;
+            background-color: $background-color;    
+        }
+    }
+}
+
+// question and answer sections
+.qa-link{
+    position: fixed; 
+    bottom: 0; 
+    left: 0;
+    width: 90px; // 90% of 100px
+    height: 90px; // 90% of 100px
+    border-top-right-radius: 90px; // 90% of 100px
+    background-color: $text-color; // Adjust the color as needed
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        font-size: 1.35rem; // 90% of 1.5rem
+        position: absolute;
+        bottom: -9px; // 90% of -10px
+        left: 9px; // 90% of 10px
+        color: $background-color;
+        text-align: start;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.q-and-a{
+    @include Padding5rem;
+    grid-column: 1 / -1;
+    max-width: 80rem;
+    .headline{
+        @include MarginBottom3rem;
+    }
+    &--questions{
+        .question{
+            @include MarginBottom2rem
+        }
+        @include ColJustifyStartFlexbox;
+        @include MarginBottom3rem;
+        h3{
+            @include MarginBottom2rem;
+        }
+
+        .title{
+            font-weight: bold;
+            line-height: 2.0;
+        }
+
+        .anwer{
+
+        }
+    }
+    &--email{
+        .login--form{
+            width: 100%;
+            #id_question{
+                width: 100%;
+            }
+        }
+
+        @include ColJustifyStartFlexbox;
+        flex-grow: 1;
+        @include MarginBottom3rem;
+    }
 }
 
 //category grid

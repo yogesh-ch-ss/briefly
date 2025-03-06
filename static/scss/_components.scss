@@ -24,7 +24,7 @@
 
 
 // input
-input {
+input, textarea {
   @include MarginTop1rem;
   @include MarginBottom1rem;
   @include Padding1rem;
@@ -34,7 +34,7 @@ input {
   // transition: border-color 0.3s ease-in-out;
 }
 // when input is clicked, change border color
-input:focus {
+input:focus, textarea:focus {
   &:not([type="checkbox"]) {
     outline: 2px solid $text-color;
   }

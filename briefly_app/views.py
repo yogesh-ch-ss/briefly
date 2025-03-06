@@ -1,7 +1,8 @@
 from collections import defaultdict
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from briefly_app.forms import BrieflyUserSignupForm, BrieflyUserLoginForm, BrieflyUserProfileForm
+from briefly_app.email import send_to_admin, send_to_user
+from briefly_app.forms import BrieflyUserSignupForm, BrieflyUserLoginForm, BrieflyUserProfileForm,QuestionForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.views.decorators.http import require_POST
@@ -23,12 +24,34 @@ import requests
 import environ
 import os
 from pathlib import Path
+from .forms import QuestionForm
 
 # Setting up NEWS API
 env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, '.env'))
 NEWS_API_KEY = env("NEWS_API_KEY", default=None)
 newsapi = NewsApiClient(api_key=NEWS_API_KEY)
+
+# QA page
+def qa(request):
+    original_source_url = request.META.get('HTTP_REFERER', '/')
+    if request.method == 'POST':
+        question_form = QuestionForm(request.POST)
+        if question_form.is_valid():
+            print('Question created')
+            # print content
+            print(question_form.cleaned_data['email'])
+            print(question_form.cleaned_data['question'])
+            # send email to the admin and the user
+            send_to_admin('New question', question_form.cleaned_data['question'])
+            send_to_user('Your question has been received', 'Thank you for your question', question_form.cleaned_data['email'])
+            # Send email to admin
+            return redirect(original_source_url)
+        else:
+            return redirect(original_source_url)
+    else:
+        question_form = QuestionForm()
+    return render(request, './question_answer.html', {'question_form': question_form})
 
 # Signup, Login, Logout, Signout
 # check if user is authenticated or not
@@ -138,19 +161,6 @@ def get_authenticated_user(request):
         return request.user
     return None
 
-@require_POST
-@login_required
-def save_article(request):
-    article_id = request.POST.get('article_id')
-    if article_id:
-        try:
-            article = NewsArticle.objects.get(NewsID=article_id)
-            SavedNews.objects.create(User=request.user, News=article)
-            return HttpResponse(status=201)  # Created
-        except NewsArticle.DoesNotExist:
-            return HttpResponse("Article not found.", status=404)
-    return HttpResponse("Invalid request.", status=400)
-
 def user_signup(request):
     # if user is authenticated, redirect to top_page
     if request.user.is_authenticated:
@@ -247,6 +257,19 @@ def get_authenticated_user(request):
 
 
 # view saved articles separately to the headlines page
+def save_article(request):
+    article_id = request.POST.get('article_id')
+    user_id = request.POST.get('user_id')
+    if article_id and user_id:
+        try:
+            user = BrieflyUser.objects.get(id=user_id)
+            saved_article = SavedNews.objects.create(User=user, News__NewsID=article_id)
+            print(saved_article)
+            return HttpResponse(status=204)  # No Content
+        except SavedNews.DoesNotExist:
+            return HttpResponse("article not found.", status=404)
+    return HttpResponse("Invalid request.", status=400)
+
 @login_required
 def saved_articles(request, response_type="html"):
     user = request.user
@@ -256,7 +279,7 @@ def saved_articles(request, response_type="html"):
         saved_articles = [saved_article.News for saved_article in saved_articles]
         # Get NewsArticle objects related to the SavedNews objects
         if response_type != "html":
-            return Response({"saved_articles": list(saved_articles)})
+            return Response({"saved_articles": list(saved_articles), "user": user})
         return render(request, 'saved_articles.html', {'saved_articles': saved_articles})
     else:
         return redirect('briefly:user_login')
@@ -271,6 +294,23 @@ def view_article(request, article_id):
             })
     except NewsArticle.DoesNotExist:
         return HttpResponse("Article not found.", status=404)
+
+def remove_saved_article(request):
+    print("start")
+    article_id = request.POST.get('article_id')
+    print(article_id)
+    user_id = request.POST.get('user_id')
+    print(user_id)
+    if article_id and user_id:
+        try:
+            user = BrieflyUser.objects.get(id=user_id)
+            saved_article = SavedNews.objects.get(User=user, News__NewsID=article_id)
+            print(saved_article)
+            saved_article.delete()
+            return HttpResponse(status=204)  # No Content
+        except SavedNews.DoesNotExist:
+            return HttpResponse("Saved article not found.", status=404)
+    return HttpResponse("Invalid request.", status=400)
 
 #views
 #02/17/2025 Yongwoo - Deleted template_views, incorporated into views.

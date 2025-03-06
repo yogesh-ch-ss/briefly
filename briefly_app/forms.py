@@ -93,3 +93,14 @@ class BrieflyUserLoginForm(forms.ModelForm):
             'username': None,
         }
         
+class QuestionForm(forms.Form):
+    email = forms.EmailField(required=True)
+    question = forms.CharField(widget=forms.Textarea, required=True)
+    class Meta:
+        help_texts = {
+            'email': "Enter your email address.",
+            'question': "Enter your question.",
+        }
+    widgets = {
+        'question': forms.Textarea(attrs={'rows': 4, 'cols': 40}),
+    }

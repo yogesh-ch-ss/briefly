@@ -89,6 +89,9 @@ body img {
   max-width: 40rem;
   margin-bottom: 3rem;
 }
+.banner--message--subheadline--text {
+  font-size: 3rem;
+}
 .banner--article {
   display: flex;
   flex-direction: column;
@@ -134,10 +137,86 @@ body img {
 .account--action {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
   flex-wrap: wrap;
-  gap: 1rem;
+}
+.account--action form {
+  width: 100%;
+}
+.account--action form input {
+  width: 100%;
+  color: #3a3e46;
+  background-color: #fcfaf1;
+}
+
+.qa-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 90px;
+  height: 90px;
+  border-top-right-radius: 90px;
+  background-color: #3a3e46;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.qa-link a {
+  font-size: 1.35rem;
+  position: absolute;
+  bottom: -9px;
+  left: 9px;
+  color: #fcfaf1;
+  text-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.q-and-a {
+  padding: 5rem;
+  grid-column: 1/-1;
+  max-width: 80rem;
+}
+.q-and-a .headline {
+  margin-bottom: 3rem;
+}
+.q-and-a--questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+.q-and-a--questions .question {
+  margin-bottom: 2rem;
+}
+.q-and-a--questions h3 {
+  margin-bottom: 2rem;
+}
+.q-and-a--questions .title {
+  font-weight: bold;
+  line-height: 2;
+}
+.q-and-a--email {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin-bottom: 3rem;
+}
+.q-and-a--email .login--form {
+  width: 100%;
+}
+.q-and-a--email .login--form #id_question {
+  width: 100%;
 }
 
 .category {
@@ -374,7 +453,7 @@ input, button, label {
   transform: translateY(1px);
 }
 
-input {
+input, textarea {
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding: 1rem;
@@ -383,7 +462,7 @@ input {
   box-shadow: 0 0 7px rgba(58, 62, 70, 0.35);
 }
 
-input:focus:not([type=checkbox]) {
+input:focus:not([type=checkbox]), textarea:focus:not([type=checkbox]) {
   outline: 2px solid #3a3e46;
 }
 
