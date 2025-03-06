@@ -12,7 +12,6 @@ urlpatterns = [
     path('accounts/logout', views.user_logout, name='user_logout'),
     path('accounts/delete', views.user_delete_account, name='user_delete_account'),
     path('accounts/profile_setting', views.user_profile_setting, name='user_profile_setting'),
-    path('accounts/user_profile_setting/category_preference', views.user_category_preference, name='user_category_preference'),
     # views
     # path('template_login', views.login, name='login'),
     path('template_headlines', views.headlines, name='headlines'),

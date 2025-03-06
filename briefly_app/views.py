@@ -1,7 +1,7 @@
 from collections import defaultdict
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from briefly_app.forms import BrieflyUserSignupForm, BrieflyUserLoginForm, CategoryForm, BrieflyUserProfileForm
+from briefly_app.forms import BrieflyUserSignupForm, BrieflyUserLoginForm, BrieflyUserProfileForm
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.views.decorators.http import require_POST
@@ -94,22 +94,105 @@ def user_delete_account(request):
         request.user.delete()
     return redirect('briefly:top_page')
 
-# choose and update category
-# to choose category, user must be logged in
 @login_required
-def user_category_preference(request):
+def user_profile_setting(request):
     user = request.user
     if request.method == 'POST':
-        category_form = CategoryForm(request.POST)
-        if category_form.is_valid():
-            category_form.save(user=user)
-            return redirect('briefly:top_page')
-    else:
-        user_categories = UserCategory.objects.filter(User=user).values_list('Category__CategoryName', flat=True)
-        initial_data = {'categories': list(user_categories)}
-        category_form = CategoryForm(initial=initial_data)
-    return render(request, 'category_preference.html', {'category_form': category_form})
+        # Pass both request.POST and the user instance to the form
+        user_profile_form = BrieflyUserProfileForm(data=request.POST, instance=user)
+        
+        # Check if the form is valid
+        if user_profile_form.is_valid():
+            # Extract cleaned data
+            username = user_profile_form.cleaned_data['username']
+            email = user_profile_form.cleaned_data['email']
+            country = user_profile_form.cleaned_data['country']
+            selected_categories = user_profile_form.cleaned_data['categories']
 
+            # Save user fields
+            user.username = username
+            user.email = email
+            user.country = country
+            user.save()
+            
+            UserCategory.objects.filter(User=user).delete()
+            for category_name in selected_categories:
+                category_obj, created = Category.objects.get_or_create(CategoryName=category_name)
+                UserCategory.objects.create(User=user, Category=category_obj)
+            return redirect('briefly:user_profile_setting')
+        else:
+            # If form is invalid (e.g., no category selected), re-render with errors
+            return render(request, 'user_profile.html', {
+                'user_profile_form': user_profile_form
+            })
+    else:
+        # Populate form with initial data for GET requests
+        user_profile_form = BrieflyUserProfileForm(instance=user)
+        return render(request, 'user_profile.html', {
+            'user_profile_form': user_profile_form
+        })
+
+# function to check if the user is authenticated
+def get_authenticated_user(request):
+    if request.user.is_authenticated:
+        return request.user
+    return None
+
+
+def user_signup(request):
+    # if user is authenticated, redirect to top_page
+    if request.user.is_authenticated:
+        return redirect('briefly:top_page')
+    if request.method == 'POST':
+        user_signup_form = BrieflyUserSignupForm(data=request.POST)
+        if user_signup_form.is_valid():
+            user_signup_form.save()  # Save the user and related categories in one go
+            print('User created')
+            # when the sign up is successful, redirect to login page
+            return redirect('briefly:user_login')
+        else:
+            print(user_signup_form.errors)
+    else:
+        user_signup_form = BrieflyUserSignupForm()
+    return render(request, 'signup.html', {
+        'user_signup_form': user_signup_form,
+    })
+
+def user_login(request):
+    # if user is authenticated, redirect to top_page
+    if request.user.is_authenticated:
+        return redirect('briefly:top_page')
+    if request.method == 'POST':        
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(username=username, password=password)
+        if user:
+            if user.is_active:
+                login(request, user)
+                return redirect('briefly:top_page')
+            else:
+                return HttpResponse("Your account is disabled.")
+        else:
+            return HttpResponse("Invalid login details.")
+    else:
+        user_login_form = BrieflyUserLoginForm()
+        return render(request, 'login.html', {'user_login_form': user_login_form})
+
+@require_POST
+@login_required
+def user_logout(request):
+    if request.user.is_authenticated:
+        logout(request)
+        # redirect to top_page
+        return redirect('briefly:top_page')
+    return redirect('briefly:top_page')
+
+@login_required
+@require_POST
+def user_delete_account(request):
+    if request.user.is_authenticated:
+        request.user.delete()
+    return redirect('briefly:top_page')
 
 # get profile_setting page
 @login_required
@@ -122,11 +205,16 @@ def user_profile_setting(request):
         email = request.POST.get('email')
         country = request.POST.get('country')
         categories = request.POST.getlist('categories')
-        print(categories)
         user.username = username
         user.email = email
         user.country = country
         user.save()
+
+        if len(categories) == 0:
+            return render(request, 'user_profile.html', {
+                'user_profile_form': BrieflyUserProfileForm(instance=user),
+                'error': 'You must select at least one category'
+            })
         
         UserCategory.objects.filter(User=user).delete()
         for category in categories:
@@ -139,7 +227,6 @@ def user_profile_setting(request):
         'user_profile_form': user_profile_form
         })
 
-
 # function to check if the user is authenticated
 def get_authenticated_user(request):
     if request.user.is_authenticated:
@@ -147,6 +234,7 @@ def get_authenticated_user(request):
     return None
 
 
+<<<<<<< HEAD
 def user_signup(request):
     # if user is authenticated, redirect to top_page
     if request.user.is_authenticated:
@@ -182,22 +270,105 @@ def user_delete_account(request):
         request.user.delete()
     return redirect('briefly:top_page')
 
-# choose and update category
-# to choose category, user must be logged in
 @login_required
-def user_category_preference(request):
+def user_profile_setting(request):
     user = request.user
     if request.method == 'POST':
-        category_form = CategoryForm(request.POST)
-        if category_form.is_valid():
-            category_form.save(user=user)
-            return redirect('briefly:top_page')
-    else:
-        user_categories = UserCategory.objects.filter(User=user).values_list('Category__CategoryName', flat=True)
-        initial_data = {'categories': list(user_categories)}
-        category_form = CategoryForm(initial=initial_data)
-    return render(request, 'category_preference.html', {'category_form': category_form})
+        # Pass both request.POST and the user instance to the form
+        user_profile_form = BrieflyUserProfileForm(data=request.POST, instance=user)
+        
+        # Check if the form is valid
+        if user_profile_form.is_valid():
+            # Extract cleaned data
+            username = user_profile_form.cleaned_data['username']
+            email = user_profile_form.cleaned_data['email']
+            country = user_profile_form.cleaned_data['country']
+            selected_categories = user_profile_form.cleaned_data['categories']
 
+            # Save user fields
+            user.username = username
+            user.email = email
+            user.country = country
+            user.save()
+            
+            UserCategory.objects.filter(User=user).delete()
+            for category_name in selected_categories:
+                category_obj, created = Category.objects.get_or_create(CategoryName=category_name)
+                UserCategory.objects.create(User=user, Category=category_obj)
+            return redirect('briefly:user_profile_setting')
+        else:
+            # If form is invalid (e.g., no category selected), re-render with errors
+            return render(request, 'user_profile.html', {
+                'user_profile_form': user_profile_form
+            })
+    else:
+        # Populate form with initial data for GET requests
+        user_profile_form = BrieflyUserProfileForm(instance=user)
+        return render(request, 'user_profile.html', {
+            'user_profile_form': user_profile_form
+        })
+
+# function to check if the user is authenticated
+def get_authenticated_user(request):
+    if request.user.is_authenticated:
+        return request.user
+    return None
+
+
+def user_signup(request):
+    # if user is authenticated, redirect to top_page
+    if request.user.is_authenticated:
+        return redirect('briefly:top_page')
+    if request.method == 'POST':
+        user_signup_form = BrieflyUserSignupForm(data=request.POST)
+        if user_signup_form.is_valid():
+            user_signup_form.save()  # Save the user and related categories in one go
+            print('User created')
+            # when the sign up is successful, redirect to login page
+            return redirect('briefly:user_login')
+        else:
+            print(user_signup_form.errors)
+    else:
+        user_signup_form = BrieflyUserSignupForm()
+    return render(request, 'signup.html', {
+        'user_signup_form': user_signup_form,
+    })
+
+def user_login(request):
+    # if user is authenticated, redirect to top_page
+    if request.user.is_authenticated:
+        return redirect('briefly:top_page')
+    if request.method == 'POST':        
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        user = authenticate(username=username, password=password)
+        if user:
+            if user.is_active:
+                login(request, user)
+                return redirect('briefly:top_page')
+            else:
+                return HttpResponse("Your account is disabled.")
+        else:
+            return HttpResponse("Invalid login details.")
+    else:
+        user_login_form = BrieflyUserLoginForm()
+        return render(request, 'login.html', {'user_login_form': user_login_form})
+
+@require_POST
+@login_required
+def user_logout(request):
+    if request.user.is_authenticated:
+        logout(request)
+        # redirect to top_page
+        return redirect('briefly:top_page')
+    return redirect('briefly:top_page')
+
+@login_required
+@require_POST
+def user_delete_account(request):
+    if request.user.is_authenticated:
+        request.user.delete()
+    return redirect('briefly:top_page')
 
 # get profile_setting page
 @login_required
@@ -210,11 +381,16 @@ def user_profile_setting(request):
         email = request.POST.get('email')
         country = request.POST.get('country')
         categories = request.POST.getlist('categories')
-        print(categories)
         user.username = username
         user.email = email
         user.country = country
         user.save()
+
+        if len(categories) == 0:
+            return render(request, 'user_profile.html', {
+                'user_profile_form': BrieflyUserProfileForm(instance=user),
+                'error': 'You must select at least one category'
+            })
         
         UserCategory.objects.filter(User=user).delete()
         for category in categories:

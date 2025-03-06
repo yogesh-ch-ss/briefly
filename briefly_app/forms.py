@@ -1,21 +1,6 @@
 from django import forms
 from .models import CATEGORY_CHOICES, BrieflyUser, Category, UserCategory
 from .models import COUNTRY_CHOICES
-
-
-class CategoryForm(forms.Form):
-    categories = forms.MultipleChoiceField(
-        choices=CATEGORY_CHOICES,
-        widget=forms.CheckboxSelectMultiple
-    )
-
-    def save(self, user, commit=True):
-        selected_categories = self.cleaned_data['categories']
-        UserCategory.objects.filter(User=user).delete()
-        for category_name in selected_categories:
-            category = Category.objects.get(CategoryName=category_name)
-            UserCategory.objects.create(User=user, Category=category)
-
 class BrieflyUserSignupForm(forms.ModelForm):
     password_confirmation = forms.CharField(widget=forms.PasswordInput())
     categories = forms.MultipleChoiceField(
@@ -31,7 +16,7 @@ class BrieflyUserSignupForm(forms.ModelForm):
             'country': forms.Select(choices=COUNTRY_CHOICES),
         }
         initial = {
-            'country': 'YourDefaultCountryCode',  # Replace 'YourDefaultCountryCode' with the desired default country code
+            'country': 'uk',
         }
         help_texts = {
             'username': None,
@@ -61,7 +46,8 @@ class BrieflyUserSignupForm(forms.ModelForm):
 class BrieflyUserProfileForm(forms.ModelForm):
     categories = forms.MultipleChoiceField(
         choices=CATEGORY_CHOICES,
-        widget=forms.CheckboxSelectMultiple
+        widget=forms.CheckboxSelectMultiple,
+        required=True  # Make the field required
     )
 
     class Meta:
@@ -74,6 +60,13 @@ class BrieflyUserProfileForm(forms.ModelForm):
             'username': None,
         }
 
+    def clean(self):
+        cleaned_data = super().clean()
+        selected_categories = cleaned_data.get('categories')
+        if not selected_categories or len(selected_categories) < 1:
+            self.add_error('categories', "You must select at least one category")
+        return cleaned_data
+
     def __init__(self, *args, **kwargs):
         user = kwargs.pop('instance', None)
         super().__init__(*args, **kwargs)
@@ -83,8 +76,12 @@ class BrieflyUserProfileForm(forms.ModelForm):
             self.fields['username'].initial = user.username
             self.fields['email'].initial = user.email
             self.fields['country'].initial = user.country
-            
-    
+            self.fields['username'].required = True
+            self.fields['email'].required = True
+            self.fields['country'].required = True
+            self.fields['categories'].required = True
+
+
 class BrieflyUserLoginForm(forms.ModelForm):
     class Meta:
         model = BrieflyUser

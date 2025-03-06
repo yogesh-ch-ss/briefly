@@ -8,7 +8,7 @@
         <a class="title" href="{% url 'briefly:view_article' article.NewsID %}">{{ article.Title }}</a>
         <div class="headlines--category--titles--info">
           <span class="publisher">{{article.Source}}</span>
-          <a class="button" href="">Remove</a>
+          <a id={article.NewsID} class="button remove-saved-article" href="">remove</a>
         </div>
       </div>
     {% empty %}
@@ -18,4 +18,5 @@
     {% endfor %}
   </div>
 </div>
+<script src="{% static 'javascript/saved_article.js' %}"></script>
 {% endblock %}
