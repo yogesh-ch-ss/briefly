@@ -1,0 +1,24 @@
+{% extends "./briefly_layout.html" %} {% load static %} {% block body %}
+
+<div class="headlines">
+        {% for category, articles in grouped_news.items %}
+        <div class="headlines--category">
+            <h3 class="headlines--category--name">&#9724; {{ category|capfirst }}</h3>
+            {% for article in articles %}
+            <div class="headlines--category--titles">
+                <a class="title" href="#">
+                    {{ article.Title }}
+                </a>
+                <div class="headlines--category--titles--info">
+                    <span class="publisher">{{ article.Source }}</span>
+                    {% if category != "Saved News" %}
+                    <a class="button" href="#">Save</a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

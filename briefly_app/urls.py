@@ -22,7 +22,7 @@ urlpatterns = [
     #sample endpoint
     path('api/news', fetch_news, name='fetch_news'),
     path('api/news/day_headlines', fetch_news_day_headlines, name='fetch_news_day_headlines'),
-    path('news/<str:username>/', get_user_news, name="user_news"),
+    path('news/', get_user_news, name="user_news"),
     # saved articles
     path('view_article/<int:article_id>/', views.view_article, name='view_article'),
     path('saved_articles', views.saved_articles, name='saved_articles'),
