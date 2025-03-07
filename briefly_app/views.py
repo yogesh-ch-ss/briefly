@@ -41,7 +41,7 @@ def qa(request):
             user_email = question_form.cleaned_data['email']
             question = question_form.cleaned_data['question']
             # send email to the admin and the user
-            send_to_admin(question, question,user_email)
+            send_to_admin(question,user_email)
             send_to_user(question, user_email)
             # Send email to admin
             return redirect(original_source_url)
