@@ -1,7 +1,8 @@
 $(document).ready(function() {
   $('.button.save').on('click', function(event) {
       event.preventDefault();   
-      const savedArticlesDiv = $('.saved-articles');
+    const lastCategory = $('.headlines--category').last();
+    console.log('lastCategory:', lastCategory);
       var parentDiv = $(this).closest('.headlines--category--titles');
       var articleId = $(this).attr('id');
       var userId = $(this).attr('data-user-id');
@@ -11,7 +12,9 @@ $(document).ready(function() {
           parentDiv.fadeOut(1000, function() {
               parentDiv.remove();
               parentDiv.find('.button.save').remove();
-              savedArticlesDiv.append(parentDiv);
+              if (lastCategory.children('.headlines--category--titles').length < 5) {
+                  lastCategory.append(parentDiv);
+              }
               parentDiv.fadeIn(1000);
           });
       }

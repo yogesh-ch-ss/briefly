@@ -7,8 +7,10 @@ from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
-from briefly_app.models import Category, SavedNews, UserCategory, BrieflyUser, NewsArticle, UserCategory
+from briefly_app.models import Category, SavedNews, UserCategory, BrieflyUser, NewsArticle, UserCategory, ViewedNews
 from django.db.models import F
+from bs4 import BeautifulSoup
+
 
 #Rest and News API integration into views
 from django.conf import settings
@@ -188,6 +190,7 @@ def user_login(request):
         user = authenticate(username=username, password=password)
         if user:
             if user.is_active:
+                fetch_news(user)
                 login(request, user)
                 return redirect('briefly:top_page')
             else:
@@ -261,7 +264,8 @@ def save_article(request):
     if article_id and user_id:
         try:
             user = BrieflyUser.objects.get(id=user_id)
-            saved_article = SavedNews.objects.create(User=user, News__NewsID=article_id)
+            news_article = NewsArticle.objects.get(NewsID=article_id)
+            saved_article = SavedNews.objects.create(User=user, News=news_article)
             print(saved_article)
             return HttpResponse(status=204)  # No Content
         except SavedNews.DoesNotExist:
@@ -277,8 +281,19 @@ def saved_articles(request, response_type="html"):
         saved_articles = [saved_article.News for saved_article in saved_articles]
         # Get NewsArticle objects related to the SavedNews objects
         if response_type != "html":
-            return Response({"saved_articles": list(saved_articles), "user": user})
+            return Response({"saved_articles": list(saved_articles)})
         return render(request, 'saved_articles.html', {'saved_articles': saved_articles})
+    else:
+        return redirect('briefly:user_login')
+    
+@login_required
+def viewed_articles(request):
+    user = request.user
+    if user:
+        # Get ViewedNews objects for the user
+        viewed_articles = ViewedNews.objects.filter(User=user)
+        viewed_articles = [viewed_article.News for viewed_article in viewed_articles]
+        return Response({"viewed_articles": list(viewed_articles)})
     else:
         return redirect('briefly:user_login')
 
@@ -286,24 +301,28 @@ def saved_articles(request, response_type="html"):
 def view_article(request, article_id):
     try:
         article = NewsArticle.objects.get(NewsID=article_id)
+        ViewedNews.objects.create(User=request.user, News=article)
+        # Check if the article is in the saved articles
+        is_saved = SavedNews.objects.filter(User=request.user, News=article).exists()
+        type = "viewed_article"
+        if is_saved:
+            type = "saved_article"
+
         return render(request, './view_article.html', {
             'article': article,
-            "type" : "saved_article"
+            "type" : type
             })
     except NewsArticle.DoesNotExist:
         return HttpResponse("Article not found.", status=404)
 
+
 def remove_saved_article(request):
-    print("start")
     article_id = request.POST.get('article_id')
-    print(article_id)
     user_id = request.POST.get('user_id')
-    print(user_id)
     if article_id and user_id:
         try:
             user = BrieflyUser.objects.get(id=user_id)
             saved_article = SavedNews.objects.get(User=user, News__NewsID=article_id)
-            print(saved_article)
             saved_article.delete()
             return HttpResponse(status=204)  # No Content
         except SavedNews.DoesNotExist:
@@ -326,10 +345,7 @@ def top_page(request):
             print(f"Error fetching news: {e}")
         return redirect('briefly:user_news')
 
-    random_article = NewsArticle.objects.order_by('?').first()
     return render(request, './top_page.html', {
-        'user': user,
-        'article': random_article
     })
 
 # def login(request):
@@ -344,20 +360,83 @@ def add_category(request):
 def headlines(request):
     return render(request, './template_headlines.html')
 
-#Sample API Call
-@api_view(['GET'])
-def fetch_news(request):
-    
-    # top_headlines = newsapi.get_top_headlines(
-    #     sources='CNN'
-    # )
-
-    sample_query = 'bitcoin'
-    # sample_everything = newsapi.get_everything(q=sample_query)
-    # return Response(sample_everything)
-
-    sample_top_headlines = newsapi.get_top_headlines()
-    return Response(sample_top_headlines)
+def fetch_news(user):
+    try:
+        # Get user's category preferences
+        user_categories = UserCategory.objects.filter(User=user)
+        
+        #Handler for user error, shouldn't trigger unless user has selected no categories
+        if not user_categories.exists():
+            print(f"No categories selected for user {user.username}")
+            return False
+        
+        #Array for User Data
+        news_data = []
+        
+        # Fetch news for each of the user's categories
+        for user_category in user_categories:
+            category_name = user_category.Category.CategoryName
+            try:
+                # Make API call to News API, assign to api_response
+                api_response = newsapi.get_top_headlines(
+                    category=category_name,
+                    country=user.country
+                )
+                #Print statement to flag the category name as it goes along
+                print(category_name)
+                
+                if api_response["status"] == "ok" and "articles" in api_response:
+                    # Extract articles
+                    articles = api_response["articles"]
+                    news_data.extend(articles)
+                    category_obj = user_category.Category
+                    #iterator to save only up to 5 articles per category
+                    i = 0
+                    # Save each article to the database
+                    for article in articles:
+                        if i >= 5: break
+                        # Extract article data with fallbacks, makes URL the unique identifier, don't populate if article already exists
+                        # (Models has been modified to take URL attribute as unique)
+                        title = article.get('title', 'No title')
+                        url = article.get('url')
+                        content = article.get('content')
+                        if not content:
+                            #1st fallback for null content
+                            content = article.get('description')
+                            #2nd fallback for null content
+                        if not content:
+                            content = "No Preview Content Available: Click on Link to view Original Article"
+                        source_name = article.get('source', {}).get('name', 'Unknown source')
+                        
+                        # Check for duplicates before saving
+                        if not NewsArticle.objects.filter(Title=title).exists():
+                            NewsArticle.objects.create(
+                                Category=category_obj,
+                                Title=title,
+                                Url=url,
+                                Content=content,
+                                Source=source_name,
+                                Region=user.country
+                            )
+                        i += 1
+            except Exception as e:
+                print(f"Error fetching news for category {category_name}: {e}")
+                continue
+        
+        # Save to JSON file if needed
+        SUB_DIR = os.path.join(os.path.dirname(__file__), 'news_data')
+        os.makedirs(SUB_DIR, exist_ok=True)
+        JSON_FILE_PATH = os.path.join(SUB_DIR, f'news_data.json')
+        
+        with open(JSON_FILE_PATH, 'w', encoding='utf-8') as json_file:
+            json.dump(news_data, json_file, ensure_ascii=False, indent=4)
+        
+        print(f"Successfully fetched {len(news_data)} news articles for user {user.username}")
+        return True
+        
+    except Exception as e:
+        print(f"Error in fetch_news: {e}")
+        return False
 
 @api_view(['GET'])
 def fetch_news_day_headlines(request):
@@ -380,9 +459,8 @@ def fetch_news_day_headlines(request):
 # @permission_classes([IsAuthenticated])
 @login_required
 def get_user_news(request):
-    # if request.user.username != username:
+# if request.user.username != username:
     #     return Response({"error": "Unauthorized access. You can only fetch your own news."}, status=403)
-
     try:
         # Get the user
         # user = BrieflyUser.objects.get(username=request.u)
@@ -398,21 +476,54 @@ def get_user_news(request):
         # Fetch news articles related to those categories
         news_articles = NewsArticle.objects.filter(Category__in=categories).annotate(
             CategoryName=F("Category__CategoryName")
-        ).values("Title", "CategoryName", "Date", "Content", "Source")
+        ).values("NewsID", "Title", "CategoryName", "Date", "Content", "Source")
 
-        # **Group articles by category**
-        grouped_news = defaultdict(list)
-        for article in news_articles:
-            grouped_news[article["CategoryName"]].append(article)
-
-        saved_articles_response = saved_articles(request, response_type="json")
-
+        saved_articles_response = saved_articles(request, response_type="json")        
         if isinstance(saved_articles_response, Response):
             saved_articles_data = saved_articles_response.data.get("saved_articles", [])
         else:
             saved_articles_data = []
         
+        viewed_articles_response = viewed_articles(request)
+        if isinstance(viewed_articles_response, Response):
+            viewed_articles_data = viewed_articles_response.data.get("viewed_articles", [])
+        else:
+            viewed_articles_data = []        
+        viewed_article_ids = {article.NewsID for article in viewed_articles_data}
+        print(f"Viewed article IDs: {len(viewed_article_ids)}")
+        # **Group articles by category**
+        grouped_news = defaultdict(lambda: {"new": [], "viewed": []})
+        for article in news_articles:
+            if article["NewsID"] in viewed_article_ids:
+                print(f"Article {article['Title']} is viewed.")
+                grouped_news[article["CategoryName"]]["viewed"].append(article)
+            else:
+                grouped_news[article["CategoryName"]]["new"].append(article)
+
         grouped_news["Saved News"] = saved_articles_data
+        # Remove duplicate articles that are already in saved news
+        saved_article_id = {article.NewsID for article in saved_articles_data}
+        for category, articles in grouped_news.items():
+            if category != "Saved News":
+                grouped_news[category]["new"] = [article for article in articles["new"] if article["NewsID"] not in saved_article_id]
+                grouped_news[category]["viewed"] = [article for article in articles["viewed"] if article["NewsID"] not in saved_article_id]
+        
+
+        for category, articles in grouped_news.items():
+            print(f"Category: {category}")
+            if category != "Saved News":
+                
+                print("new Articles:")
+                for article in articles["new"]:
+                    print(f" - {article['Title']}")
+                
+                print("Viewed Articles:")
+                for article in articles["viewed"]:
+                    print(f" - {article['Title']}")
+            else:
+                print("Saved Articles:")
+                for article in articles:
+                    print(f" - {article.Title}")
 
         context = {
             "username": user.username,

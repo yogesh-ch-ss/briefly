@@ -20,9 +20,9 @@ urlpatterns = [
     path('template_headlines/template_add_category', views.add_category, name='add_category'),
     # path('template_headlines/template_view_article', views.view_article, name='view_article'),
     #sample endpoint
-    path('api/news', fetch_news, name='fetch_news'),
+    path('api/news', views.fetch_news, name='fetch_news'),
     # path('api/news/day_headlines', name='fetch_news_day_headlines'),
-    path('news/', get_user_news, name="user_news"),
+    path('news/', views.get_user_news, name="user_news"),
     # saved articles
     path('view_article/<int:article_id>/', views.view_article, name='view_article'),
     path('save_article', views.save_article, name='save_article'),

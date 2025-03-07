@@ -1,18 +1,46 @@
 <div class="article">
     <div class="article--title">
+        {% if article %}
         <p>{{article.Title}}</p>
+        {% else %}
+        <p>Clean and Distraction free News Curation App Launched in Mar 2025</p>
+        {% endif %}
     </div>
     <div class="article--info">
         <div class="article--info--publisher">
+            {% if article %}
             <p>{{article.Source}}</p>
+            {% else %}
+            <p>News Agency 1028</p>            
+            {% endif %}
         </div>
         <div class="article--info--date">
+            {% if article %}
             <p>{{article.Date}}</p>
+            {% else %}
+            <p>March 14</p>            
+            {% endif %}
         </div>
     </div>
     <div class="article--content">
+        {% if article %}
+        <p>{{article.Content}}</p>
+        {% else %}
         <p>
-            {{article.Content}}
+            Briefly, the latest news curation app, was launched in March 2025 with a focus on providing a clean and distraction-free reading experience. The app's design philosophy centers around simplicity and minimalism, ensuring that users can focus on the content without any unnecessary clutter. 
         </p>
+        <p>
+            User experience is at the forefront of Briefly's design, with features such as offline access for reading on the go. Overall, Briefly aims to revolutionize the way users consume news by combining elegance, efficiency, and user-centric design.
+        </p>
+        <p>
+            Functionality-wise, Briefly offers personalized news feeds, allowing users to tailor their reading experience based on their interests and location (country). The app also features an intuitive interface that makes navigation seamless and enjoyable too. 
+        </p>
+        <p>
+            The app is only available on the browser but is mobile responsive, ensuring a wide reach and accessibility for users across different devices. With its launch, Briefly is set to make a significant impact in the digital news landscape, offering a refreshing alternative to traditional news consumption methods.
+        </p>
+        <p>
+            The creators of Briefly are Yongwoo Hur, Yogesh Chandra Singh Samant, and Kohei Oishi from the University of Glasgow.
+        </p>
+        {% endif %}
     </div>
 </div>
