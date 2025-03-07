@@ -24,7 +24,7 @@
 
 
 // input
-input {
+input, textarea {
   @include MarginTop1rem;
   @include MarginBottom1rem;
   @include Padding1rem;
@@ -34,7 +34,7 @@ input {
   // transition: border-color 0.3s ease-in-out;
 }
 // when input is clicked, change border color
-input:focus {
+input:focus, textarea:focus {
   &:not([type="checkbox"]) {
     outline: 2px solid $text-color;
   }
@@ -44,34 +44,6 @@ label {
   font-weight: bold;
   display: block;
 }
-
-// input[type="checkbox"] {
-//   display: none;
-// }
-
-// .category-label {
-//   padding: 1rem 2rem;
-//   color: $background-color;
-//   background-color: $text-color;
-//   display: inline-flex;
-//   align-items: center;
-//   justify-content: center;
-//   background-color: transparent;
-//   color: $text-color;
-//   padding: 1rem 2rem;
-//   cursor: pointer;
-//   @include BoxShadow;
-//   transition: background-color 0.3s, color 0.3s;
-// } 
-
-// input[type="checkbox"]:checked + .category-label  {
-//   background-color: $text-color;
-//   color: $background-color;
-// }
-
-// .category-label :hover {
-//   background-color: transparent;
-// }
 
 //select
 // select
@@ -87,8 +59,11 @@ select {
   padding: 1rem;
   border: none;
   background-color: transparent;
-  color: $text-color;
-  font-size: 1em;
+  color: black;
+  font-size: 2rem;
+//   @include smartphone {
+//     font-size: 1.5rem;
+// }
   cursor: pointer;
 }
 

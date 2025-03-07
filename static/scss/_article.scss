@@ -10,6 +10,7 @@
 
     @include smartphone{
         max-width: 50rem;
+        @include Padding3rem;
     }
 
     &--title{

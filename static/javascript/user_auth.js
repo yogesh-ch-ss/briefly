@@ -1,16 +1,17 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const logoutForm = document.getElementById('user-logout');
-    const deleteAccountForm = document.getElementById('user-account-delete');
+$(document).ready(function() {
+    console.log('Document is ready');
+    const logoutForm = $('#user-logout');
+    const deleteAccountForm = $('#user-account-delete');
 
-    if (logoutForm) {
-        logoutForm.onsubmit = function() {
+    if (logoutForm.length) {
+        logoutForm.submit(function() {
             return confirm('Are you sure you want to logout?');
-        };
+        });
     }
 
-    if (deleteAccountForm) {
-        deleteAccountForm.onsubmit = function() {
+    if (deleteAccountForm.length) {
+        deleteAccountForm.submit(function() {
             return confirm('Are you sure you want to delete your account?');
-        };
+        });
     }
 });

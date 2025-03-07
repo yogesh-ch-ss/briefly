@@ -13,10 +13,19 @@ class BrieflyUserAdmin(UserAdmin):
         ("Additional Info", {"fields": ("country",)}),
     )
 
+class NewsArticleAdmin(admin.ModelAdmin):
+    list_display = ('NewsID', 'Title', 'Category', 'Url', 'Date', 'Region', 'Source')
 
+
+class ViewedNewsAdmin(admin.ModelAdmin):
+    list_display = ('User', 'News')
+
+class SavedNewsAdmin(admin.ModelAdmin):
+    list_display = ('User', 'News')
+
+admin.site.register(ViewedNews, ViewedNewsAdmin)
+admin.site.register(SavedNews, SavedNewsAdmin)
 admin.site.register(BrieflyUser, BrieflyUserAdmin) 
 admin.site.register(Category)
 admin.site.register(UserCategory)
-admin.site.register(NewsArticle)
-admin.site.register(ViewedNews)
-admin.site.register(SavedNews)
+admin.site.register(NewsArticle, NewsArticleAdmin)

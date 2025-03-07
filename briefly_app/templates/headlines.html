@@ -1,24 +1,46 @@
 {% extends "./briefly_layout.html" %} {% load static %} {% block body %}
-
 <div class="headlines">
+    {% csrf_token %}
         {% for category, articles in grouped_news.items %}
-        <div class="headlines--category">
-            <h3 class="headlines--category--name">&#9724; {{ category|capfirst }}</h3>
-            {% for article in articles %}
-            <div class="headlines--category--titles">
-                <a class="title" href="#">
-                    {{ article.Title }}
-                </a>
-                <div class="headlines--category--titles--info">
-                    <span class="publisher">{{ article.Source }}</span>
-                    {% if category != "Saved News" %}
-                    <a class="button" href="#">Save</a>
+            <div class="headlines--category">
+                <h3 class="headlines--category--name">
+                    &#9724; {{ category|capfirst }} 
+                </h3>
+                {% if category == "Saved News" %}
+                    {% for article in articles|slice:":5" %}
+                    <div class="headlines--category--titles">
+                        <a class="title" href="{% url 'briefly:view_article' article.NewsID %}">{{ article.Title }}</a>
+                        <div class="headlines--category--titles--info">
+                            <span class="publisher">{{ article.Source }}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% if articles|length > 5 %}
+                        <a href="{% url 'briefly:saved_articles' %}" class="jump-to-saved-article"><b>...More</b></a>            
                     {% endif %}
-                </div>
+                {% else %}
+                    {% for article in articles.new%}
+                    <div class="headlines--category--titles">
+                        <a class="title" href="{% url 'briefly:view_article' article.NewsID %}">{{ article.Title }}</a>
+                        <div class="headlines--category--titles--info">
+                            <span class="publisher">{{ article.Source }}</span>
+                            <a class="button save" id="{{article.NewsID}}" data-user-id="{{ user.id }}">Save</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% for article in articles.viewed %}
+                    <div class="headlines--category--titles viewed">
+                        <a class="title" href="{% url 'briefly:view_article' article.NewsID %}">[viewed] {{ article.Title }}</a>
+                        <div class="headlines--category--titles--info">
+                            <span class="publisher">{{ article.Source }}</span>
+                            <a class="button save" id="{{article.NewsID}}" data-user-id="{{ user.id }}">Save</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
             </div>
-            {% endfor %}
-        </div>
         {% endfor %}
     </div>
 </div>
+<script src="{% static 'javascript/headlines.js' %}"></script>
 {% endblock %}

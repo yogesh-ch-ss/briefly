@@ -1,0 +1,33 @@
+{% extends "./briefly_layout.html" %}
+{% load static %}
+{% block body %}
+<div class="q-and-a">
+  <h3 class="headline">Common Questions</h3>
+    <div class="q-and-a--questions">
+        <div class="question">
+            <p class="title">&#9724; What is the Briefly.?</p>
+            <p class="answer">Our site is designed to provide you with the latest news in a clean and distraction-free format. News is refreshed every day at 12 UTC time to bring you the latest. When you access the website the next day, the news is refreshed automatically.</p>
+        </div>
+        <div class="question">
+            <p class="title">&#9724; How do I save an article?</p>
+            <p class="answer">To save an article, simply click the "Save" button next to the article you would like to save. You can view your saved articles by clicking on the "Saved Articles" link in the navigation bar.</p>
+        </div>
+        <div class="question">
+            <p class="title">&#9724; How do I access my user profile?</p>
+            <p class="answer">To access your user profile, click on your username in the top right corner of the page. This will take you to your profile page where you can view and edit your personal information.</p>
+        </div>
+    </div>
+    <div class="q-and-a--email">
+        <h3 class="headline">Ask questions to Briefly. team</h3>
+        <div class="login--form">
+            <form method="POST" action="{% url 'briefly:qa' %}" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="login--form--input">
+              {{ question_form.as_p }}
+              <input class="button" type="submit" value="Send" />
+            </form>
+        </div>
+        
+    </div>
+</div>
+{% endblock %}

@@ -14,13 +14,16 @@
     </div>
     <div class="banner--message--subheadline">
       <h3 class="banner--message--subheadline--text">
-        Away from the mess of the word. Start of your day with less than 25
+        Away from the mess of the word. Start of your day with the selected news
         articles.
       </h3>
     </div>
     <div>
       <a href="{% url 'briefly:user_login' %}" class="button">Login</a>
     </div>
+  </div>
+  <div class="qa-link" >
+    <a href="{% url 'briefly:qa' %}">Have a question?</a>
   </div>
   {% include "template_article.html" %}
 </div>

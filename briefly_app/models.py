@@ -67,6 +67,10 @@ class UserCategory(models.Model):
 
     class Meta:
         verbose_name_plural = "UserCategories"
+        unique_together = ('User', 'Category')
+
+    def __str__(self):
+        return f"{self.User.username} - {self.Category.CategoryName}"
 
 class NewsArticle(models.Model):
     # List of News Articles fetched from the API.

@@ -1,10 +1,15 @@
 {% extends "./briefly_layout.html" %} 
 {% load static %} 
-<script src="{% static 'javascript/script.js' %}"></script>
 {% block body %}
 <div class="login">
   <h3>User Profile</h3>
   <div class="login--form">
+    {% if error %}
+      <p class="error">{{ error }}</p>
+    {% endif %}
+    {% if success %}
+      <p class="success">{{ success }}</p>
+    {% endif %}
     <form method="POST" action="{% url 'briefly:user_profile_setting' %}" enctype="multipart/form-data">
       {% csrf_token %}
       <div class="login--form--input">
@@ -22,6 +27,9 @@
       <input class="button" type="submit" value="Delete Account" />  
     </form>
   </div>
+</div>
+<div class="qa-link" >
+  <a href="{% url 'briefly:qa' %}">Have a question?</a>
 </div>
 <script src="{% static 'javascript/user_auth.js' %}"></script>
 {% endblock %}
