@@ -72,9 +72,11 @@ class NewsArticle(models.Model):
     # List of News Articles fetched from the API.
     NewsID = models.AutoField(primary_key=True)
     Category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    Url = models.CharField(max_length=255, blank=True)
     Title = models.CharField(max_length=255)
     Date = models.DateField(auto_now_add=True)
     Content = models.TextField()
+    Region = models.TextField(max_length=2, null=True)
     Source = models.CharField(max_length=255)
 
     class Meta:
