@@ -1,3 +1,4 @@
+from collections import defaultdict
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from briefly_app.forms import BrieflyUserSignupForm, BrieflyUserLoginForm, CategoryForm, BrieflyUserProfileForm
@@ -6,7 +7,7 @@ from django.contrib.auth import logout
 from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 from briefly_app.models import Category, SavedNews, UserCategory, BrieflyUser, NewsArticle, UserCategory
-
+from django.db.models import F
 
 #Rest and News API integration into views
 from django.conf import settings
@@ -62,10 +63,11 @@ def user_login(request):
             if user.is_active:
                 login(request, user)
                 try:
+                    #API call (check corresponding method implemenation)
                     fetch_news(user)
                 except Exception as e:
                     print(f"Error fetching news: {e}")
-                return redirect('briefly:top_page')
+                return redirect('briefly:user_news')
             else:
                 return HttpResponse("Your account is disabled.")
         else:
@@ -234,13 +236,15 @@ def get_authenticated_user(request):
 
 # view saved articles separately to the headlines page
 @login_required
-def saved_articles(request):
+def saved_articles(request, response_type="html"):
     user = request.user
     if user:    
         # Get SavedNews objects for the user
         saved_articles = SavedNews.objects.filter(User=user)
         saved_articles = [saved_article.News for saved_article in saved_articles]
         # Get NewsArticle objects related to the SavedNews objects
+        if response_type != "html":
+            return Response({"saved_articles": list(saved_articles)})
         return render(request, 'saved_articles.html', {'saved_articles': saved_articles})
     else:
         return redirect('briefly:user_login')
@@ -264,8 +268,16 @@ def index(request):
 
 def top_page(request):
     user = get_authenticated_user(request)
+    if user and user.is_authenticated:
+        try:
+        #API call (check corresponding method implemenation)
+            fetch_news(user)
+        except Exception as e:
+            print(f"Error fetching news: {e}")
+        return redirect('briefly:user_news')
+
     random_article = NewsArticle.objects.order_by('?').first()
-    return render(request, './template_top_page.html', {
+    return render(request, './top_page.html', {
         'user': user,
         'article': random_article
     })
@@ -378,32 +390,80 @@ def fetch_news(user):
         return False
 
 #Gets User's News AND Saved News from Models
+# @api_view(['GET'])
+# def get_user_news(request, username):
+#     try:
+#         # Get the user
+#         user = BrieflyUser.objects.get(username=username)
+#         print(user)
+#         # Get all categories the user is subscribed to
+#         user_categories = UserCategory.objects.filter(User=user)
+#         print("User Categories:", user_categories)
+
+#         # Extract category names properly
+#         category_names = user_categories.values_list('Category__CategoryName', flat=True)
+#         print("Category Names:", list(category_names))  # Debugging
+
+#         # Get the corresponding categories
+#         categories = Category.objects.filter(CategoryName__in=category_names)
+#         print("Categories:", categories)
+
+#         print("All News Articles:", list(NewsArticle.objects.all().values("Title", "Category_id", "Category__CategoryName")))
+
+#         # Fetch news articles related to those categories
+#         news_articles = NewsArticle.objects.filter(Category__in=categories).values(
+#             "Title", "Date", "Content", "Source"
+#         )
+#         print("News Articles:", news_articles)
+#         return Response({"news": list(news_articles)})
+    
+#     except BrieflyUser.DoesNotExist:
+#         return Response({"error": f"User '{username}' does not exist."}, status=404)
+
 @api_view(['GET'])
-def get_user_news(request, username):
+# @permission_classes([IsAuthenticated])
+@login_required
+def get_user_news(request):
+    # if request.user.username != username:
+    #     return Response({"error": "Unauthorized access. You can only fetch your own news."}, status=403)
+
     try:
         # Get the user
-        user = BrieflyUser.objects.get(username=username)
-        print(user)
+        # user = BrieflyUser.objects.get(username=request.u)
+        user = request.user
+
         # Get all categories the user is subscribed to
         user_categories = UserCategory.objects.filter(User=user)
-        print("User Categories:", user_categories)
-
-        # Extract category names properly
         category_names = user_categories.values_list('Category__CategoryName', flat=True)
-        print("Category Names:", list(category_names))  # Debugging
 
         # Get the corresponding categories
         categories = Category.objects.filter(CategoryName__in=category_names)
-        print("Categories:", categories)
-
-        print("All News Articles:", list(NewsArticle.objects.all().values("Title", "Category_id", "Category__CategoryName")))
 
         # Fetch news articles related to those categories
-        news_articles = NewsArticle.objects.filter(Category__in=categories).values(
-            "Title", "Date", "Content", "Source"
-        )
-        print("News Articles:", news_articles)
-        return Response({"news": list(news_articles)})
+        news_articles = NewsArticle.objects.filter(Category__in=categories).annotate(
+            CategoryName=F("Category__CategoryName")
+        ).values("Title", "CategoryName", "Date", "Content", "Source")
+
+        # **Group articles by category**
+        grouped_news = defaultdict(list)
+        for article in news_articles:
+            grouped_news[article["CategoryName"]].append(article)
+
+        saved_articles_response = saved_articles(request, response_type="json")
+
+        if isinstance(saved_articles_response, Response):
+            saved_articles_data = saved_articles_response.data.get("saved_articles", [])
+        else:
+            saved_articles_data = []
+        
+        grouped_news["Saved News"] = saved_articles_data
+
+        context = {
+            "username": user.username,
+            "grouped_news": dict(grouped_news),  # grouped news contains "saved_articles" as a category
+        }
+        # return Response(context)
+        return render(request, "headlines.html", context)
     
     except BrieflyUser.DoesNotExist:
-        return Response({"error": f"User '{username}' does not exist."}, status=404)
+        return Response({"error": f"User '{user.username}' does not exist."}, status=404)

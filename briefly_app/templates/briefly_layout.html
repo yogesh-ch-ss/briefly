@@ -9,14 +9,15 @@
       rel="stylesheet"
       type="text/css"
       href="{% static 'css/styles.css' %}"
+      res="icon"
+      type="image/favicon"
+      href="../../static/images/favicon.ico"
     />
     <a href="/top_page">
       <title>Briefly.</title>
     </a>
   </head>
   <body class="container">
-    {% include "briefly_navbar.html" %}
-    {% block body %}
-    {% endblock %}
+    {% include "briefly_navbar.html" %} {% block body %} {% endblock %}
   </body>
 </html>
