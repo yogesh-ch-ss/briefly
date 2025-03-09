@@ -26,7 +26,6 @@
     grid-row: 1;
     @include RowJustifyCenterFlexbox;
     align-items: baseline;
-
     gap: 2rem;
 
     // For widths greater than smartphone
@@ -56,8 +55,11 @@
             max-width: 40rem;
             @include MarginBottom3rem;
             &--text{
-                font-size: 3.0rem;
+                font-size: 2.5rem;
             }
+        }
+        .button{
+            padding: 0.3rem 3.5rem;
         }
     }
     &--article{

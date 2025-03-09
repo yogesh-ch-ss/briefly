@@ -42,7 +42,7 @@ newsapi = NewsApiClient(api_key="833b467e009b40eb9aadcc6c049e2ad9")
 #833b467e009b40eb9aadcc6c049e2ad9
 
 # QA page
-def qa(request):
+def question_answer(request):
     original_source_url = request.META.get('HTTP_REFERER', '/')
     if request.method == 'POST':
         question_form = QuestionForm(request.POST)

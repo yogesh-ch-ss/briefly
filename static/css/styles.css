@@ -93,7 +93,10 @@ body img {
   margin-bottom: 3rem;
 }
 .banner--message--subheadline--text {
-  font-size: 3rem;
+  font-size: 2.5rem;
+}
+.banner--message .button {
+  padding: 0.3rem 3.5rem;
 }
 .banner--article {
   display: flex;
@@ -402,7 +405,7 @@ h2 {
 }
 
 h3 {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 @media (max-width: 900px) {
   h3 {
@@ -572,7 +575,7 @@ select:focus {
   justify-content: center;
   align-items: start;
   flex-wrap: wrap;
-  box-shadow: 0 0 7px rgba(58, 62, 70, 0.4);
+  box-shadow: 14px 0 14px -14px rgba(58, 62, 70, 0.4), -14px 0 14px -14px rgba(58, 62, 70, 0.4), 0 0 0 rgba(58, 62, 70, 0), 0 0 0 rgba(58, 62, 70, 0);
   padding: 5rem;
   margin-bottom: 3rem;
   max-width: 80rem;
@@ -580,12 +583,13 @@ select:focus {
 }
 @media (max-width: 900px) {
   .article {
-    max-width: 50rem;
+    max-width: 60rem;
     padding: 3rem;
   }
 }
 .article--title p {
   font-weight: bold;
+  font-size: 2rem;
 }
 .article--info {
   margin-bottom: 2rem;
