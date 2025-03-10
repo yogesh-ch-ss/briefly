@@ -271,7 +271,11 @@ def fetch_news(user):
         
         #Array for User Data
         news_data = []
-        
+
+        # Getting user country
+        user_country = BrieflyUser.objects.get(username=user.username).country
+        print("USER COUNTRY: ", user_country)
+
         # Fetch news for each of the user's categories
         for user_category in user_categories:
             category_name = user_category.Category.CategoryName
@@ -279,7 +283,7 @@ def fetch_news(user):
                 # Make API call to News API, assign to api_response
                 api_response = newsapi.get_top_headlines(
                     category=category_name,
-                    country=user.country
+                    country=user_country
                 )
                 #Print statement to flag the category name as it goes along
                 print(category_name)
@@ -368,12 +372,13 @@ def get_user_news(request):
         # Get all categories the user is subscribed to
         user_categories = UserCategory.objects.filter(User=user)
         category_names = user_categories.values_list('Category__CategoryName', flat=True)
+        user_country = BrieflyUser.objects.get(username=user.username).country
 
         # Get the corresponding categories
         categories = Category.objects.filter(CategoryName__in=category_names)
 
         # Fetch news articles related to those categories
-        news_articles = NewsArticle.objects.filter(Category__in=categories).annotate(
+        news_articles = NewsArticle.objects.filter(Category__in=categories, Region=user_country).annotate(
             CategoryName=F("Category__CategoryName")
         ).values("NewsID", "Title", "CategoryName", "Date", "Content", "Source")
 
