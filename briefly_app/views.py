@@ -89,7 +89,7 @@ def user_login(request):
             if user.is_active:
                 login(request, user)
                 try:
-                    #API call (check corresponding method implemenation)
+                    print("fetch_news(user)")
                     fetch_news(user)
                 except Exception as e:
                     print(f"Error fetching news: {e}")
@@ -120,105 +120,11 @@ def user_delete_account(request):
         request.user.delete()
     return redirect('briefly:top_page')
 
-@login_required
-def user_profile_setting(request):
-    user = request.user
-    if request.method == 'POST':
-        # Pass both request.POST and the user instance to the form
-        user_profile_form = BrieflyUserProfileForm(data=request.POST, instance=user)
-        
-        # Check if the form is valid
-        if user_profile_form.is_valid():
-            # Extract cleaned data
-            username = user_profile_form.cleaned_data['username']
-            email = user_profile_form.cleaned_data['email']
-            country = user_profile_form.cleaned_data['country']
-            selected_categories = user_profile_form.cleaned_data['categories']
-
-            # Save user fields
-            user.username = username
-            user.email = email
-            user.country = country
-            user.save()
-            
-            UserCategory.objects.filter(User=user).delete()
-            for category_name in selected_categories:
-                category_obj, created = Category.objects.get_or_create(CategoryName=category_name)
-                UserCategory.objects.create(User=user, Category=category_obj)
-            return redirect('briefly:user_profile_setting')
-        else:
-            # If form is invalid (e.g., no category selected), re-render with errors
-            return render(request, 'user_profile.html', {
-                'user_profile_form': user_profile_form
-            })
-    else:
-        # Populate form with initial data for GET requests
-        user_profile_form = BrieflyUserProfileForm(instance=user)
-        return render(request, 'user_profile.html', {
-            'user_profile_form': user_profile_form
-        })
-
 # function to check if the user is authenticated
 def get_authenticated_user(request):
     if request.user.is_authenticated:
         return request.user
     return None
-
-def user_signup(request):
-    # if user is authenticated, redirect to top_page
-    if request.user.is_authenticated:
-        return redirect('briefly:top_page')
-    if request.method == 'POST':
-        user_signup_form = BrieflyUserSignupForm(data=request.POST)
-        if user_signup_form.is_valid():
-            user_signup_form.save()  # Save the user and related categories in one go
-            print('User created')
-            # when the sign up is successful, redirect to login page
-            return redirect('briefly:user_login')
-        else:
-            print(user_signup_form.errors)
-    else:
-        user_signup_form = BrieflyUserSignupForm()
-    return render(request, 'signup.html', {
-        'user_signup_form': user_signup_form,
-    })
-
-def user_login(request):
-    # if user is authenticated, redirect to top_page
-    if request.user.is_authenticated:
-        return redirect('briefly:top_page')
-    if request.method == 'POST':        
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        user = authenticate(username=username, password=password)
-        if user:
-            if user.is_active:
-                fetch_news(user)
-                login(request, user)
-                return redirect('briefly:top_page')
-            else:
-                return HttpResponse("Your account is disabled.")
-        else:
-            return HttpResponse("Invalid login details.")
-    else:
-        user_login_form = BrieflyUserLoginForm()
-        return render(request, 'login.html', {'user_login_form': user_login_form})
-
-@require_POST
-@login_required
-def user_logout(request):
-    if request.user.is_authenticated:
-        logout(request)
-        # redirect to top_page
-        return redirect('briefly:top_page')
-    return redirect('briefly:top_page')
-
-@login_required
-@require_POST
-def user_delete_account(request):
-    if request.user.is_authenticated:
-        request.user.delete()
-    return redirect('briefly:top_page')
 
 # get profile_setting page
 @login_required
@@ -252,13 +158,6 @@ def user_profile_setting(request):
         return render(request, 'user_profile.html', {
         'user_profile_form': user_profile_form
         })
-
-# function to check if the user is authenticated
-def get_authenticated_user(request):
-    if request.user.is_authenticated:
-        return request.user
-    return None
-
 
 # view saved articles separately to the headlines page
 def save_article(request):
@@ -343,6 +242,9 @@ def top_page(request):
     if user and user.is_authenticated:
         try:
         #API call (check corresponding method implemenation)
+            print("delete_old_unsaved_news()")
+            delete_old_unsaved_news()
+            print("fetch_news(user)")
             fetch_news(user)
         except Exception as e:
             print(f"Error fetching news: {e}")
@@ -350,12 +252,6 @@ def top_page(request):
 
     return render(request, './top_page.html', {
     })
-
-# def login(request):
-#     return render(request, './template_login.html')
-
-# def signup(request):
-#     return render(request, './template_signup.html')
 
 def add_category(request):
     return render(request, './template_category.html')
@@ -539,37 +435,15 @@ def get_user_news(request):
         return Response({"error": f"User '{user.username}' does not exist."}, status=404)
     
 
-@api_view(['DELETE'])
-@permission_classes([IsAdminUser])  # Ensure only admins can call this
-def delete_unsaved_news(request):
-    # Get today's date
+def delete_old_unsaved_news():
+    """Delete all unsaved news articles that are not from today."""
     today = now().date()
 
-    # Get all news articles that are not saved by any user
-    # Annotate is used to add a temp field "is_saved" to NewsArticle
-    unsaved_news = NewsArticle.objects.annotate(
-        is_saved=Exists(SavedNews.objects.filter(News=OuterRef('pk')))
-    ).filter(is_saved=False, Date=today)  # Only delete today's unsaved news
-
-    # Count how many will be deleted
-    deleted_count, _ = unsaved_news.delete()
-
-    return Response({"message": f"Deleted {deleted_count} unsaved news articles."})
-
-@api_view(['DELETE'])
-# @permission_classes([IsAdminUser])  # Ensure only admins can call this
-def delete_unsaved_news_other_days(request):
-    # Get today's date
-    today = date.today()
-
-
-    # Annotate is used to add a temp field "is_saved" to NewsArticle
-    # Get all news articles that are NOT saved by any user and are NOT from today
-    unsaved_old_news = NewsArticle.objects.annotate(
+    # Find news articles that are NOT saved by ANY user
+    old_unsaved_news = NewsArticle.objects.annotate(
         is_saved=Exists(SavedNews.objects.filter(News=OuterRef('pk')))
     ).filter(is_saved=False).exclude(Date=today)  # Exclude today's news
 
-    # Count how many will be deleted
-    deleted_count, _ = unsaved_old_news.delete()
-
-    return Response({"message": f"Deleted {deleted_count} unsaved news articles."})
+    # Delete these old unsaved articles
+    deleted_count, _ = old_unsaved_news.delete()
+    print(f"Deleted {deleted_count} old, unsaved news articles.")
