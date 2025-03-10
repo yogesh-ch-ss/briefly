@@ -1,28 +1,41 @@
 [
     {
         "source": {
-            "id": "bloomberg",
-            "name": "Bloomberg"
+            "id": null,
+            "name": "CNBC"
         },
-        "author": "Suvashree Ghosh",
-        "title": "Bitcoin Drops After Trump Executive Order Disappoints Market - Bloomberg",
-        "description": "A simmering tension in the crypto industry resurfaced after President Donald Trump signed a long-awaited order creating a strategic Bitcoin reserve and an additional stockpile of other digital assets.",
-        "url": "https://www.bloomberg.com/news/articles/2025-03-07/trump-signs-order-creating-bitcoin-reserve-and-crypto-stockpile",
-        "urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/imdUzS8VqSUI/v0/1200x800.jpg",
-        "publishedAt": "2025-03-07T13:11:20Z",
-        "content": "A simmering tension in the crypto industry resurfaced after President Donald Trump signed a long-awaited order creating a strategic Bitcoin reserve and an additional stockpile of other digital assets… [+217 chars]"
+        "author": "Jesse Pound",
+        "title": "Dow futures drop 300 points as selling continues on Wall Street: Live updates - CNBC",
+        "description": "The stock market is off to a rough start in March, and key economic data is due out this week.",
+        "url": "https://www.cnbc.com/2025/03/09/stock-market-news-today-live-updates.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/108112754-1741363586692-gettyimages-2203810302-tariffs597253_6feyhmpx.jpeg?v=1741363628&w=1920&h=1080",
+        "publishedAt": "2025-03-10T09:53:00Z",
+        "content": "Stock futures dropped on Monday as the selling pressures that dragged Wall Street last week persisted, while investors braced for a slew of economic data reports this week.\r\nFutures tied to the Dow J… [+2092 chars]"
     },
     {
         "source": {
             "id": null,
-            "name": "Barron's"
+            "name": "Motley Fool"
         },
-        "author": "Barron's",
-        "title": "Broadcom, Nvidia, HPE, Gap, Walgreens, Costco, Intuitive Machines, and More Movers - Barron's",
+        "author": "Adria Cimino",
+        "title": "Has Nvidia Stock Become Too Cheap to Ignore? - The Motley Fool",
+        "description": "",
+        "url": "https://www.fool.com/investing/2025/03/10/has-nvidia-stock-become-too-cheap-to-ignore/",
+        "urlToImage": "https://g.foolcdn.com/editorial/images/810340/gettyimages-1276837766.jpg",
+        "publishedAt": "2025-03-10T08:45:00Z",
+        "content": "Nvidia(NVDA 1.92%) has become a stock market giant thanks to its dominance in one of today's highest-growth markets: artificial intelligence (AI), a $200 billion market that analysts say is heading f… [+4961 chars]"
+    },
+    {
+        "source": {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        "author": "Daily Mail",
+        "title": "Revealed: What witnesses saw inside Fort Knox as Trump and Musk suggest America's gold could be gone - Daily Mail",
         "description": null,
-        "url": "https://www.barrons.com/articles/stock-market-movers-a8bcae99",
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQcWExRXRCZjFVekM1LU1kSWlnd2VRR2xmRVVzMG5BZS1mOUs5eUhNUF9zaE14alpRTXR5ZEJoOGpaMnBPb2RsTUpMc3lXY2dqVWRIZzVuNHJlY3Q2ejgzUjJiUjRrTHFoQUZtbDlHakJWaHdubW9mdGlzeTFNY1p2cGtEVm9jUzFpcUJfYUZ3QjJJVUg2QnZNVlY3WHN4aU9TRmlhanBGbkthZ3RXRlkwUnVPYjFCeE00SENacDJsWGMtX19RZm1F?oc=5",
         "urlToImage": null,
-        "publishedAt": "2025-03-07T11:06:00Z",
+        "publishedAt": "2025-03-10T08:07:08Z",
         "content": null
     },
     {
@@ -31,51 +44,103 @@
             "name": "BBC News"
         },
         "author": null,
-        "title": "Man will be first to face US firing squad in 15 years - BBC.com",
-        "description": "Brad Sigmon will be the first person in the US to be killed by firing squad in 15 years.",
-        "url": "https://www.bbc.com/news/articles/c86p0wzjv0do",
-        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/9d6c/live/5c495250-faad-11ef-afa9-ddb9d47ff65a.jpg",
-        "publishedAt": "2025-03-07T10:07:05Z",
-        "content": "A South Carolina prison inmate convicted of killing his ex-girlfriend's parents with a baseball bat will be the first person in the US to be executed by firing squad in 15 years.\r\nIf Brad Sigmon's ex… [+4605 chars]"
-    },
-    {
-        "source": {
-            "id": "cnn",
-            "name": "CNN"
-        },
-        "author": "Gawon Bae, Yoonjung Seo, Jessie Yeung",
-        "title": "South Korean court orders release of President Yoon Suk Yeol as he awaits impeachment ruling - CNN",
-        "description": "South Korean President Yoon Suk Yeol, who lawmakers voted to impeach and was indicted on criminal charges for declaring martial law last December, was cleared to be released from detention on Friday.",
-        "url": "https://www.cnn.com/2025/03/07/asia/south-korea-yoon-suk-yeol-released-detention-intl-hnk/index.html",
-        "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/ap25044051727771.jpg?c=16x9&q=w_800,c_fill",
-        "publishedAt": "2025-03-07T09:25:00Z",
-        "content": "South Korean President Yoon Suk Yeol, who lawmakers voted to impeach and was indicted on criminal charges for declaring martial law last December, was cleared to be released from detention on Friday.… [+3300 chars]"
+        "title": "Trump says US economy in 'transition' as trade war escalates - BBC.com",
+        "description": "New retaliatory tariffs from China targeting some US farm products came into effect on Monday.",
+        "url": "https://www.bbc.com/news/articles/cz61nn99eg1o",
+        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1251/live/d7fca240-fd4a-11ef-a555-336cd2341958.jpg",
+        "publishedAt": "2025-03-10T07:58:54Z",
+        "content": "João da SilvaBusiness reporter, BBC News\r\nNew tit-for-tat tariffs from China, which target some US farm products, came into effect on Monday\r\nUS President Donald Trump has refused to say whether the … [+3152 chars]"
     },
     {
         "source": {
             "id": null,
-            "name": "Yahoo Entertainment"
+            "name": "Investing.com"
         },
-        "author": "Kevin O'Connor",
-        "title": "Luka, LeBron leave OT with WIN, Brunson leaves LIMPING | Kevin O'Connor Show - Yahoo Sports",
-        "description": "Kevin O'Connor and Tom Haberstroh dive into the Lakers' thrilling overtime victory against the Knicks in this episode of The Kevin O'Connor Show.",
-        "url": "https://sports.yahoo.com/nba/article/luka-lebron-leave-ot-with-win-brunson-leaves-limping--kevin-oconnor-show-080738085.html",
-        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/grkiCv8XC8f1opZQnD5Uzg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-/https://s.yimg.com/os/creatr-uploaded-images/2025-03/ca420fe0-fb2a-11ef-b7e9-bcb87efb5c8c",
-        "publishedAt": "2025-03-07T08:07:38Z",
-        "content": "Kevin O'Connor and Tom Haberstroh dive into the Los Angeles Lakers' thrilling overtime victory against the New York Knicks in this episode of The Kevin O'Connor Show. How concerned should Knicks fans… [+1867 chars]"
+        "author": "Reuters",
+        "title": "Stocks slip, yen gains on Trump trade war, China deflationary woes By Reuters - Investing.com",
+        "description": "Stocks slip, yen gains on Trump trade war, China deflationary pressure",
+        "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-sink-yen-gains-on-china-deflationary-pressures-trade-war-3916613",
+        "urlToImage": "https://i-invdn-com.investing.com/news/LYNXMPECBE0OL_L.jpg",
+        "publishedAt": "2025-03-10T06:22:30Z",
+        "content": "By Nell Mackenzie and Kevin Buckland\r\nLONDON (Reuters) -European shares dipped to their lowest in almost a month on Monday and world stocks followed as building deflationary pressure in China added t… [+3957 chars]"
     },
     {
         "source": {
-            "id": "associated-press",
-            "name": "Associated Press"
+            "id": "google-news",
+            "name": "Google News"
         },
-        "author": "Hyung-jin Kim",
-        "title": "South Korea stops some military drills after accidental bombing in possible setback to US exercises - The Associated Press",
-        "description": "South Korea's military says it has suspended the training flights of air force aircraft and all live-fire drills after two fighter jets accidentally bombed a civilian area. Experts said Friday the suspensions will likely be a setback to the annual military tr…",
-        "url": "https://apnews.com/article/south-korea-fighter-jets-accidental-bombing-us-drills-6c9b9aa634ca7a34c813b9b8b3e64191",
-        "urlToImage": "https://dims.apnews.com/dims4/default/8d95e18/2147483647/strip/true/crop/6000x3375+0+312/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fdb%2Fd5%2F1c090bd5c687479c46cf804350ed%2F241ecd6b17804c8a8256bd06880c507e",
-        "publishedAt": "2025-03-07T07:34:00Z",
-        "content": "SEOUL, South Korea (AP) South Korea suspended the training flights of air force aircraft and all live-fire drills following its fighter jets accidental bombing of a civilian area, officials said Frid… [+3923 chars]"
+        "author": "CoinDesk",
+        "title": "Spain's Second Largest Bank Gets Green Light to Offer Bitcoin and Ether Trading: Report - CoinDesk",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNb04zUTVVc2hKNnBHZmJIRFN2aFhrU3NULW1qeDNDYm1UVWhUb2hFb0pySFFzNXY0eExUQTBhWlZod1NfaVFmeVlqVTdIQ3FoRDlpV2Z1Tl9uYnQyQ1N0UFdHd21yUjd3NTNrZW5FbzN2UkxDQ0k2WUs4TnlnQmhSUlJKeDVvOHhEaHBveHZybGNNUFBUZ3cxSXg0MTJXaExwUjVBV3FDX2U1SV9TOWRYcjZSTQ?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T06:01:00Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Decrypt"
+        },
+        "author": "Decrypt",
+        "title": "Five Key Moves in March the White House Has Made on Crypto - Decrypt",
+        "description": null,
+        "url": "https://decrypt.co/309281/five-key-moves-in-march-the-white-house-has-made-for-crypto",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T04:36:48Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Ambcrypto.com"
+        },
+        "author": "Clinton Otieno",
+        "title": "Ethereum’s market strength: What draws investors back to ETH, time and again - AMBCrypto News",
+        "description": "ETH demonstrated strong resilience, always rebounding from past downturns.",
+        "url": "https://ambcrypto.com/ethereums-market-strength-what-draws-investors-back-to-eth-time-and-again/",
+        "urlToImage": "https://ambcrypto.com/wp-content/uploads/2025/03/xfhbj-1000x600.png",
+        "publishedAt": "2025-03-10T04:02:57Z",
+        "content": "<ul><li>Ethereum’s price history reflected resilience in the latest percentage drawdown.</li><li>The altcoin’s resilience hinged on navigating volatility, supported by the 2024 Dencun upgrade and ETF… [+3494 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Bitcoin.com"
+        },
+        "author": "Jamie Redman",
+        "title": "The US Government’s Liquidation of High-Value Crypto Could Net Another 5,000 BTC - Bitcoin.com News",
+        "description": "Sacks insisted the \"government will not acquire additional assets for the Stockpile beyond those obtained through forfeiture proceedings.\"",
+        "url": "https://news.bitcoin.com/the-us-governments-liquidation-of-high-value-crypto-could-net-another-5000-btc/",
+        "urlToImage": "https://static.news.bitcoin.com/wp-content/uploads/2025/03/vvod.png",
+        "publishedAt": "2025-03-10T03:30:51Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "CNBC"
+        },
+        "author": "Arjun Kharpal",
+        "title": "Bitcoin falls as much as 6.5% as volatility continues after Trump's bitcoin reserve plan - CNBC",
+        "description": "President Donald Trump's executive order to create a U.S. strategic bitcoin reserve disappointed investors.",
+        "url": "https://www.cnbc.com/2025/03/10/bitcoin-falls-as-volatility-continues-after-trumps-bitcoin-reserve-plan.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/108112693-1741359002550-gettyimages-2202592326-raa-cryptocr250303_npQOY.jpeg?v=1741359111&w=1920&h=1080",
+        "publishedAt": "2025-03-10T01:45:00Z",
+        "content": "Bitcoin fell on Monday as volatility in the price of the world's largest cryptocurrency continues following an executive order signed by President Donald Trump to create a strategic bitcoin reserve f… [+2014 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "BBC News"
+        },
+        "author": null,
+        "title": "What happens when a plane passenger dies during a flight? - BBC.com",
+        "description": "Crews will try to shield passengers from the body by using empty aisles, blankets and dim lighting.",
+        "url": "https://www.bbc.com/news/articles/cz9nj075yggo",
+        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/f40b/live/1a9db6d0-fcd2-11ef-9e61-71ee71f26eb1.jpg",
+        "publishedAt": "2025-03-10T01:34:28Z",
+        "content": "Plane aisles are narrow and space can be tight\r\nIf a passenger dies on board a flight, cabin crew members like Jay Robert have to think fast.\r\n\"We go from service to lifesaving to mortician, dealing … [+7794 chars]"
     },
     {
         "source": {
@@ -83,116 +148,103 @@
             "name": "CNBC"
         },
         "author": "Yeo Boon Ping",
-        "title": "CNBC Daily Open: Trump paused tariffs for some imports — but Nasdaq enters correction territory - CNBC",
-        "description": "The Trump administration seems to be doubling down on tariffs, even as it acknowledges — and dismisses — the repercussions of such levies.",
-        "url": "https://www.cnbc.com/2025/03/07/cnbc-daily-open-more-tariff-pauses-but-nasdaq-enters-correction.html",
-        "urlToImage": "https://image.cnbcfm.com/api/v1/image/108112335-17412962782025-03-06t211202z_784510376_rc2v7dats9oe_rtrmadp_0_usa-trump.jpeg?v=1741296311&w=1920&h=1080",
-        "publishedAt": "2025-03-07T07:30:01Z",
-        "content": "U.S. President Donald Trump expanded his tariff pause to goods coming in from Canada and Mexico, so long as they satisfy terms of the United States-Mexico-Canada Agreement, a trade deal between all c… [+5896 chars]"
+        "title": "CNBC Daily Open: The effect of Trump policies will sway Fed’s interest rate moves - CNBC",
+        "description": "U.S. President Donald Trump's policies to reshape the U.S. and its economy are so drastic that the Federal Reserve is taking note.",
+        "url": "https://www.cnbc.com/2025/03/10/cnbc-daily-open-trump-policies-will-sway-feds-interest-rate-moves.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/108101412-17393783552025-02-12t154441z_1818274945_rc23tcao6izy_rtrmadp_0_usa-fed-powell.jpeg?v=1739378381&w=1920&h=1080",
+        "publishedAt": "2025-03-10T01:22:00Z",
+        "content": "The U.S. nonfarm payrolls report for February was weaker than expected, but the silver lining is that the number of jobs added for the month was higher than in January. That said, the layoff of feder… [+3978 chars]"
     },
     {
         "source": {
-            "id": "associated-press",
-            "name": "Associated Press"
+            "id": "google-news",
+            "name": "Google News"
         },
-        "author": "The Associated Press",
-        "title": "EU leaders back new military spending plans at Ukraine summit - The Associated Press",
-        "description": "European Union leaders committed to a massive step in defense cooperation following decades of hesitation, spurred on by President Donald Trump’s announcement that U.S. was suspending aid to Ukraine.",
-        "url": "https://apnews.com/live/ukraine-europe-eu-security-summit-updates",
-        "urlToImage": "https://dims.apnews.com/dims4/default/0284a54/2147483647/strip/true/crop/5737x3227+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F1b%2F94%2Fe7f41d2949edb673cbf4dee9a2e8%2Fap25065817642951.jpg",
-        "publishedAt": "2025-03-07T07:22:27Z",
-        "content": "The EUs 27 leaders have finished a working lunch with Ukrainian President Volodymyr Zelenskyy. Meal-time discussions are unscripted, and the heads of state and government can freely speak, often in E… [+1017 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Field Gulls"
-        },
-        "author": "Mookie Alexander",
-        "title": "‘We’re talking to a ton of teams’ - Seahawks GM John Schneider on DK Metcalf trade request - Field Gulls",
-        "description": "Schneider confirmed that trade talks are happening following Metcalf’s request, but of course didn’t publicly slam the door shut on the idea that DK will stay with Seattle.",
-        "url": "https://www.fieldgulls.com/2025/3/6/24379751/seattle-seahawks-gm-john-schneider-dk-metcalf-trade-request-nfl-news",
-        "urlToImage": "https://cdn.vox-cdn.com/thumbor/lYeqrNxFEQWF8jrocpZGJktg3vU=/0x0:4458x2334/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/25900880/2155942621.jpg",
-        "publishedAt": "2025-03-07T06:39:26Z",
-        "content": "One day after news of DK Metcalfs trade request was revealed, Seattle Seahawks general manager John Schneider addressed this major twist in the offseason.\r\nSchneider made his weekly appearance on Sea… [+2272 chars]"
-    },
-    {
-        "source": {
-            "id": "the-washington-post",
-            "name": "The Washington Post"
-        },
-        "author": "Adam Taylor, Heba Farouk Mahfouz, Gerry Shih",
-        "title": "Trump administration’s direct talks with Hamas break an old taboo - The Washington Post",
-        "description": "Israeli Prime Minister Benjamin Netanyahu was not informed of the talks before they took place and was caught off guard, said an Israeli with knowledge of the matter.",
-        "url": "https://www.washingtonpost.com/world/2025/03/06/hamas-talks-trump-gaza-netanyahu/",
-        "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/YWXJSV5GMT32KUKQD52YR5OEQQ.JPG&w=1440",
-        "publishedAt": "2025-03-07T06:11:18Z",
-        "content": "Under the Trump administration, U.S. officials have begun meeting directly with Hamas, breaking a long-standing although sometimes flexible U.S. policy against talking with groups Washington has desi… [+4647 chars]"
+        "author": "Investor's Business Daily",
+        "title": "Wall Street Hopes For Trump-Google Antitrust Deal Take A Blow - Investor's Business Daily",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQzNhYWdXYWZJMUFuMWY1VjhtYlFqbThRdkRReU1lMDBRN19RRDZUaWNCb3Q2RVdGOG1pS1pXOWxWRDFvbFlGUVJvVlAtTFdZN25NcGx5NmpQeTF4RlJFTHN2R1ladWl2QkowQkdYaXRhWkl2UzBGSHF1aFlRSF9xQzVtVFNjN1dWZ05BMk5VQVdvUm0tTlZXSlFCVWFoVlFackxyVmVRV1kxUQ?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T01:14:00Z",
+        "content": null
     },
     {
         "source": {
             "id": null,
-            "name": "9to5Mac"
+            "name": "BBC News"
         },
-        "author": "Filipe Espósito",
-        "title": "M3 Ultra on par with M4 Max in CPU performance based on benchmark test - 9to5Mac",
-        "description": "Apple this week announced a new generation of Mac Studio, and surprisingly it is available with two different chip families:...",
-        "url": "https://9to5mac.com/2025/03/06/m3-ultra-m4-max-chip-benchmark/",
-        "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2025/03/mac-studio-m4-max-m3-ultra.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
-        "publishedAt": "2025-03-07T05:23:00Z",
-        "content": "Apple this week announced a new generation of Mac Studio, and surprisingly it is available with two different chip families: M3 Ultra and M4 Max. While the company claims that the M3 Ultra is up to t… [+2586 chars]"
+        "author": null,
+        "title": "North Korean hackers cash out hundreds of millions from $1.5bn ByBit hack - BBC.com",
+        "description": "Hackers from the infamous Lazarus Group are in a cat-and-mouse game to launder their stolen funds from the ByBit heist.",
+        "url": "https://www.bbc.com/news/articles/c2kgndwwd7lo",
+        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/29fa/live/8d521bb0-fb62-11ef-896e-d7e7fb1719a4.png",
+        "publishedAt": "2025-03-10T01:11:47Z",
+        "content": "Joe TidyCyber correspondent, BBC World Service\r\nHackers thought to be working for the North Korean regime have successfully converted at least $300m (£232m) of their record-breaking $1.5bn crypto hei… [+4644 chars]"
     },
     {
         "source": {
-            "id": "associated-press",
-            "name": "Associated Press"
+            "id": "google-news",
+            "name": "Google News"
         },
-        "author": "Morgan Lee",
-        "title": "Investigation advances into Gene Hackman's mysterious death, with update by New Mexico authorities - The Associated Press",
-        "description": "Authorities are preparing to reveal more information about the investigation into the deaths of actor Gene Hackman and his wife, Betsy Arakawa. The couple's partially mummified bodies were discovered last week at their home in the hills of Santa Fe, New Mexic…",
-        "url": "https://apnews.com/article/gene-hackman-death-betsy-arakawa-investigation-c94b2cb4d5d7aec9a1a39a81b46dbdf9",
-        "urlToImage": "https://dims.apnews.com/dims4/default/482cd93/2147483647/strip/true/crop/6000x3375+0+312/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F1a%2F4a%2Fb6c13adfbb253815acb227661943%2Ff3a1e1f25b704f41b595a8a8145b6b4e",
-        "publishedAt": "2025-03-07T05:15:00Z",
-        "content": "SANTA FE, N.M. (AP) Authorities are set to reveal more information about an investigation into the deaths of actor Gene Hackman and wife Betsy Arakawa, whose partially mummified bodies were discovere… [+2179 chars]"
-    },
-    {
-        "source": {
-            "id": "associated-press",
-            "name": "Associated Press"
-        },
-        "author": "Ellen Knickmeyer, Michael Kunzelman",
-        "title": "Judge orders Trump administration to speed payment of USAID and State Dept. debts - The Associated Press",
-        "description": "A federal judge has given the Trump administration until Monday to speed up payment toward some of nearly $2 billion owed to partners of the U.S. Agency for International Development and the State Department. Thursday's decision thaws the administration’s six…",
-        "url": "https://apnews.com/article/usaid-trump-foreign-aid-funding-freeze-02e8ed553e55c79c43fe8811de952d02",
-        "urlToImage": "https://dims.apnews.com/dims4/default/f1a0cf4/2147483647/strip/true/crop/6000x3375+0+312/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F64%2F4a%2F0aeda97f6d2885bb5501a86754aa%2F919b699a701c448196ba007336e68480",
-        "publishedAt": "2025-03-07T04:58:00Z",
-        "content": "WASHINGTON (AP) A federal judge on Thursday ordered the Trump administration to speed up its payment on some of nearly $2 billion in debts to partners of the U.S. Agency for International Development… [+3668 chars]"
+        "author": "Cointelegraph",
+        "title": "Utah’s Senate passes Bitcoin bill — but scraps key provision - Cointelegraph",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOc3BxV1RPRkdJZTR5dDkza3NxRzl2czg3amlNbXF4TUFWSDd6MS1UWEQ5amk5aDlOQy1pblh0aEluTmo1OTlyU1JxeXdLMXlMcWxKSnRydVlUaWlBMDdoN2UtQXB0ZlZHb2phX2lWRzJMVEVXTnpHRG1yZjBNQjF6VC1wVHVjbVZHTkRud2dBN2JFZjA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T00:09:53Z",
+        "content": null
     },
     {
         "source": {
             "id": null,
-            "name": "9to5google.com"
+            "name": "CNBC"
         },
-        "author": "Ben Schoon",
-        "title": "Pixel 9a’s new purple color and tiny camera bump shown off in latest leaks [Gallery] - 9to5Google",
-        "description": "Yet another Pixel 9a leak has hit the web, this time showing off the purple color and the tiny camera bump on Google's device.",
-        "url": "http://9to5google.com/2025/03/06/google-pixel-9a-purple-leak/",
-        "urlToImage": "https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2025/03/pixel-9a-camera-bump-blass-2.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
-        "publishedAt": "2025-03-07T02:55:00Z",
-        "content": "Ahead of its upcoming launch, another batch of Pixel 9a leaks have hit the web, primarily showcasing the purple color of Google’s mid-range device.\r\nPosted by Evan Blass on a private Twitter/X accoun… [+1142 chars]"
+        "author": "Jim Cramer",
+        "title": "What to do while waiting for stock market-minded Trump to say enough is enough - CNBC",
+        "description": "Don't close your eyes. Just keep looking. Maybe the cavalry is on the horizon, it's just the rhetorical smoke that's blocking it.",
+        "url": "https://www.cnbc.com/2025/03/09/jim-cramer-what-to-do-while-waiting-for-market-minded-trump-to-say-enough.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/108075145-1734020399071-Cramer-1.jpg?v=1734020408&w=1920&h=1080",
+        "publishedAt": "2025-03-10T00:09:00Z",
+        "content": "Our president, Donald Trump , tells us that \"what we are doing is big,\" so there might be economic consequences to come that we don't like. But he can't change the plan, whatever the heck the plan is… [+12280 chars]"
+    },
+    {
+        "source": {
+            "id": "fortune",
+            "name": "Fortune"
+        },
+        "author": "Michael Mackenzie, Liz Capo McCormick, Bloomberg",
+        "title": "The bond market’s Trump trade is looking like a recession trade - Fortune",
+        "description": "“Recession risk is definitely higher because of the sequence of Trump’s policies – tariffs first, tax cuts later.”",
+        "url": "https://fortune.com/2025/03/09/bond-market-trump-trade-recession-outlook-treasury-yields-tariffs/",
+        "urlToImage": "https://fortune.com/img-assets/wp-content/uploads/2025/03/GettyImages-157672005-e1741561698511.jpg?resize=1200,600",
+        "publishedAt": "2025-03-09T23:15:00Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": "fortune",
+            "name": "Fortune"
+        },
+        "author": "Jason Ma",
+        "title": "The Wall Street strategist who nailed the stock market's recent mega-rallies sees a 10%-15% jump in the coming months - Fortune",
+        "description": "\"I think it’s very possible that March, April, May could actually be one of these huge rally months where we’re rallying 10-15%.\"",
+        "url": "https://fortune.com/2025/03/09/stock-market-outlook-sp500-rebound-selloff-trump-tariffs-fed-put/",
+        "urlToImage": "https://fortune.com/img-assets/wp-content/uploads/2025/03/GettyImages-2197428464-e1741553058891.jpg?resize=1200,600",
+        "publishedAt": "2025-03-09T22:18:00Z",
+        "content": null
     },
     {
         "source": {
             "id": null,
-            "name": "Financial Times"
+            "name": "CNBC"
         },
-        "author": "Rafe Uddin, Stephen Morris",
-        "title": "SpaceX Starship rocket explodes minutes after launch - Financial Times",
-        "description": "Second straight incident is setback to Elon Musk’s ambitions to build vessel capable of reaching Mars",
-        "url": "https://www.ft.com/content/00a535cc-a890-4525-a346-dbafb1d2bcfb",
-        "urlToImage": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F2698662c-0dbe-4069-a1d0-e41bef90f5f7.jpg?source=next-barrier-page",
-        "publishedAt": "2025-03-07T02:37:30Z",
-        "content": "Complete digital access to quality analysis and expert insights, complemented with our award-winning Weekend Print edition.\r\n<ul><li></li>Everything in Print<li></li>Weekday Print Edition<li></li>FT … [+202 chars]"
+        "author": "Jesse Pound",
+        "title": "Dow futures drop 300 points as selling continues on Wall Street: Live updates - CNBC",
+        "description": "The stock market is off to a rough start in March, and key economic data is due out this week.",
+        "url": "https://www.cnbc.com/2025/03/09/stock-market-news-today-live-updates.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/108112754-1741363586692-gettyimages-2203810302-tariffs597253_6feyhmpx.jpeg?v=1741363628&w=1920&h=1080",
+        "publishedAt": "2025-03-10T09:53:00Z",
+        "content": "Stock futures dropped on Monday as the selling pressures that dragged Wall Street last week persisted, while investors braced for a slew of economic data reports this week.\r\nFutures tied to the Dow J… [+2092 chars]"
     },
     {
         "source": {
@@ -200,259 +252,233 @@
             "name": "ABC News"
         },
         "author": "ABC News",
-        "title": "Trump tells Cabinet members that they're in charge, not Musk: Sources - ABC News",
+        "title": "Small plane crashes with 5 aboard in Pennsylvania - ABC News",
         "description": null,
-        "url": "https://abcnews.go.com/Politics/trump-tells-cabinet-charge-musk-sources/story?id\\\\u003d119525584",
+        "url": "https://abcnews.go.com/US/small-plane-crashes-pennsylvania/story?id\\\\u003d119615364",
         "urlToImage": null,
-        "publishedAt": "2025-03-07T02:35:30Z",
+        "publishedAt": "2025-03-10T09:49:28Z",
         "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Motley Fool"
+        },
+        "author": "Adria Cimino",
+        "title": "Has Nvidia Stock Become Too Cheap to Ignore? - The Motley Fool",
+        "description": "",
+        "url": "https://www.fool.com/investing/2025/03/10/has-nvidia-stock-become-too-cheap-to-ignore/",
+        "urlToImage": "https://g.foolcdn.com/editorial/images/810340/gettyimages-1276837766.jpg",
+        "publishedAt": "2025-03-10T08:45:00Z",
+        "content": "Nvidia(NVDA 1.92%) has become a stock market giant thanks to its dominance in one of today's highest-growth markets: artificial intelligence (AI), a $200 billion market that analysts say is heading f… [+4961 chars]"
+    },
+    {
+        "source": {
+            "id": "abc-news",
+            "name": "ABC News"
+        },
+        "author": "ABC News",
+        "title": "US 'just about' ready to lift Ukraine intel freeze, Trump says ahead of Saudi meet - ABC News",
+        "description": null,
+        "url": "https://abcnews.go.com/International/us-lifts-ukraine-intel-freeze-trump-ahead-saudi/story?id\\\\u003d119624605",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T08:25:30Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "BBC News"
+        },
+        "author": null,
+        "title": "Trump says US economy in 'transition' as trade war escalates - BBC.com",
+        "description": "New retaliatory tariffs from China targeting some US farm products came into effect on Monday.",
+        "url": "https://www.bbc.com/news/articles/cz61nn99eg1o",
+        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1251/live/d7fca240-fd4a-11ef-a555-336cd2341958.jpg",
+        "publishedAt": "2025-03-10T07:58:54Z",
+        "content": "João da SilvaBusiness reporter, BBC News\r\nNew tit-for-tat tariffs from China, which target some US farm products, came into effect on Monday\r\nUS President Donald Trump has refused to say whether the … [+3152 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Vatican News"
+        },
+        "author": "Vatican News",
+        "title": "Pope had quiet night, continues to rest at Gemelli hospital - Vatican News",
+        "description": "Pope Francis had a quiet night and is resting, as he recovers from bilateral pneumonia at Rome's Gemelli Hospital, according to the Holy See Press Office on Monday morning.",
+        "url": "https://www.vaticannews.va/en/pope/news/2025-03/pope-francis-health-update-gemelli-monday.html",
+        "urlToImage": "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/afp/2025/03/09/18/1741540690094.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+        "publishedAt": "2025-03-10T07:44:31Z",
+        "content": "By Vatican News\r\nThe Holy See Press Office released a statement on Monday morning to provide an update on the Pope's recovery.\r\n\"The Pope had a quiet night, and is resting,\" read the statement.\r\nOn S… [+920 chars]"
+    },
+    {
+        "source": {
+            "id": "cnn",
+            "name": "CNN"
+        },
+        "author": "Rafael Romo, Susannah Cullinane, José Álvarez",
+        "title": "Sudiksha Konanki: Search launched for University of Pittsburgh student missing in Dominican Republic - CNN",
+        "description": "Authorities in the Dominican Republic are interviewing a young man believed to have been with a missing student from the University of Pittsburgh right before her disappearance in Punta Cana, a local police source told CNN.",
+        "url": "https://www.cnn.com/2025/03/09/us/sudiksha-konanki-missing-punta-cana/index.html",
+        "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/482920714-18071160541818506-3363789177669153238-n.jpg?c=16x9&q=w_800,c_fill",
+        "publishedAt": "2025-03-10T07:26:00Z",
+        "content": "Authorities in the Dominican Republic are interviewing a young man believed to have been with a missing student from the University of Pittsburgh right before her disappearance in Punta Cana, a local… [+5289 chars]"
+    },
+    {
+        "source": {
+            "id": "the-washington-post",
+            "name": "The Washington Post"
+        },
+        "author": "Lauren Lumpkin",
+        "title": "Md. confirms measles case; Dulles Airport travelers may have been exposed - The Washington Post",
+        "description": "The health department said there may have been exposures at Dulles’s international arrivals area and a Howard County pediatric emergency department.",
+        "url": "https://www.washingtonpost.com/dc-md-va/2025/03/09/measles-maryland-howard-dulles/",
+        "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/OVVGK2F2RVLDRSSQO6KGJEDXZA.JPG&w=1440",
+        "publishedAt": "2025-03-10T07:02:47Z",
+        "content": "A positive case of measles was identified in Maryland, public health officials said Sunday.\r\nThe highly contagious virus was detected in a Howard County resident who had recently traveled internation… [+2861 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Financial Times"
+        },
+        "author": "Ryan McMorrow, Nian Liu, Joe Leahy",
+        "title": "China hits US farm goods with tariffs as trade war escalates - Financial Times",
+        "description": "Beijing’s latest measures target $22bn of American agriculture products as well as timber",
+        "url": "https://www.ft.com/content/da80beaf-d916-4125-a9bc-040a1f15942e",
+        "urlToImage": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F7799dfd8-a877-4b8e-97b7-df56e55a392c.jpg?source=next-barrier-page",
+        "publishedAt": "2025-03-10T06:28:16Z",
+        "content": "White House Watch newsletter\r\nRegister for your free guide to the new US administration, with cabinet announcements, policy plans and exclusive election insights.\r\nUS Presidential Election 2024 hub\r\n… [+357 chars]"
+    },
+    {
+        "source": {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        "author": "The Washington Post",
+        "title": "Athol Fugard, trenchant South African playwright, dies at 92 - The Washington Post",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNdFhxbUxhVWxITUhVQ0ZQVFphbENYNzQzMUFnX0xOdlhCMGZtT2tmbGd1aVdKZThBOXd4MmlOTEVBOE92R2JNZWJPbWNaWndncTdyLXFfZnR0dUt3a05jbUZHYm5MTWNZSHJKZHBZYVFYbjF5WEhMVDU4YTZaMHA3MG9ZczFfLVJEaFE?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T05:23:54Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Suntimes.com"
+        },
+        "author": "Georgia Nicols",
+        "title": "Horoscope for Monday, March 10, 2025 - Chicago Sun-Times",
+        "description": null,
+        "url": "https://chicago.suntimes.com/horoscopes/2025/03/10/horoscopes-today-monday-march-10-2025",
+        "urlToImage": "https://cst.brightspotcdn.com/dims4/default/2145dbd/2147483647/strip/true/crop/870x497+0+67/resize/1461x834!/quality/90/?url=https%3A%2F%2Fchorus-production-cst-web.s3.us-east-1.amazonaws.com%2Fbrightspot%2Fac%2Ffd%2F790f04b15195427014757adc0272%2Fgeorgia-nicols.jpg",
+        "publishedAt": "2025-03-10T05:02:16Z",
+        "content": "Moon alert\r\nThere are no restrictions to shopping or important decisions. The moon is in Leo.\r\nAries (March 21-April 19)\r\nYoure a Friday person caught in a Monday world. Play hooky if you can. Take a… [+3847 chars]"
     },
     {
         "source": {
             "id": "associated-press",
             "name": "Associated Press"
         },
-        "author": "Maryclaire Dale",
-        "title": "Medical plane’s voice recorder likely wasn’t working for years before Philadelphia crash - The Associated Press",
-        "description": "The National Transportation Safety Board says a cockpit voice recorder was not working on a medical transport plane that crashed in Philadelphia in January and likely had not been working for several years. In a preliminary report issued Thursday, the NTSB al…",
-        "url": "https://apnews.com/article/philadelphia-plane-crash-3fc95249e1c008d9bfe801ad7826ad73",
-        "urlToImage": "https://dims.apnews.com/dims4/default/7be3799/2147483647/strip/true/crop/5815x3271+0+303/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fc0%2Fb6%2Ff860f5ccb6b883ab54a08a026e23%2F98b50d97f20a40d48d564f305a775b37",
-        "publishedAt": "2025-03-07T01:40:00Z",
-        "content": "PHILADELPHIA (AP) The cockpit voice recorder was not working on a medical transport plane that killed seven people when it plummeted into a Philadelphia neighborhood in January and likely had not bee… [+4710 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Deadline"
-        },
-        "author": "Erik Pedersen",
-        "title": "Walt Disney Animation Studios Staffers Ratify First Union Contract – Update - Deadline",
-        "description": "Production workers at Walt Disney Animation Studios have voted overwhelmingly to unionize with IATSE and Animation Guild. The vote was 93% \"yes\" on 96% turnout.",
-        "url": "http://deadline.com/2025/03/disney-animation-studios-unionize-iatse-animation-guild-1235590384/",
-        "urlToImage": "https://deadline.com/wp-content/uploads/2023/11/Walt-Disney-Studios-Animation-The-Animation-Guild.jpg?w=1000",
-        "publishedAt": "2025-03-07T01:30:00Z",
-        "content": "UPDATED, 5:30 PM: Some 17 months after unionizing, production management staffers at Walt Disney Animation Studios have ratified their first labor contract. The vote conducted by IATSE‘s Animation Gu… [+1948 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "ScienceAlert"
-        },
-        "author": "Russell McLendon",
-        "title": "Losing Just One Night's Sleep Changes Your Immune System, Study Finds - ScienceAlert",
-        "description": "We all know sleep is important, but it takes up so much time.",
-        "url": "https://www.sciencealert.com/losing-just-one-nights-sleep-changes-your-immune-system-study-finds",
-        "urlToImage": "https://www.sciencealert.com/images/2025/03/woman_sleeping_table_header.jpg",
-        "publishedAt": "2025-03-07T04:54:55Z",
-        "content": "We all know sleep is important, but it takes up so much time. With responsibilities and diversions still looming from our waking life, the urge to skimp on sleep can be powerful.\r\nYet as a new study … [+3890 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "ScienceAlert"
-        },
-        "author": "Carly Cassella",
-        "title": "World First: Scientists Printed Penises For Pigs And Restored Their Erections - ScienceAlert",
-        "description": "A 3D-printed penis implant has restored erectile function to rabbits and pigs in a world first.",
-        "url": "https://www.sciencealert.com/world-first-scientists-printed-penises-for-pigs-and-restored-their-erections",
-        "urlToImage": "https://www.sciencealert.com/images/2025/03/PigPenisImplant.jpg",
-        "publishedAt": "2025-03-07T04:31:52Z",
-        "content": "A 3D-printed penis implant has restored erectile function to rabbits and pigs in a world first.\r\nPigs with damage to their penile tissue that received the one-of-a-kind surgery not only achieved erec… [+4327 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "ScienceAlert"
-        },
-        "author": "Russell McLendon",
-        "title": "Chewing Wood Could Give Your Brain an Unexpected Boost - ScienceAlert",
-        "description": "Maybe dogs who chew sticks are on to something.",
-        "url": "https://www.sciencealert.com/chewing-wood-could-give-your-brain-an-unexpected-boost",
-        "urlToImage": "https://www.sciencealert.com/images/2025/03/man_chewing_pencil_header.jpg",
-        "publishedAt": "2025-03-07T03:54:35Z",
-        "content": "Maybe dogs who chew sticks are on to something. We don't necessarily have to chomp with a canine's zeal, but the basic concept safely gnawing some hard, durable material might be worth considering.\r\n… [+4049 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "SciTechDaily"
-        },
-        "author": null,
-        "title": "New Study Reveals the Hidden Danger of Red Meat: Cancer-Causing Iron - SciTechDaily",
-        "description": "A new study reveals the connection between dietary iron and cancer progression, paving the way for targeted therapies in Singapore and beyond. Scientists from the Agency for Science, Technology and Research (A*STAR), in collaboration with the National Cancer …",
-        "url": "https://scitechdaily.com/new-study-reveals-the-hidden-danger-of-red-meat-cancer-causing-iron/",
-        "urlToImage": "https://scitechdaily.com/images/Red-Meat-Two-Steaks.jpg",
-        "publishedAt": "2025-03-07T03:47:25Z",
-        "content": "Iron from red meat reactivates telomerase, driving colorectal cancer, but SP2509 may block this and serve as a potential treatment.\r\nA new study reveals the connection between dietary iron and cancer… [+4564 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "PEOPLE"
-        },
-        "author": "Cara Lynn Shultz",
-        "title": "This Medicine Cabinet Staple May Help Stop Cancer from Spreading - AOL",
-        "description": "The anti-clotting effect of aspirin may trigger a biological chain of events that stops cancer cells from metastasizing, researchers say",
-        "url": "https://people.com/this-medicine-cabinet-staple-may-stop-cancer-from-spreading-11692417",
-        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/G0CfaJAL8F7zZcgnYdFzRw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/aol_people_articles_471/71556695ea57edc297d5a3d73637dd7b",
-        "publishedAt": "2025-03-07T00:06:17Z",
-        "content": "Getty\r\n Stock image of a medicine cabinet.\r\nAspirin may help stop cancer from spreading and scientists think theyve figured out why.\r\nResearchers at the University of Cambridge found that aspirin may… [+2365 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "The Dallas Morning News"
-        },
-        "author": "Adrian Ashford, Matt Kyle",
-        "title": "Fort Worth’s Mercy Culture celebrates school with lowest measles vaccination rate in Texas - The Dallas Morning News",
-        "description": "Mercy Culture Preparatory, a private school next to the church, has a 14.3% MMR vaccination rate, according to Texas Department of State Health Services data.",
-        "url": "https://www.dallasnews.com/news/faith/2025/03/06/fort-worths-mercy-culture-celebrates-school-with-lowest-measles-vaccination-rate-in-texas/",
-        "urlToImage": "https://dmn-dallas-news-prod.cdn.arcpublishing.com/resizer/v2/J34BIISSOBENTMJSMYUOHIQBFE.png?auth=f83c4d4b234ddff4e10ae70cd9ee4b473941edad862fe8f9772a7a230add5d92&height=630&width=1200&smart=true&quality=80",
-        "publishedAt": "2025-03-06T23:54:35Z",
-        "content": "The pastor of a Fort Worth megachurch is celebrating that a school affiliated with his church has the lowest vaccination rate for measles of any school in Texas. \r\nRelated:Map: These Texas schools ha… [+3900 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Yahoo Entertainment"
-        },
-        "author": "Korin Miller",
-        "title": "What can’t vitamin A do? Experts on the health benefits of the nutrient — and if you need to take a supplement. - Yahoo Life",
-        "description": "Vitamin A is good for your eyes, skin and immune system, but too much of it can be harmful.",
-        "url": "https://www.yahoo.com/lifestyle/what-cant-vitamin-a-do-experts-on-the-health-benefits-of-the-nutrient--and-if-you-need-to-take-a-supplement-232645422.html",
-        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/q9yHMkzXdvtT1xdinx5OYw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-uploaded-images/2025-03/ab7a8ec0-f9fe-11ef-bbf7-cf7c20ddcf97",
-        "publishedAt": "2025-03-06T23:26:46Z",
-        "content": "Despite not being the buzziest nutrient out there, vitamin A plays an important role in your health, including your immune system function. The vitamin has recently gotten some attention as a possibl… [+8449 chars]"
+        "author": "Jake Offenhartz",
+        "title": "Immigration agents arrest Palestinian activist who helped lead Columbia University protests - The Associated Press",
+        "description": "A prominent Palestinian activist who helped lead last spring's protests at Columbia University has been arrested by federal immigration agents. Mahmoud Khalil's lawyer says he was arrested at his apartment near the university by agents who claimed they were a…",
+        "url": "https://apnews.com/article/columbia-university-mahmoud-khalil-ice-15014bcbb921f21a9f704d5acdcae7a8",
+        "urlToImage": "https://dims.apnews.com/dims4/default/d0e2272/2147483647/strip/true/crop/5760x3240+0+300/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe3%2F4a%2Fdbe2adabd18d50263c96544ac315%2Fbabe1346a9e24c468072193f9ecc77b2",
+        "publishedAt": "2025-03-10T03:37:00Z",
+        "content": "NEW YORK (AP) Federal immigration authorities arrested a Palestinian activist Saturday who played a prominent role in Columbia Universitys protests against Israel, a significant escalation in the Tru… [+4884 chars]"
     },
     {
         "source": {
             "id": "cnn",
             "name": "CNN"
         },
-        "author": "Julianna Bragg",
-        "title": "Replacing butter for some plant oils could significantly lower risk of mortality, new study finds - CNN",
-        "description": "Despite some social media movements criticizing seed oils, a new study suggests swapping your daily butter intake for some plant-based oils decreases your risk of death.",
-        "url": "https://www.cnn.com/2025/03/06/health/butter-seed-oils-reduced-death-wellness/index.html",
-        "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-1206682746.jpg?c=16x9&q=w_800,c_fill",
-        "publishedAt": "2025-03-06T22:36:00Z",
-        "content": "Editors Note: Sign up for CNNs Eat, But Better: Mediterranean Style. Our eight-part guide shows you a delicious expert-backed eating lifestyle that will boost your health for life.\r\nSwapping your dai… [+7873 chars]"
+        "author": "Michael Rios, Kathleen Magramo",
+        "title": "Prince Frederik of Luxembourg dies from rare disease - CNN",
+        "description": "Prince Frederik of Luxembourg has died after a lifelong battle with a rare genetic disorder known as POLG mitochondrial disease.",
+        "url": "https://www.cnn.com/2025/03/09/europe/prince-frederik-luxembourg-dies-polg-intl-latam/index.html",
+        "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/img-0298-1024x763.jpg?c=16x9&q=w_800,c_fill",
+        "publishedAt": "2025-03-10T03:01:00Z",
+        "content": "Prince Frederik of Luxembourg has died after a lifelong battle with a rare genetic disorder known as POLG mitochondrial disease.\r\nHe passed away on March 1 in Paris, his family announced on the websi… [+2737 chars]"
     },
     {
         "source": {
-            "id": null,
-            "name": "Neurosciencenews.com"
-        },
-        "author": "Neuroscience News",
-        "title": "AI-Powered Brain Implant Lets Paralyzed Man Control Robotic Arm - Neuroscience News",
-        "description": "A new brain-computer interface (BCI) has enabled a paralyzed man to control a robotic arm by simply imagining movements.",
-        "url": "https://neurosciencenews.com/ai-robot-arm-bci-neurotech-28471/",
-        "urlToImage": "https://neurosciencenews.com/files/2025/03/ai-robotic-hand-neuroscience.jpg",
-        "publishedAt": "2025-03-06T21:55:33Z",
-        "content": "Summary: A new brain-computer interface (BCI) has enabled a paralyzed man to control a robotic arm by simply imagining movements. Unlike previous BCIs, which lasted only a few days, this AI-enhanced … [+6831 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "QNS.com"
-        },
-        "author": "Colum Motherway",
-        "title": "Avian flu outbreaks in Queens spark further calls to shut down all overcrowded NYC wet markets - QNS",
-        "description": "The resurgence of avian flu at two animal slaughter markets in Queens has renewed urgent calls to shut down densely packed wet markets.",
-        "url": "http://qns.com/2025/03/avian-flu-queens-overcrowded-wet-markets/",
-        "urlToImage": "https://qns.com/wp-content/uploads/2025/03/GettyImages-1210583390.jpg?w=1024&p=q",
-        "publishedAt": "2025-03-06T21:24:12Z",
-        "content": "Sign up for our QNS email newsletter to get news, updates, and local insights delivered straight to your inbox!\r\nThe resurgence of avian flu at two animal slaughter markets in Queens has renewed urge… [+7744 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "PEOPLE"
-        },
-        "author": "Cara Lynn Shultz",
-        "title": "Ohio Mom Discovers Cancer Deep in Her Thumb — and the Only Sign Was 2 Thin Lines on Her Nail - AOL",
-        "description": "Michelle Tagliamonte, 58, was getting a manicure when she noticed two black lines, which signaled the start of a fast-spreading cancer",
-        "url": "https://people.com/fast-spreading-cancer-on-thumb-two-black-lines-11692199",
-        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/EtUpvrBK0GnKPhc.kOwSjw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/aol_people_articles_471/e5765deb30694a702e533949f4cc8564",
-        "publishedAt": "2025-03-06T20:46:25Z",
-        "content": "Kennedy News &amp; Media\r\n The black lines (left) on Michelle Tagliamonte's thumb were a sign of cancer.\r\n<ul><li>Michelle Tagliamonte, 58, noticed black lines on her thumb while getting a manicure i… [+3887 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Futurity: Research News"
-        },
-        "author": "Gregory Filiano-Stony Brook",
-        "title": "‘Midlife window’ could be key for preventing brain decline - Futurity: Research News",
-        "description": "New research offers insights into when interventions to prevent cognitive decline might be most effective.",
-        "url": "https://www.futurity.org/midlife-window-preventing-brain-cognitive-decline-3272602/",
-        "urlToImage": "https://www.futurity.org/wp/wp-content/uploads/2025/03/midlife-window-preventing-age-related-brain-cognitive-decline-1600.jpg",
-        "publishedAt": "2025-03-06T19:26:51Z",
-        "content": "Researchers have identified a critical “midlife window” for preventing age-related brain decline.\r\nThe new study in PNAS has unveiled that brain aging follows a distinct yet nonlinear trajectory with… [+5573 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Medical Xpress"
-        },
-        "author": "Justin Jackson",
-        "title": "Oral norovirus vaccine passes safety testing with a strong immune response in older adults - Medical Xpress",
-        "description": "Researchers at Vaxart Inc. and the Center for Vaccine Development at the University of Maryland School of Medicine evaluated the safety and immunogenicity of an oral norovirus vaccine tablet, VXA-G1.1-NN. Results indicate that the vaccine was safe and well to…",
-        "url": "https://medicalxpress.com/news/2025-03-oral-norovirus-vaccine-safety-strong.html",
-        "urlToImage": "https://scx2.b-cdn.net/gfx/news/hires/2025/vaxart-oral-norovirus.jpg",
-        "publishedAt": "2025-03-06T18:57:02Z",
-        "content": "Researchers at Vaxart Inc. and the Center for Vaccine Development at the University of Maryland School of Medicine evaluated the safety and immunogenicity of an oral norovirus vaccine tablet, VXA-G1.… [+4449 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "YourTango"
-        },
-        "author": "Dr. John Kruse",
-        "title": "Neuroscientist Warns Of The Common Habit That Destroys The Success And Thinking Ability Of Even The Most Brilliant People - YourTango",
-        "description": "Neuroscientist Dr. John Kruse reflects on the common habit that has led to decreased performance and productivity in the pharmaceutical sector.",
-        "url": "https://www.yourtango.com/self/neuroscientist-warns-common-habit-destroys-success-thinking-ability",
-        "urlToImage": "https://www.yourtango.com/sites/default/files/image_blog/2025-03/habit-destroys-success.png",
-        "publishedAt": "2025-03-06T18:35:53Z",
-        "content": "Three out of 10 pharmacies in business in 2010 had closed within the decade, according to a recent summary that indicated that many neighborhoods across the US have lost their local pharmacy. \r\nSome … [+15852 chars]"
-    },
-    {
-        "source": {
-            "id": "cnn",
-            "name": "CNN"
-        },
-        "author": "Nick Watt",
-        "title": "Inside the perfect storm of the deadly measles outbreak in Texas - CNN",
-        "description": "Gaines County is a vast, flat expanse far in the west of Texas: more than 1,500 square miles of sparsely populated farmland. And right now, this is the epicenter of a measles outbreak the likes of which this state hasn’t seen in more than 30 years. Many here …",
-        "url": "https://www.cnn.com/2025/03/06/health/west-texas-measles-outbreak/index.html",
-        "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/seminole-7.jpg?c=16x9&q=w_800,c_fill",
-        "publishedAt": "2025-03-06T18:19:00Z",
-        "content": "Gaines County is a vast, flat expanse far in the west of Texas: more than 1,500 square miles of sparsely populated farmland. And right now, this is the epicenter of a measles outbreak the likes of wh… [+5298 chars]"
-    },
-    {
-        "source": {
-            "id": "business-insider",
-            "name": "Business Insider"
-        },
-        "author": "Gabby Landsverk",
-        "title": "Struggling to build muscle? The reigning Mr. Olympia shares diet and workout hacks that transformed his body - Business Insider",
-        "description": "Samson Dauda, once a construction worker who struggled to build muscle, is now the world's top bodybuilder. Diet and exercise tweaks transformed his body.",
-        "url": "https://www.businessinsider.com/mr-olympia-2024-muscle-building-diet-workout-hacks-2025-3",
-        "urlToImage": "https://i.insider.com/67c9d8cc69253ccddf987b06?width=1200&format=jpeg",
-        "publishedAt": "2025-03-06T18:16:00Z",
-        "content": "Looking at Samson Dauda, you'd never guess he used to be a skinny kid.\r\nBut the winner of the 2024 Mr. Olympia the most prestigious award in bodybuilding said he once had a hard time gaining muscle.\r… [+3350 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "SciTechDaily"
+            "id": "espn",
+            "name": "ESPN"
         },
         "author": null,
-        "title": "3.7 Billion Miles Away: Hubble Uncovers a Hidden Trio That Could Rewrite Kuiper Belt History - SciTechDaily",
-        "description": "A newly identified Kuiper Belt trio, possibly only the second of its kind, could provide strong evidence that these distant objects didn’t form from collisions but instead took shape through gravitational collapse—just like stars. The universe is home to many…",
-        "url": "https://scitechdaily.com/3-7-billion-miles-away-hubble-uncovers-a-hidden-trio-that-could-rewrite-kuiper-belt-history/",
-        "urlToImage": "https://scitechdaily.com/images/Altjira-System-scaled.jpg",
-        "publishedAt": "2025-03-07T09:21:34Z",
-        "content": "This artist’s concept depicts one of the possible scenarios for the 148780 Altjira system in the solar system’s Kuiper Belt. It is likely a hierarchical triple formation, in which two very close comp… [+7677 chars]"
+        "title": "Wisconsin's Moseley resigns after 4th losing year - ESPN",
+        "description": "Wisconsin women's basketball coach Marisa Moseley has stepped down after posting a 47-75 record in four seasons.",
+        "url": "https://www.espn.com/womens-college-basketball/story/_/id/44185485/wisconsin-marisa-moseley-stepping-fourth-straight-losing-season",
+        "urlToImage": "https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2025%2F0310%2Fr1461950_1023x575_16%2D9.jpg",
+        "publishedAt": "2025-03-10T02:27:00Z",
+        "content": "MADISON, Wis. -- Wisconsin women's basketball coach Marisa Moseley has stepped down after posting a 47-75 record in four seasons at a program that has been struggling to compete in the Big Ten for ov… [+3250 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Hollywood Reporter"
+        },
+        "author": "Kirsten Chuba",
+        "title": "After a Project-Packed 2024, Nicole Kidman Says This Year Will Be “Not as Crazy” - Hollywood Reporter",
+        "description": "The actress, who had three movies and three shows come out last year, is kicking off 2025 with new thriller 'Holland,' which premiered at SXSW.",
+        "url": "http://www.hollywoodreporter.com/movies/movie-news/nicole-kidman-project-packed-year-2025-not-as-crazy-sxsw-1236159085/",
+        "urlToImage": "https://www.hollywoodreporter.com/wp-content/uploads/2025/03/GettyImages-2204226591.jpg?crop=0px%2C123px%2C6000px%2C3357px&resize=1440%2C810",
+        "publishedAt": "2025-03-10T02:06:34Z",
+        "content": "You would be hard-pressed to find a busier person in Hollywood than Nicole Kidman, who in the last year or so has released Expats, A Family Affair, The Perfect Couple, Spellbound, Babygirl and season… [+1431 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Forbes"
+        },
+        "author": "David Axe",
+        "title": "Russia Is Bombing Bridges To Cut Off 10,000 Ukrainian Troops In Kursk - Forbes",
+        "description": "Russian drone strikes precipitated the crisis.",
+        "url": "https://www.forbes.com/sites/davidaxe/2025/03/09/russia-is-bombing-bridges-to-cut-off-10000-ukrainian-troops-in-kursk/",
+        "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/67ce3c8db2ca43548e88ee94/0x0.jpg?format=jpg&crop=1280,720,x0,y66,safe&height=900&width=1600&fit=bounds",
+        "publishedAt": "2025-03-10T01:20:34Z",
+        "content": "A Ukrainian 2S7 howitzer in action.\r\n43rd Artillery Brigade\r\nThe 10,000-strong Ukrainian garrison in western Russias Kursk Oblast is in trouble.\r\nRelentless strikes by an elite Russian drone group ha… [+2450 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Allsides.com"
+        },
+        "author": null,
+        "title": "CDC to Study Potential Autism and Vaccine Links - AllSides",
+        "description": "See multiple perspectives from Newsmax (News), USA TODAY, and Newsweek at AllSides.com.",
+        "url": "https://www.allsides.com/story/public-health-cdc-study-potential-autism-and-vaccine-links",
+        "urlToImage": "https://www.allsides.com/",
+        "publishedAt": "2025-03-10T07:24:19Z",
+        "content": "The US Centers for Disease Control and Prevention (CDC) reportedly plans to study potential links between autism and vaccines. \r\nThe Details: The plans come after Health and Human Services (HHS) Secr… [+1660 chars]"
+    },
+    {
+        "source": {
+            "id": "the-washington-post",
+            "name": "The Washington Post"
+        },
+        "author": "Lauren Lumpkin",
+        "title": "Md. confirms measles case; Dulles Airport travelers may have been exposed - The Washington Post",
+        "description": "The health department said there may have been exposures at Dulles’s international arrivals area and a Howard County pediatric emergency department.",
+        "url": "https://www.washingtonpost.com/dc-md-va/2025/03/09/measles-maryland-howard-dulles/",
+        "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/OVVGK2F2RVLDRSSQO6KGJEDXZA.JPG&w=1440",
+        "publishedAt": "2025-03-10T07:02:47Z",
+        "content": "A positive case of measles was identified in Maryland, public health officials said Sunday.\r\nThe highly contagious virus was detected in a Howard County resident who had recently traveled internation… [+2861 chars]"
+    },
+    {
+        "source": {
+            "id": "the-wall-street-journal",
+            "name": "The Wall Street Journal"
+        },
+        "author": "Stephen Kreider Yoder, Karen Kreider Yoder",
+        "title": "A Big Downside of Retirement: We Have More Time to Worry About Our Health - The Wall Street Journal",
+        "description": "A few years ago, we and our friends talked a lot about our ailing parents. Now we talk about when it will be our turn.",
+        "url": "https://www.wsj.com/health/wellness/retirement-health-worries-b25bf759",
+        "urlToImage": "https://images.wsj.net/im-91483069/social",
+        "publishedAt": "2025-03-10T02:00:00Z",
+        "content": null
     },
     {
         "source": {
@@ -460,64 +486,194 @@
             "name": "ScienceAlert"
         },
         "author": "The Conversation",
-        "title": "Record Discovery: Impact Crater in Australia's Outback Oldest by a Billion Years - ScienceAlert",
-        "description": "We have discovered the oldest meteorite impact crater on Earth, in the very heart of the Pilbara region of Western Australia.",
-        "url": "https://www.sciencealert.com/record-discovery-impact-crater-in-australias-outback-oldest-by-a-billion-years",
-        "urlToImage": "https://www.sciencealert.com/images/2025/03/DigitalPaintingOfAMeteoriteImpactOnEarth.jpg",
-        "publishedAt": "2025-03-07T02:32:37Z",
-        "content": "We have discovered the oldest meteorite impact crater on Earth, in the very heart of the Pilbara region of Western Australia. The crater formed more than 3.5 billion years ago, making it the oldest k… [+6039 chars]"
+        "title": "An Ancient Disease Has Reappeared in The US. This Could Be Why. - ScienceAlert",
+        "description": "An outbreak of tuberculosis, or TB – a lung disease that is often accompanied by a hacking cough – began in January 2024 in Kansas City, Kansas, and two nearby counties and continues as of early March 2025.",
+        "url": "https://www.sciencealert.com/an-ancient-disease-has-reappeared-in-the-us-this-could-be-why",
+        "urlToImage": "https://www.sciencealert.com/images/2025/03/DoctorAndNurseLookAtXray.jpg",
+        "publishedAt": "2025-03-10T01:35:39Z",
+        "content": "An outbreak of tuberculosis, or TB a lung disease that is often accompanied by a hacking cough began in January 2024 in Kansas City, Kansas, and two nearby counties and continues as of early March 20… [+6515 chars]"
     },
     {
         "source": {
             "id": null,
-            "name": "WGME"
+            "name": "Thebrighterside.news"
         },
-        "author": "Meteorologist Ryan Munn, WGME",
-        "title": "Radar detects meteorites landed in northern Washington County - WGME",
-        "description": "A radar site on February 21 detected several objects flying through the Earth’s atmosphere at a very high rate of speed and landing near the town of Codyville.",
-        "url": "https://wgme.com/news/local/radar-detects-meteorites-landing-in-northern-washington-county-maine-space-rocks",
-        "urlToImage": "https://wgme.com/resources/media2/16x9/700/986/0x7/90/8c5832af-ab6d-49d2-98ba-c251343d8fbe-snip2.png",
-        "publishedAt": "2025-03-07T02:00:37Z",
-        "content": "PORTLAND (WGME) -- A radar site on February 21 detected several objects flying through the Earths atmosphere at a very high rate of speed and landing near the town of Codyville.\r\nWhen the planets wer… [+1493 chars]"
+        "author": "Joseph Shavit",
+        "title": "Popular health supplement shows promise in reversing lung damage - The Brighter Side of News",
+        "description": "A recent study suggests that zinc could help reverse lung damage in patients with idiopathic pulmonary fibrosis, helping 100,000 Americans.",
+        "url": "https://www.thebrighterside.news/health/popular-health-supplement-shows-promise-in-reversing-lung-damage",
+        "urlToImage": "https://www.thebrighterside.news/uploads/2025/03/lung-damage.jpg?auto=webp",
+        "publishedAt": "2025-03-10T00:07:00Z",
+        "content": "A recent study from the Womens Guild Lung Institute at Cedars-Sinai suggests that zinc could help reverse lung damage in patients with idiopathic pulmonary fibrosis (IPF). \r\nThe findings, published i… [+9374 chars]"
     },
     {
         "source": {
             "id": null,
-            "name": "New York Post"
+            "name": "CNBC"
         },
-        "author": "Jorge Fitz-Gibbon",
-        "title": "Stranded Starliner astronaut’s teen daughter blames ‘negligence’ for dad’s long absence: ‘A lot of politics’ - AOL",
-        "description": "Daryn Wilmore, 16, says she's frustrated over her astronaut dad Butch's unscheduled nine-month stay on the International Space Station due to \"issue after is...",
-        "url": "https://nypost.com/2025/03/06/us-news/stranded-starliner-astronauts-teen-daughter-blames-negligence-politics-for-his-absence/?utm_source=aol&amp;utm_campaign=nypost&amp;utm_medium=referral",
-        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/qT_oq2XU61CQ0eKPcbPyyg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/aol_ny_post_us_news_articles_123/7a097b1b85e4782dcaf92750466cdc07",
-        "publishedAt": "2025-03-07T00:44:30Z",
-        "content": "Daryn Wilmore, the daughter of stranded astronaut Barry WIlmore, blames 'negligence' for her dad being stuck in space.\r\nThe 16-year-old daughter of stranded Starliner astronaut Barry Butch Wilmore sa… [+2794 chars]"
-    },
-    {
-        "source": {
-            "id": "usa-today",
-            "name": "USA Today"
-        },
-        "author": "James Powel, Eric Lagatta",
-        "title": "Donald Trump says he asked 'a favor' of Elon Musk to bring back astronauts from ISS - AOL",
-        "description": "President Donald Trump said that he asked \"a favor\" of Elon Musk to retrieve astronauts on the ISS. The plan to bring them back has been in place since September.",
-        "url": "https://www.usatoday.com/story/news/politics/2025/03/06/donald-trump-elon-musk-astronauts-iss/81802709007/",
-        "urlToImage": "https://www.usatoday.com/gcdn/authoring/authoring-images/2025/03/06/USAT/81814805007-usatsi-25594655.jpg?crop=1919,1081,x0,y99&width=1919&height=1081&format=pjpg&auto=webp",
-        "publishedAt": "2025-03-07T00:20:15Z",
-        "content": "President Donald Trump claimed to have \"asked a favor\" of Elon Musk to complete the retrieval of astronauts from the International Space Station, continuing to take partisan swipes at the Biden admin… [+2856 chars]"
+        "author": "Lucy Handley",
+        "title": "Singapore's population is aging fast. It hopes AI can help manage its elderly care - CNBC",
+        "description": "By 2030, a quarter of Singaporeans will be 65 or over. Societies around the world are \"dismally unprepared\" for an aging population, said one expert.",
+        "url": "https://www.cnbc.com/2025/03/10/singapore-looks-to-ai-help-to-manage-health-of-fast-aging-population.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/108108255-1740649564564-gettyimages-1247096202-SINGAPORE_BUDGET.jpeg?v=1741138743&w=1920&h=1080",
+        "publishedAt": "2025-03-09T23:06:52Z",
+        "content": "A mural depicting Samsui women in Chinatown in Singapore.\r\nFrom listening devices that detect falls to \"patient sitter\" systems in hospitals and robots helping with exercise in care homes, Singapore … [+5370 chars]"
     },
     {
         "source": {
             "id": null,
-            "name": "Live Science"
+            "name": "ScienceAlert"
         },
-        "author": "Sharmila Kuthunur",
-        "title": "'This doesn't appear in computer simulations': Hubble maps chaotic history of Andromeda galaxy, and it's nothing like scientists expected - Livescience.com",
-        "description": "An ambitious new survey by the Hubble Space Telescope offers the first bird's-eye view of all known dwarf galaxies orbiting the Andromeda galaxy. The data suggests Andromeda had a chaotic past unlike anything scientists expected.",
-        "url": "https://www.livescience.com/space/astronomy/this-doesnt-appear-in-computer-simulations-hubble-maps-chaotic-history-of-andromeda-galaxy-and-its-nothing-like-scientists-expected",
-        "urlToImage": "https://cdn.mos.cms.futurecdn.net/v4xTgVpWmatR93VghLsp2H-1200-80.jpg",
-        "publishedAt": "2025-03-06T23:14:59Z",
-        "content": "An ambitious new survey by the Hubble Space Telescope provides the first-ever bird's-eye view of all known dwarf galaxies orbiting the Andromeda galaxy.\r\nThe results reveal that over billions of year… [+4615 chars]"
+        "author": "David Nield",
+        "title": "This Common Blood Pressure Drug Extends Lifespan And Slows Aging in Animals - ScienceAlert",
+        "description": "The hypertension drug rilmenidine has been shown to slow down aging in worms, an effect that in humans could hypothetically help us live longer and keep us healthier in our latter years.",
+        "url": "https://www.sciencealert.com/this-common-blood-pressure-drug-extends-lifespan-and-slows-aging-in-animals",
+        "urlToImage": "https://www.sciencealert.com/images/2019-01/processed/haemochromatosis_aging_1024.jpg",
+        "publishedAt": "2025-03-09T22:43:19Z",
+        "content": "The hypertension drug rilmenidine has been shown to slow down aging in worms, an effect that in humans could hypothetically help us live longer and keep us healthier in our latter years.\r\nPrevious re… [+3346 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Good News Network"
+        },
+        "author": "Good News Network",
+        "title": "Ingredient Found in All Mushrooms Can Reprogram Immune Cells to Fight Deadly Flu Infections - Good News Network",
+        "description": "A component found in all fungi may provide a shield that prevents flu-related lung damage, according to a new Canadian study.",
+        "url": "https://www.goodnewsnetwork.org/ingredient-found-in-all-mushrooms-can-reprogram-immune-cells-to-fight-deadly-flu-infections/",
+        "urlToImage": "https://www.goodnewsnetwork.org/wp-content/uploads/2025/03/varieties-of-mushrooms-fungi-pubdomain-by-Andrew-Ridley-bx0a2yq2hxs-Unsplash.jpg",
+        "publishedAt": "2025-03-09T21:41:35Z",
+        "content": "Credit: Andrew Ridley\r\nA component found in all fungi may provide a shield that prevents flu-related lung damage, according to a new Canadian study.\r\nThe preclinical trial uncovered how beta-glucanwh… [+2852 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Eatingwell.com"
+        },
+        "author": "https://www.facebook.com/EatingWell/",
+        "title": "The #1 Protein to Reduce Visceral Fat, Recommended by Dietitians - EatingWell",
+        "description": "Discover how pistachios, a powerful protein source, can help minimize visceral fat and promote overall health, as recommended by dietitians.",
+        "url": "https://www.eatingwell.com/best-protein-for-visceral-fat-11693637",
+        "urlToImage": "https://www.eatingwell.com/thmb/AA-MfkA6CYtYmJpku2th7d8UY0w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/The-1-Protein-to-Eat-to-Reduce-Visceral-Fat-d44daeb2ef594f769cf519ad6f361e41.jpg",
+        "publishedAt": "2025-03-09T21:04:31Z",
+        "content": "Visceral fat is one of those health terms you might have heard but not fully understood. It refers to the fat stored deep within your abdominal cavity, surrounding essential organs like the liver, pa… [+6747 chars]"
+    },
+    {
+        "source": {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        "author": "YourTango",
+        "title": "Your Wife Is Most Likely To Cheat With This Out Of Left-Field Person, According To Research - YourTango",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFB4NWEyajAyY0FVcTVXelZROXFOYnI3X3hsVmVHeFhlaEs0YWFtN3phTlRwUWVfOUNkdFNESEwwejJKZ3paQkNOZF94RWdxb2pVUDRBQ3A4SDVEanZpbUV0UTVTbjBnNnYtQkVjendIMFRkSGN6dUZUNQ?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2025-03-09T20:06:12Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Allrecipes.com"
+        },
+        "author": "https://www.facebook.com/allrecipes",
+        "title": "I Asked 5 Chefs for the Best Way to Cook Asparagus, and They All Agree This Is the Most Foolproof Way - Allrecipes",
+        "description": "If they were forced to choose just one way to ensure perfectly crisp asparagus every time, the chefs we spoke to recommend roasting the green spears.",
+        "url": "https://www.allrecipes.com/chefs-best-way-to-cook-asparagus-11685900",
+        "urlToImage": "https://www.allrecipes.com/thmb/36ztp2u8iXkEXOC338Od6pRjm2s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/214931_oven-roasted-asparagus_Rita-2x1-1-4a556a83fb324056b07e11531ea6fbc2.jpg",
+        "publishedAt": "2025-03-09T18:00:00Z",
+        "content": "Ranking right up there with fresh peas and rhubarb, no food says spring more than asparagus. Mildly nutty, grassy, and sweet all at once, the subtle flavor of asparagus shines when it's in season, wh… [+7034 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "KSL.com"
+        },
+        "author": "Emma Benson, KSL-TV",
+        "title": "Utah colon cancer survivor shares experience with immunotherapy, encourages early detection - KSL.com",
+        "description": "Colon cancer survivor Eva Brinley received immunotherapy as an alternative to chemotherapy. Now, she says she feels \"strong and healthy.\"",
+        "url": "https://www.ksl.com/article/51269682/utah-colon-cancer-survivor-shares-experience-with-immunotherapy-encourages-early-detection-",
+        "urlToImage": "https://img.ksl.com/slc/3045/304527/30452737.jpeg?filter=kslv2/responsive_story_lg",
+        "publishedAt": "2025-03-09T17:18:57Z",
+        "content": "MURRAY An avid traveler, 72-year-old Eva Brinley lives her life to the fullest.\r\nBut things took a turn a few years ago after her physician encouraged her to get a colonoscopy.\r\n\"I went in and had it… [+2384 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Prevention.com"
+        },
+        "author": "Korin Miller",
+        "title": "Eating Less of This Food Leads to Weight Loss in Just 8 Weeks - AOL",
+        "description": "A new study breaks down exactly how to stop eating ultra-processed foods in eight weeks. Here's what it found and what experts have to say about the findings...",
+        "url": "https://www.prevention.com/food-nutrition/healthy-eating/a64074545/how-to-stop-eating-ultra-processed-foods-study/",
+        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/sBWo5j1dSvkPMicLlGP_vw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-/https://media.zenfs.com/en/aol_prevention_182/770b186e6d41d4d1c57b738eb5081d2c",
+        "publishedAt": "2025-03-09T16:01:31Z",
+        "content": "How to Stop Eating So Much Ultra-Processed Foods Javier Zayas Photography - Getty Images\r\n\"Hearst Magazines and Yahoo may earn commission or revenue on some items through these links.\"\r\nIts nearly im… [+8204 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Newsnationnow.com"
+        },
+        "author": "Ashley N. Soriano",
+        "title": "Bacterial infection common in women may actually be an STI: Study - NewsNation Now",
+        "description": "“We’ve suspected for a long time that it’s a sexually transmitted infection (STI),” one of the researchers said.",
+        "url": "https://www.newsnationnow.com/health/bacterial-infection-common-women-sti/",
+        "urlToImage": "https://www.newsnationnow.com/wp-content/uploads/sites/108/2025/01/GettyImages-2166856899.jpg?w=1280",
+        "publishedAt": "2025-03-09T14:52:15Z",
+        "content": "(NewsNation) A third of women experience a common bacterial infection that previously was not considered to be sexually transmitted. Now, researchers believe it may be.\r\nIn a new study published Wedn… [+1981 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "KSL.com"
+        },
+        "author": "American Heart Association News, Associated Press",
+        "title": "Getting more of some vitamins during pregnancy may lower future risk of high blood pressure - KSL.com",
+        "description": "Pregnant women whose blood contains higher levels of essential vitamins and minerals – such as B12, copper and manganese – may face a lower risk for high blood pressure two decades later, new research suggests.",
+        "url": "https://www.ksl.com/article/51269557/getting-more-of-some-vitamins-during-pregnancy-may-lower-future-risk-of-high-blood-pressure",
+        "urlToImage": "https://img.ksl.com/slc/3045/304524/30452491.jpg?filter=kslv2/responsive_story_lg",
+        "publishedAt": "2025-03-09T14:27:45Z",
+        "content": "NEW ORLEANS Pregnant women whose blood contains higher levels of essential vitamins and minerals such as B12, copper and manganese may face a lower risk for high blood pressure two decades later, new… [+4145 chars]"
+    },
+    {
+        "source": {
+            "id": "the-times-of-india",
+            "name": "The Times of India"
+        },
+        "author": "TOI Lifestyle Desk",
+        "title": "Shocking stories of people who went blind after taking Ozempic and Mounjaro - The Times of India",
+        "description": "Weight loss drugs like Ozempic, while transformative in combating obesity, have been linked to irreversible vision impairment, including conditions li",
+        "url": "https://timesofindia.indiatimes.com/life-style/health-fitness/health-news/shocking-stories-of-people-who-went-blind-after-taking-ozempic-and-mounjaro/articleshow/118819663.cms",
+        "urlToImage": "https://static.toiimg.com/thumb/msid-118819784,width-1070,height-580,imgsize-22580,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg",
+        "publishedAt": "2025-03-09T12:20:00Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Edinburgh Live"
+        },
+        "author": "Rob Currell",
+        "title": "One diet 'reduces Alzheimer's risk by 53%' as scientists identify key food group - Edinburgh Live",
+        "description": "While there is currently no cure for Alzheimer's disease, scientists are exploring how certain lifestyle changes - including diet - could help reduce the risk of developing the condition",
+        "url": "https://www.edinburghlive.co.uk/news/uk-world-news/one-diet-reduces-alzheimers-risk-31161513",
+        "urlToImage": "https://i2-prod.edinburghlive.co.uk/news/uk-world-news/article31161511.ece/ALTERNATES/s1200/0_HVR_MEN_090223_dementia_02.jpg",
+        "publishedAt": "2025-03-09T11:53:00Z",
+        "content": "Alzheimer's Disease, a form of dementia that affects memory, thinking and behaviour, continues to be a significant health issue in the UK. It is the most common type of dementia, affecting two-thirds… [+3703 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "WSET"
+        },
+        "author": "Brigette Kelly",
+        "title": "Women face higher risk of Alzheimer's, says Alzheimer's Association - WSET",
+        "description": "According to the association, nearly two-thirds of Americans living with Alzheimer's are women.",
+        "url": "https://wset.com/news/local/women-face-higher-risk-of-alzheimers-says-alzheimers-association-international-womens-day-march-2025",
+        "urlToImage": "https://wset.com/resources/media2/16x9/496/986/1x0/90/68e191c3-3335-4d75-b4ba-319a5d95ef4d-ALZ3.PNG",
+        "publishedAt": "2025-03-09T11:42:33Z",
+        "content": "(WSET) On International Women's Day, the Alzheimer's Association Central and Western Virginia highlighted the significant impact of Alzheimer's disease on women. \r\nAccording to the association, nearl… [+1179 chars]"
     },
     {
         "source": {
@@ -525,558 +681,51 @@
             "name": "SciTechDaily"
         },
         "author": null,
-        "title": "The Holy Grail of Physics: Superconductivity Without the Cold - SciTechDaily",
-        "description": "A new study reveals that the laws of physics don’t prohibit room-temperature superconductors, rekindling hope for a technological revolution. Researchers found that fundamental constants determine the upper limit of superconducting temperatures, and luckily, …",
-        "url": "https://scitechdaily.com/the-holy-grail-of-physics-superconductivity-without-the-cold/",
-        "urlToImage": "https://scitechdaily.com/images/Abstract-Superconducting-Material-Physics-Concept.jpg",
-        "publishedAt": "2025-03-06T22:16:11Z",
-        "content": "Scientists have uncovered a link between superconductivity and the fundamental constants of nature, showing that room-temperature superconductors could exist. Credit: SciTechDaily.com\r\nA new study re… [+3999 chars]"
+        "title": "Scientists Discover Mysterious New Brain Cells That Could Change How We Treat Alzheimer’s - SciTechDaily",
+        "description": "The discovery of ‘ovoid cells’ is transforming our understanding of memory and may pave the way for new treatments for Alzheimer’s disease, epilepsy, and other neurological conditions. Look around your home, and you'll see familiar comforts—family photos on t…",
+        "url": "https://scitechdaily.com/scientists-discover-mysterious-new-brain-cells-that-could-change-how-we-treat-alzheimers/",
+        "urlToImage": "https://scitechdaily.com/images/Neuron-Illustration.jpg",
+        "publishedAt": "2025-03-10T01:27:15Z",
+        "content": "Scientists at UBC have discovered a new type of brain cell, called ovoid cells, which play a key role in object recognition memory. This breakthrough could lead to new treatments for memory-related d… [+5351 chars]"
     },
     {
         "source": {
             "id": null,
-            "name": "Indiandefencereview.com"
+            "name": "WKBN.com"
         },
-        "author": null,
-        "title": "New Species of 237-Million-Year-Old Crocodile-Like Predator Discovered in Brazil - Indian Defence Review",
-        "description": "Paleontologists have discovered Retymaijychampsa beckerorum, a 237-million-year-old crocodile-like reptile in Brazil, revealing new insights into prehistoric predators before the rise of dinosaurs.",
-        "url": "https://indiandefencereview.com/new-species-237-myear-old-crocodile-brazil/",
-        "urlToImage": "https://indiandefencereview.com/wp-content/uploads/2025/03/New-Species-of-237-Million-Year-Old-Crocodile-Like-Predator-Discovered-in-Brazil.jpg",
-        "publishedAt": "2025-03-06T21:45:00Z",
-        "content": "Paleontologists have identified a new species of ancient reptile, Retymaijychampsa beckerorum, from a remarkably preserved 237-million-year-old fossil found in southern Brazil. This newly classified … [+3811 chars]"
+        "author": "Craig Ziobert",
+        "title": "Will the Valley be able to see the lunar eclipse this week? - WKBN.com",
+        "description": "On the heels of our solar eclipse and the Northern Lights being visible in 2024, another celestial spectacle will be on our radar this week.",
+        "url": "https://www.wkbn.com/weather/will-the-valley-be-able-to-see-the-lunar-eclipse-this-week/",
+        "urlToImage": "https://www.wkbn.com/wp-content/uploads/sites/48/2022/06/moon-night-midnight-weather-generic-4.jpg?w=1280",
+        "publishedAt": "2025-03-10T01:16:46Z",
+        "content": "On the heels of our solar eclipse and multiple occasions of the Northern Lights being visible in 2024, another celestial spectacle will be on our radar this week. \r\nThe 2025 total lunar eclipse will … [+3414 chars]"
     },
     {
         "source": {
             "id": null,
-            "name": "Pethelpful.com"
+            "name": "Hackaday"
         },
-        "author": "Genny Glassman",
-        "title": "New Controversial Breed of 'Woolly Mice' Just Created by Scientists Has the Internet Buzzing - PetHelpful",
-        "description": "They're hoping to revive the Woolly Mammoth.",
-        "url": "https://pethelpful.com/pet-news/new-controversial-breed-woolly-mice-just-created-by-scientists",
-        "urlToImage": "https://pethelpful.com/.image/c_fill,g_xy_center,x_1114,y_605/NDowMDAwMDAwMDAwMDczMDAx/mouse.png",
-        "publishedAt": "2025-03-06T21:30:00Z",
-        "content": "Mar 6, 2025 4:30 PM ESTScience really is incredible! There are so many things weve yet to explore and see. Take the latest discovery by scientists at Colossal Biosciences in Dallas, Texas, who recent… [+2477 chars]"
+        "author": "Dan Maloney",
+        "title": "Hackaday Links: March 9, 2025 - Hackaday",
+        "description": "It’s been a busy week in space news, and very little of it was good. We’ll start with the one winner of the week, Firefly’s Blue Ghost Mission 1, which landed successfully on the …",
+        "url": "https://hackaday.com/2025/03/09/hackaday-links-march-9-2025/",
+        "urlToImage": "https://hackaday.com/wp-content/uploads/2014/11/had-links-banner.jpg",
+        "publishedAt": "2025-03-10T00:00:00Z",
+        "content": "It’s been a busy week in space news, and very little of it was good. We’ll start with the one winner of the week, Firefly’s Blue Ghost Mission 1, which landed successfully on the Moon’s surface on Ma… [+4716 chars]"
     },
     {
         "source": {
-            "id": null,
-            "name": "Phys.Org"
+            "id": "national-geographic",
+            "name": "National Geographic"
         },
-        "author": "Harvard-Smithsonian Center for Astrophysics",
-        "title": "Runaway stars reveal hidden black hole in Milky Way's nearest neighbor - Phys.org",
-        "description": "Astronomers have discovered strong evidence for the closest supermassive black hole outside of the Milky Way galaxy. This giant black hole is located in the Large Magellanic Cloud, one of the nearest galactic neighbors to our own.",
-        "url": "https://phys.org/news/2025-03-runaway-stars-reveal-hidden-black.html",
-        "urlToImage": "https://scx2.b-cdn.net/gfx/news/2025/runaway-stars-reveal-h.jpg",
-        "publishedAt": "2025-03-06T20:58:51Z",
-        "content": "Astronomers have discovered strong evidence for the closest supermassive black hole outside of the Milky Way galaxy. This giant black hole is located in the Large Magellanic Cloud, one of the nearest… [+4447 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Live Science"
-        },
-        "author": "Jamie Carter",
-        "title": "Powerful 'equinox auroras' may arrive soon: Why changing seasons can bring the best northern lights - Livescience.com",
-        "description": "Expect an uptick in aurora sightings near the spring equinox on March 20, as celestial geometry swings in favor of geomagnetic disturbances.",
-        "url": "https://www.livescience.com/space/the-sun/powerful-equinox-auroras-may-arrive-soon-why-changing-seasons-can-bring-the-best-northern-lights",
-        "urlToImage": "https://cdn.mos.cms.futurecdn.net/GL6krViejT67VFsSARXNUh-1200-80.jpg",
-        "publishedAt": "2025-03-06T20:03:08Z",
-        "content": "The sun is about to enter the Northern Hemisphere, which means some stunning auroras may be visible in the coming weeks.\r\nAt precisely 9:01 UTC (5:01 a.m. EDT) on March 20, our star will cross the ce… [+2886 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "NASA"
-        },
-        "author": "Mark A. Garcia",
-        "title": "What You Need to Know about NASA’s SpaceX Crew-10 Mission - NASA",
-        "description": "Four crew members are preparing to launch to the International Space Station as part of NASA’s SpaceX Crew-10 mission to perform research, technology",
-        "url": "https://www.nasa.gov/missions/station/what-you-need-to-know-about-nasas-spacex-crew-10-mission/",
-        "urlToImage": "https://images-assets.nasa.gov/image/jsc2024e077921/jsc2024e077921~large.jpg",
-        "publishedAt": "2025-03-06T19:17:15Z",
-        "content": "Four crew members are preparing to launch to the International Space Station as part of NASAs SpaceX Crew-10 mission to perform research, technology demonstrations, and maintenance activities aboard … [+6650 chars]"
-    },
-    {
-        "source": {
-            "id": "ars-technica",
-            "name": "Ars Technica"
-        },
-        "author": "Jennifer Ouellette",
-        "title": "Prehistoric bone tool cache suggests advanced reasoning in early hominins - Ars Technica",
-        "description": "Tools “show evidence that their creators carefully worked the bones, chipping off flakes to create useful shapes.”…",
-        "url": "https://arstechnica.com/science/2025/03/prehistoric-bone-tool-cache-suggests-advanced-reasoning-in-early-hominins/",
-        "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2025/03/bone6-1152x648.jpg",
-        "publishedAt": "2025-03-06T18:14:29Z",
-        "content": null
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Earth.com"
-        },
-        "author": null,
-        "title": "Man's brain turned to glass after volcanic eruption, scientists think they know why - Earth.com",
-        "description": "A young man's brain turned into glass during Mount Vesuvius’ 79 AD eruption. Scientists now study how extreme heat preserved its structure.",
-        "url": "https://www.earth.com/news/mans-brain-turned-to-glass-after-volcanic-eruption-scientists-think-they-know-why/",
-        "urlToImage": "https://cff2.earth.com/uploads/2025/03/06095035/mount-vesuvius-volcano_volcanic-glass_mans-brain-glass_1m.jpg",
-        "publishedAt": "2025-03-06T18:13:16Z",
-        "content": "A young mans remains from 79 AD have left experts speechless. His skeleton, found in the ancient town of Herculaneum, revealed something that no one expected. Fragments of his brain appear to have tu… [+4546 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Phys.Org"
-        },
-        "author": "Jeff Renaud",
-        "title": "Astrophysicists predict origins of unexpected space objects in solar system and Alpha Centauri - Phys.org",
-        "description": "Interstellar material has been discovered in our solar system, but researchers continue to hunt for where it came from and how it got here. A new study led by Western astrophysicists Cole Gregg and Paul Wiegert recommends Alpha Centauri—the next closest solar…",
-        "url": "https://phys.org/news/2025-03-astrophysicists-unexpected-space-solar-alpha.html",
-        "urlToImage": "https://scx2.b-cdn.net/gfx/news/hires/2025/western-astrophysicist.jpg",
-        "publishedAt": "2025-03-06T18:10:44Z",
-        "content": "Interstellar material has been discovered in our solar system, but researchers continue to hunt for where it came from and how it got here. A new study led by Western astrophysicists Cole Gregg and P… [+5523 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "The Daily Galaxy --Great Discoveries Channel"
-        },
-        "author": null,
-        "title": "Water Existed Billions of Years Earlier Than Scientists Thought! - The Daily Galaxy --Great Discoveries Channel",
-        "description": "Water in the universe may have appeared billions of years earlier than scientists ever imagined! A groundbreaking study suggests that the key ingredient for life formed shortly after the Big Bang, challenging everything we thought we knew. But how did it surv…",
-        "url": "https://dailygalaxy.com/2025/03/water-existed-billions-of-years-earlier/",
-        "urlToImage": "https://dailygalaxy.com/wp-content/uploads/2025/03/Water-Existed-Billions-of-Years-Earlier-Than-Scientists-Thought.jpg",
-        "publishedAt": "2025-03-06T18:00:00Z",
-        "content": "Water, a fundamental ingredient for life, may have appeared far earlier in the universe than previously thought. New research suggests that water molecules could have formed as soon as 100200 million… [+2633 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "OregonLive"
-        },
-        "author": "Jamie Hale | The Oregonian/OregonLive",
-        "title": "OMSI is hosting a midnight lunar eclipse watch party in Portland - OregonLive",
-        "description": "The midnight blood moon eclipse is one of the biggest astronomical events of the year.",
-        "url": "https://www.oregonlive.com/entertainment/2025/03/omsi-is-hosting-a-midnight-lunar-eclipse-watch-party-in-portland.html",
-        "urlToImage": "https://www.oregonlive.com/resizer/v2/BMNWWIOJBJALRHPMGSEKEZ4XPY.jpg?auth=7de9010756a3f1e7feb11d4f933d1bd7e67439400ff96230d7db7c5f600359f5&width=1280&quality=90",
-        "publishedAt": "2025-03-06T17:31:00Z",
-        "content": "The midnight blood moon eclipse is coming, and the Oregon Museum of Science and Industry is ready.\r\nOMSI will host a late-night watch party in Portland for the March 13 total lunar eclipse, giving pe… [+1500 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "The Daily Galaxy --Great Discoveries Channel"
-        },
-        "author": null,
-        "title": "Astronomers Discover a Rare Magnetic White Dwarf System That Could Become a Future Gravitational Wave Source - The Daily Galaxy --Great Discoveries Channel",
-        "description": "Astronomers have discovered a highly magnetic white dwarf system with an 81-minute orbit, which could become a future gravitational wave source detectable by the LISA mission.",
-        "url": "https://dailygalaxy.com/2025/03/astronomers-magnetic-white-dwarf-system/",
-        "urlToImage": "https://dailygalaxy.com/wp-content/uploads/2025/03/Astronomers-Discover-a-Rare-Magnetic-White-Dwarf-System-That-Could-Become-a-Future-Gravitational-Wave-Source.jpg",
-        "publishedAt": "2025-03-06T16:40:00Z",
-        "content": "A team of astronomers has identified a new polar cataclysmic variable, a rare type of binary star system featuring a highly magnetic white dwarf siphoning material from its companion star. The system… [+3304 chars]"
-    },
-    {
-        "source": {
-            "id": "nhl-news",
-            "name": "NHL News"
-        },
-        "author": null,
-        "title": "Nelson traded to Avalanche by Islanders - NHL.com",
-        "description": "Forward has 43 points this season; New York receives Kylington, Ritchie, 2 draft picks",
-        "url": "https://www.nhl.com/news/brock-nelson-traded-to-avalanche-by-islanders",
-        "urlToImage": "https://media.d3.nhle.com/image/private/t_ratio16_9-size50/v1741324933/prd/tsmvyvfzcntthb0tl3ia.jpg",
-        "publishedAt": "2025-03-07T08:21:52Z",
-        "content": "Brock Nelson was traded to the Colorado Avalanche by the New York Islanders on Thursday for defenseman Oliver Kylington, forward prospect Calum Ritchie, a conditional first-round pick in the 2026 NHL… [+4203 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Yahoo Entertainment"
-        },
-        "author": "Kevin O'Connor",
-        "title": "Luka, LeBron leave OT with WIN, Brunson leaves LIMPING | Kevin O'Connor Show - Yahoo Sports",
-        "description": "Kevin O'Connor and Tom Haberstroh dive into the Lakers' thrilling overtime victory against the Knicks in this episode of The Kevin O'Connor Show.",
-        "url": "https://sports.yahoo.com/nba/article/luka-lebron-leave-ot-with-win-brunson-leaves-limping--kevin-oconnor-show-080738085.html",
-        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/grkiCv8XC8f1opZQnD5Uzg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02NzU-/https://s.yimg.com/os/creatr-uploaded-images/2025-03/ca420fe0-fb2a-11ef-b7e9-bcb87efb5c8c",
-        "publishedAt": "2025-03-07T08:07:38Z",
-        "content": "Kevin O'Connor and Tom Haberstroh dive into the Los Angeles Lakers' thrilling overtime victory against the New York Knicks in this episode of The Kevin O'Connor Show. How concerned should Knicks fans… [+1867 chars]"
-    },
-    {
-        "source": {
-            "id": "associated-press",
-            "name": "Associated Press"
-        },
-        "author": "Joe Reedy",
-        "title": "Knicks guard Jalen Brunson expected to miss time after suffering ankle injury in OT loss to Lakers - The Associated Press",
-        "description": "New York star guard Jalen Brunson could miss an extended period of time after suffering an ankle injury during overtime in the Knicks' 113-109 loss to the Los Angeles Lakers on Thursday night. Coach Tom Thibodeau said after the game that Brunson was still bei…",
-        "url": "https://apnews.com/article/knicks-brunson-56268ae9179cd3cd877e13750f36fcb1",
-        "urlToImage": "https://dims.apnews.com/dims4/default/9bf043b/2147483647/strip/true/crop/3785x2129+0+197/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F6a%2Fb2%2Fcdd3730484f5104467c1a2fa7fea%2Fd3690fe0b59e46308a29e288d0c69c84",
-        "publishedAt": "2025-03-07T07:28:00Z",
-        "content": "LOS ANGELES (AP) New York star guard Jalen Brunson could miss an extended period of time after suffering an ankle injury during overtime in the Knicks 113-109 loss to the Los Angeles Lakers on Thursd… [+1593 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Field Gulls"
-        },
-        "author": "Mookie Alexander",
-        "title": "‘We’re talking to a ton of teams’ - Seahawks GM John Schneider on DK Metcalf trade request - Field Gulls",
-        "description": "Schneider confirmed that trade talks are happening following Metcalf’s request, but of course didn’t publicly slam the door shut on the idea that DK will stay with Seattle.",
-        "url": "https://www.fieldgulls.com/2025/3/6/24379751/seattle-seahawks-gm-john-schneider-dk-metcalf-trade-request-nfl-news",
-        "urlToImage": "https://cdn.vox-cdn.com/thumbor/lYeqrNxFEQWF8jrocpZGJktg3vU=/0x0:4458x2334/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/25900880/2155942621.jpg",
-        "publishedAt": "2025-03-07T06:39:26Z",
-        "content": "One day after news of DK Metcalfs trade request was revealed, Seattle Seahawks general manager John Schneider addressed this major twist in the offseason.\r\nSchneider made his weekly appearance on Sea… [+2272 chars]"
-    },
-    {
-        "source": {
-            "id": "associated-press",
-            "name": "Associated Press"
-        },
-        "author": "Brian Mahoney",
-        "title": "Draymond Green sorry for Towns' loss, says podcast comments about avoiding Butler were what he heard - The Associated Press",
-        "description": "Draymond Green sent well wishes to Karl-Anthony Towns after the death after a family friend, but says he was just repeating what he heard when he said on his podcast that Towns didn’t play for the Knicks against Golden State this week because Jimmy Butler was…",
-        "url": "https://apnews.com/article/draymond-green-karl-anthony-towns-podcast-48e93e9d3b38dffbbc6300e54358f223",
-        "urlToImage": "https://dims.apnews.com/dims4/default/36ce8c8/2147483647/strip/true/crop/3216x1809+0+168/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fd3%2F6d%2F6ae55db085c52bfc1efb2f96e6db%2F7461ec501b27400097e12590ba332cbe",
-        "publishedAt": "2025-03-07T06:09:00Z",
-        "content": "NEW YORK (AP) Draymond Green sent well wishes to Karl-Anthony Towns after the death of a family friend, but said Thursday he was just relaying what he heard when he said on his podcast that Towns did… [+1471 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "mlive.com"
-        },
-        "author": "Ansar Khan | akhan1@mlive.com",
-        "title": "Red Wings empathize with Carter Mazur after injury early in debut - MLive.com",
-        "description": "There was no immediate update on the severity of young winger's injury.",
-        "url": "https://www.mlive.com/redwings/2025/03/red-wings-empathize-with-carter-mazur-after-injury-early-in-debut.html",
-        "urlToImage": "https://www.mlive.com/resizer/v2/BKNYPOLGFNGHZEZAAK2MTGGDVA.jpg?auth=dc1b32716390f31de226a274cb1334f770fffab6aa6a06e8760d70007a65fe62&width=1280&quality=90",
-        "publishedAt": "2025-03-07T05:39:00Z",
-        "content": "DETROIT Carter Mazur was so excited Thursday morning about his NHL debut. His friends and family might have been even more excited. More than 200 showed up at Little Caesars Arena.\r\nThen, during his … [+1161 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Flowrestling.org"
-        },
-        "author": "David Bray",
-        "title": "2025 PAC 12 Wrestling Championship Finals Live Updates - FloWrestling",
-        "description": "Follow all the action at the 2025 PAC 12 Championships with our live updates throughout the finals.",
-        "url": "https://www.flowrestling.org/articles/13879404-2025-pac-12-wrestling-championship-finals-live-updates",
-        "urlToImage": "https://d2779tscntxxsw.cloudfront.net/677d74f69e4c7.png",
-        "publishedAt": "2025-03-07T04:50:20Z",
-        "content": "The 2025 PAC 12 Wrestling Championships take place Thursday, March 6 at Oregon State! If you can't watch the action LIVE on FloWrestling, keep track of the important happenings right here.\r\nPac 12 Wr… [+10774 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "The Official Website of the Ultimate Fighting Championship"
-        },
-        "author": null,
-        "title": "UFC Fight Pass Invitational 10 Results, Winner Interviews & More From Las Vegas - UFC",
-        "description": "See The Match Results, Watch Post-Match Interviews With The Winners And More From UFC Fight Pass Invitational 10: Rodriguez vs Hugo, Live From UFC APEX In Las Vegas",
-        "url": "https://www.ufc.com/news/ufc-fight-pass-invitational-10-rodriguez-vs-hugo-results-winner-interviews-apex-las-vegas",
-        "urlToImage": "https://dmxg5wxfqgb4u.cloudfront.net/styles/card/s3/2025-02/8392755392_FPI10_KA_Hero_1920x1080.jpg?itok=oQR_eHDb",
-        "publishedAt": "2025-03-07T04:35:33Z",
-        "content": "After a restart, Canuto was able to pass into side-control and get his knee on Tazas belly. The 31-year-old Taza was wise to it, though, and got back to his feet. The reprieve was only momentary, how… [+543 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "MLB Trade Rumors"
-        },
-        "author": "Anthony Franco",
-        "title": "A’s, Lawrence Butler Agree To Seven-Year Extension - MLB Trade Rumors",
-        "description": "The Athletics are signing right fielder Lawrence Butler to a seven-year extension. Find the details at MLB Trade Rumors.",
-        "url": "https://www.mlbtraderumors.com/2025/03/as-lawrence-butler-agree-to-seven-year-extension.html",
-        "urlToImage": "https://cdn.mlbtraderumors.com/files/2025/03/USATSI_24324292-1024x689.jpg",
-        "publishedAt": "2025-03-07T04:24:36Z",
-        "content": "The A’s are in agreement with right fielder Lawrence Butler on a seven-year, $65.5MM extension, reports ESPN’s Jeff Passan. There’s a club option for an eighth season. The contract buys out at least … [+5041 chars]"
-    },
-    {
-        "source": {
-            "id": "nhl-news",
-            "name": "NHL News"
-        },
-        "author": null,
-        "title": "Minnesota Wild Acquires Forward Justin Brazeau From the Boston Bruins in Exchange for Forwards Marat Khusnutdinov and Jakub Lauko - NHL.com",
-        "description": "SAINT PAUL, Minn. – Minnesota Wild President of Hockey Operations and General Manager Bill Guerin today announced the National Hockey League (NHL) club has acquired forward Justin Brazeau (pronounced BRAZ-oh) from the Boston Bruins in exchange for forwards Ma…",
-        "url": "https://www.nhl.com/wild/news/minnesota-wild-acquires-forward-justin-brazeau-from-the-boston-bruins-in-exchange-for-forwards-marat-khusnutdinov-and-jakub-lauko-030625",
-        "urlToImage": "https://media.d3.nhle.com/image/private/t_ratio16_9-size50/prd/l1wkzgd6qjyiiaglcfrp.jpg",
-        "publishedAt": "2025-03-07T03:58:00Z",
-        "content": "SAINT PAUL, Minn. Minnesota Wild President of Hockey Operations and General Manager Bill Guerin today announced the National Hockey League (NHL) club has acquired forward Justin Brazeau (pronounced B… [+1834 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Detroit Free Press"
-        },
-        "author": null,
-        "title": "Michigan State basketball unleashes monster comeback to lock up outright Big Ten title - Detroit Free Press",
-        "description": "Huge Savings: Subscribe today to enjoy sports, entertainment, life, money, tech, and travel news along with videos, apps, and more.",
-        "url": "https://www.freep.com/story/sports/college/michigan-state/spartans/2025/03/06/michigan-state-basketball-big-ten-title-iowa-hawkeyes-score-recap/81802774007/",
-        "urlToImage": "https://staticassets.gannettdigital.com/gci-static-assets/assets/global/checkout/meta-generic.png",
-        "publishedAt": "2025-03-07T03:21:59Z",
-        "content": null
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "MLB.com"
-        },
-        "author": "David Adler",
-        "title": "Here's the Brewers' Spring Breakout roster - MLB.com",
-        "description": "Last year, Jackson Chourio took center stage in the inaugural Spring Breakout prospect showcase before his sensational \"20-20 at age 20\" rookie season. Which Brewers prospects are next up this year? Here's everything you need to know about Spring Breakout 202…",
-        "url": "https://www.mlb.com/news/brewers-spring-breakout-roster-2025",
-        "urlToImage": "https://img.mlbstatic.com/mlb-images/image/upload/t_2x1/t_w1536/mlb/gluuqkpywk7azlcgonih.jpg",
-        "publishedAt": "2025-03-07T03:20:40Z",
-        "content": "Last year, Jackson Chourio took center stage in the inaugural Spring Breakout prospect showcase before his sensational \"20-20 at age 20\" rookie season. Which Brewers prospects are next up this year? … [+5436 chars]"
-    },
-    {
-        "source": {
-            "id": "associated-press",
-            "name": "Associated Press"
-        },
-        "author": "Howard Fendrich",
-        "title": "Women’s tennis players now are eligible for paid maternity leave financed by Saudi fund - The Associated Press",
-        "description": "Pregnant players on the women’s tennis tour now can receive 12 months of paid maternity leave, and those who become parents via partner pregnancy, surrogacy or adoption can get two months off with pay. That is available under a program sponsored by the Public…",
-        "url": "https://apnews.com/article/maternity-leave-wta-pif-45b384c5aff19024af172bff0fb4e41f",
-        "urlToImage": "https://dims.apnews.com/dims4/default/5a6b1dd/2147483647/strip/true/crop/2951x1660+0+156/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F0b%2F61%2F46c1512485ed7118a9bebe167ced%2F8acd568514764a098bb2117662e64df3",
-        "publishedAt": "2025-03-07T02:45:00Z",
-        "content": "Pregnant players on the womens tennis tour now can receive 12 months of paid maternity leave, and those who become parents via partner pregnancy, surrogacy or adoption can get two months off with pay… [+4380 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Sports Illustrated"
-        },
-        "author": "Blake Silverman",
-        "title": "Announcer Ian Eagle Went Berserk Over Steph Curry's Latest Unbelievable Three-Pointer - Sports Illustrated",
-        "description": "Steph Curry is not human.",
-        "url": "https://www.si.com/nba/announcer-ian-eagle-berserk-steph-curry-latest-unbelievable-three-pointer",
-        "urlToImage": "https://images2.minutemediacdn.com/image/upload/c_crop,w_2209,h_1242,x_0,y_0/c_fill,w_1440,ar_16:9,f_auto,q_auto,g_auto/images/ImagnImages/mmsport/si/01jnq5z1j7kpt8gke8t8.jpg",
-        "publishedAt": "2025-03-07T02:42:25Z",
-        "content": "Steph Curry did Steph Curry things Thursday as the Golden State Warriors played the Brooklyn Nets at the Barclays Center. At the first-half buzzer, he made one of the most ridiculous three-pointers o… [+1383 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Naia.org"
-        },
-        "author": null,
-        "title": "2025 Men’s Basketball National Championship National Championship Field Announced - NAIA",
-        "description": "The 2025 NAIA Men's Basketball field is set. 64 teams are in and will begin play in the first round on March 14.",
-        "url": "https://www.naia.org/sports/mbkb/2024-25/releases/2025_Qualifiers",
-        "urlToImage": "http://naia.prestosports.com/sports/mbkb/2024-25/photos/Ticket_Punched_-_Quickhitter_2_-_Landscape_-1-.jpg?max_width=600&max_height=600",
-        "publishedAt": "2025-03-07T02:14:48Z",
-        "content": "KANSAS CITY, Mo. – [First/Second Round Schedule | Bracket Reveal | Official Bracket] The National Association of Intercollegiate Athletics (NAIA) has officially announced the 64-team field and pairin… [+12770 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "New York Post"
-        },
-        "author": "Jon Heyman",
-        "title": "Yankees-J.D. Martinez marriage unlikely as search for Giancarlo Stanton fill-in drags on - New York Post ",
-        "description": "The Yankees did reach out on J.D. Martinez, but the sides don’t seem close, as the Yankees don’t want to spend any/much more.",
-        "url": "https://nypost.com/2025/03/06/sports/yankees-j-d-martinez-arent-close-to-deal-as-search/",
-        "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2025/03/newspress-collage-37xj4xh8z-1741306504473.jpg?quality=75&strip=all&1741288598&w=1024",
-        "publishedAt": "2025-03-07T01:18:00Z",
-        "content": "The Yankees did reach out on J.D. Martinez, but the sides dont seem close, as the Yankees don’t want to spend any/much more.\r\nTheres no timetable yet on Giancarlo Stanton. Meantime, hes trying experi… [+558 chars]"
-    },
-    {
-        "source": {
-            "id": "nhl-news",
-            "name": "NHL News"
-        },
-        "author": null,
-        "title": "Devils confident in playoff push despite Jack Hughes injury - NHL.com",
-        "description": "Qualifying for postseason 'still our goal' after leading goal-scorer lost for season",
-        "url": "https://www.nhl.com/news/new-jersey-focused-on-playoffs-despite-jack-hughes-injury",
-        "urlToImage": "https://media.d3.nhle.com/image/private/t_ratio16_9-size50/v1741295894/prd/wg3te6b7puiyvjnzjunv.png",
-        "publishedAt": "2025-03-07T00:04:07Z",
-        "content": "NEWARK, N.J. -- Jack Hughes will miss the remainder of the season for the New Jersey Devils, but the team remains optimistic that it can compete for a berth in the Stanley Cup Playoffs.\r\n\"Dig in, tha… [+4025 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "NBCSports.com"
-        },
-        "author": "Charean Williams",
-        "title": "Commanders re-sign LB Bobby Wagner - NBC Sports",
-        "description": "Wagner, 29th on PFT's top-100 free agents list, agreed to a one-year deal worth up to $9.5 million.",
-        "url": "https://www.nbcsports.com/nfl/profootballtalk/rumor-mill/news/commanders-re-sign-lb-bobby-wagner",
-        "urlToImage": "https://nbcsports.brightspotcdn.com/dims4/default/918fd96/2147483647/strip/true/crop/5486x3086+0+0/resize/1440x810!/quality/90/?url=https%3A%2F%2Fnbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com%2Fbrightspot%2F03%2F46%2Fc170151b420a9484b4c5b5dcd753%2Fhttps-delivery-gettyimages.com%2Fdownloads%2F2192987803",
-        "publishedAt": "2025-03-06T23:44:18Z",
-        "content": "The Commanders are re-signing linebacker Bobby Wagner to a one-year deal worth up to $9.5 million with $8 million guaranteed, NFL Media reports.\r\nWagner ranks 29th on PFTs top-100 free agents list.\r\n… [+546 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "cleveland.com"
-        },
-        "author": "Chris Fedor, cleveland.com",
-        "title": "Cavs file for trademark of fan-favorite phrase - cleveland.com",
-        "description": "According to the pending trademark filing, it would cover hosiery, footwear, T-shirts, sweatshirts, sweatpants, headwear, jackets, ties, baby clothes and much more.",
-        "url": "https://www.cleveland.com/cavs/2025/03/cavs-file-for-trademark-of-fan-favorite-phrase.html",
-        "urlToImage": "https://www.cleveland.com/resizer/v2/RQTUWMKKORFINAX5MKIQHJKSCE.JPG?auth=cf50c7ad28e555a29d48bb3d8f10f9b3d3f5fe88a6579adbf640c221dfa840c0&width=1280&quality=90",
-        "publishedAt": "2025-03-06T23:29:00Z",
-        "content": "CLEVELAND, Ohio The NBA-leading Cavs are looking to cash in on their success this season. \r\nRecords with the U.S. Patent &amp; Trademark Office reveal that, on Wednesday the night Cleveland became th… [+1991 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Pff.com"
-        },
-        "author": "Zoltán Buday",
-        "title": "2025 NFL Free Agency: 5 moves that just make sense - Pro Football Focus",
-        "description": "Zoltán Buday breaks down the five potential free-agent moves that just make sense.",
-        "url": "https://www.pff.com/news/nfl-2025-nfl-free-agency-5-moves-that-just-make-sense",
-        "urlToImage": "https://media.pff.com/2025/03/Stanley-Ronnie-Alamy-scaled.jpg?w=1200&h=675",
-        "publishedAt": "2025-03-06T22:30:00Z",
-        "content": "<ul><li>Kansas City Chiefs need to target a left tackle: After trading away guard Joe Thuney, the Chiefs could very well try to sign the best available left tackle on the market to fill the biggest h… [+4763 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "9to5Mac"
-        },
-        "author": "Filipe Espósito",
-        "title": "M3 Ultra on par with M4 Max in CPU performance based on benchmark test - 9to5Mac",
-        "description": "Apple this week announced a new generation of Mac Studio, and surprisingly it is available with two different chip families:...",
-        "url": "https://9to5mac.com/2025/03/06/m3-ultra-m4-max-chip-benchmark/",
-        "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2025/03/mac-studio-m4-max-m3-ultra.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
-        "publishedAt": "2025-03-07T05:23:00Z",
-        "content": "Apple this week announced a new generation of Mac Studio, and surprisingly it is available with two different chip families: M3 Ultra and M4 Max. While the company claims that the M3 Ultra is up to t… [+2586 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "SamMobile"
-        },
-        "author": "SamMobile, Asif Iqbal Shaik",
-        "title": "Here’s Galaxy Z Fold 6 and Flip 6 One UI 7 beta changelog - SamMobile - Samsung news",
-        "description": "After announcing the expansion of the One UI 7.0 Beta Program for more devices earlier this week, Samsung released the ...",
-        "url": "https://www.sammobile.com/news/galaxy-z-fold-6-flip-6-one-ui-7-beta-full-changelog/",
-        "urlToImage": "https://www.sammobile.com/wp-content/uploads/2024/07/Galaxy-Z-Fold-6-cameras-1-720x405.jpg",
-        "publishedAt": "2025-03-07T03:59:00Z",
-        "content": "After announcing the expansion of the One UI 7.0 Beta Program for more devices earlier this week, Samsung released the beta update today for the Galaxy Z Flip 6 and the Galaxy Z Fold 6. The update is… [+16046 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "9to5google.com"
-        },
-        "author": "Ben Schoon",
-        "title": "Pixel 9a’s new purple color and tiny camera bump shown off in latest leaks [Gallery] - 9to5Google",
-        "description": "Yet another Pixel 9a leak has hit the web, this time showing off the purple color and the tiny camera bump on Google's device.",
-        "url": "http://9to5google.com/2025/03/06/google-pixel-9a-purple-leak/",
-        "urlToImage": "https://i0.wp.com/9to5google.com/wp-content/uploads/sites/4/2025/03/pixel-9a-camera-bump-blass-2.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
-        "publishedAt": "2025-03-07T02:55:00Z",
-        "content": "Ahead of its upcoming launch, another batch of Pixel 9a leaks have hit the web, primarily showcasing the purple color of Google’s mid-range device.\r\nPosted by Evan Blass on a private Twitter/X accoun… [+1142 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Nintendo Life"
-        },
-        "author": "Liam Doolan",
-        "title": "Nintendo Expands Switch Online's Game Boy Library With Two More Titles - Nintendo Life",
-        "description": "Mario and Donkey Kong are here",
-        "url": "https://www.nintendolife.com/news/2025/03/nintendo-expands-switch-onlines-game-boy-library-with-two-more-titles",
-        "urlToImage": "https://images.nintendolife.com/0fe67fdb5729a/1280x720.jpg",
-        "publishedAt": "2025-03-07T01:30:00Z",
-        "content": "Subscribe to Nintendo Life on YouTube798k\r\nNintendo has announced two more Game Boy titles for the Switch Online service this week and they're available right now.\r\nFirst up we have the 1994 title Do… [+1819 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Platformer.news"
-        },
-        "author": "Casey Newton",
-        "title": "Google's new AI Mode is a preview of the future of search - Platformer",
-        "description": "The next phase of AI's takeover of search offers plenty of links to the web — but will anyone click?",
-        "url": "https://www.platformer.news/google-ai-mode-hands-on/",
-        "urlToImage": "https://www.platformer.news/content/images/size/w1200/2025/03/ai-mode-hero-image.width-2200.format-webp.webp",
-        "publishedAt": "2025-03-07T01:27:13Z",
-        "content": "This is a column about AI. My boyfriend works at Anthropic. See my full ethics disclosure here\r\n.\r\nJust under a year ago, at its annual developer conference, Google signaled that a dramatic change wa… [+13110 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Push Square"
-        },
-        "author": "Liam Croft",
-        "title": "Activision Confirms Tony Hawk's Pro Skater 4 Won't Be Free Roam on PS5, PS4 - Push Square",
-        "description": "Two-minute format for Pro Skater 4 confirmed",
-        "url": "https://www.pushsquare.com/news/2025/03/activision-confirms-tony-hawks-pro-skater-4-wont-be-free-roam-on-ps5-ps4",
-        "urlToImage": "https://images.pushsquare.com/4632ad4868923/1280x720.jpg",
-        "publishedAt": "2025-03-07T00:00:00Z",
-        "content": "In response to fan concerns, Activision has now confirmed that Tony Hawk's Pro Skater 4 won't ship with the free roam structure of the original game when it launches alongside Pro Skater 3 on PS5, PS… [+1254 chars]"
-    },
-    {
-        "source": {
-            "id": "ars-technica",
-            "name": "Ars Technica"
-        },
-        "author": "Kyle Orland",
-        "title": "“Literally just a copy”—hit iOS game accused of unauthorized HTML5 code theft - Ars Technica",
-        "description": "Web game illicitly “wrapped in a mobile shell” climbed the paid App Store charts.",
-        "url": "https://arstechnica.com/gaming/2025/03/more-than-a-clone-this-viral-ios-game-allegedly-committed-wholesale-code-theft/",
-        "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2025/03/diapersplease-1152x648.png",
-        "publishedAt": "2025-03-06T23:46:06Z",
-        "content": null
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "GameSpot"
-        },
-        "author": "Steven Petite",
-        "title": "Suikoden HD Remaster Collection Is Steeply Discounted For PC On Launch Day - GameSpot",
-        "description": "Suikoden I & II HD Remaster launched March 6 on PS5, Xbox Series X|S, Nintendo Switch, and PC.",
-        "url": "https://www.gamespot.com/articles/suikoden-hd-remaster-collection-is-steeply-discounted-for-pc-on-launch-day/1100-6526150/",
-        "urlToImage": "https://www.gamespot.com/a/uploads/screen_kubrick/1701/17013431/4358143-suikodenhed.jpg",
-        "publishedAt": "2025-03-06T22:44:13Z",
-        "content": "Though console players will have to pay the full $50 price to play the collection this week, the physical edition for Switch, PS5, and Xbox Series X comes bundled with a few useful in-game bonuses.\r\n… [+821 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Kotaku"
-        },
-        "author": "Ethan Gach",
-        "title": "Nvidia Slammed For 'Lying' About Budget Graphics Card But They're Selling Out Anyway - Kotaku",
-        "description": "The GeForce RTX 5070 can't compete with the 4090 after all",
-        "url": "https://kotaku.com/nvidia-geforce-rtx-5070-price-stock-amd-radeon-rx-9070-1851768229",
-        "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/2f6d6fdeb135889521448163d9357355.png",
-        "publishedAt": "2025-03-06T21:55:00Z",
-        "content": "It sounded like a miracle: Nvidias new budget GeForce RTX 5070 graphics card, priced at just $550, would perform even better than last generations $1,600 RTX 4090. That was the claim CEO Jensen Huang… [+2129 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "MacRumors"
-        },
-        "author": "Joe Rossignol",
-        "title": "Apple Says New MacBook Air Up to 23x Faster Than Intel-Based Model, But Read the Fine Print - MacRumors",
-        "description": "Apple has a staggering marketing claim for the new MacBook Air with the M4 chip.   Specifically, Apple says the new MacBook Air is up to 23x faster...",
-        "url": "https://www.macrumors.com/2025/03/06/m4-macbook-air-up-to-23x-faster-vs-intel/",
-        "urlToImage": "https://images.macrumors.com/t/aVrT4clFLhu11QbK1bLhKBCNi5E=/3840x/article-new/2025/03/Apple-MacBook-Air-hero.jpg",
-        "publishedAt": "2025-03-06T21:46:42Z",
-        "content": "Apple has a staggering marketing claim for the new MacBook Air with the M4 chip.\r\nSpecifically, Apple says the new MacBook Air is up to 23x faster than the last Intel-based model. However, there are … [+2412 chars]"
-    },
-    {
-        "source": {
-            "id": "ign",
-            "name": "IGN"
-        },
-        "author": "Eric Song",
-        "title": "The 10th Gen Apple iPad Drops to the Lowest Price for 2025: The Best iPad for Most People - IGN",
-        "description": "Snappy performance at a great price.",
-        "url": "https://www.ign.com/articles/10th-gen-apple-ipad-deal-2025",
-        "urlToImage": "https://assets-prd.ignimgs.com/2025/03/06/appleipad10g-1741296711735.jpg?width=1280",
-        "publishedAt": "2025-03-06T21:37:29Z",
-        "content": "Amazon has just dropped the price of the 10th gen Apple iPad to $259.99 shipped. Currently you can get it in Blue or Silver for this price. This is very close to the lowest price we've ever seen; it … [+2436 chars]"
+        "author": "Jason Bittel",
+        "title": "Maybe megalodon wasn’t so chonky after all - National Geographic",
+        "description": "A new study proposes that the massive ancient shark was built more slenderly than a great white. But not all paleontologists agree.",
+        "url": "https://www.nationalgeographic.com/science/article/megalodon-shark-bigger-size-slim-fossil",
+        "urlToImage": "https://i.natgeofe.com/n/69d93675-8082-4be5-8d31-773b0bb37fc8/C0493410-Megalodon_prehistoric_shark_with_prey_illustration_16x9.jpg?w=1200",
+        "publishedAt": "2025-03-09T23:18:19Z",
+        "content": "For some ancient creatures, scientists have entire skeletons with which to reconstruct what the animals may have looked like in life. But for the megalodon, the task is much more difficult.\r\nThe foss… [+1367 chars]"
     },
     {
         "source": {
@@ -1084,115 +733,466 @@
             "name": "TechCrunch"
         },
         "author": "Kyle Wiggers",
-        "title": "Hugging Face’s chief science officer worries AI is becoming ‘yes-men on servers’ - TechCrunch",
-        "description": "Hugging Face co-founder and chief science officer Thomas Wolf thinks that AI today isn't capable of figuring out novel solutions like a human.",
-        "url": "https://techcrunch.com/2025/03/06/hugging-faces-chief-science-officer-worries-ai-is-becoming-yes-men-on-servers/",
-        "urlToImage": "https://techcrunch.com/wp-content/uploads/2016/11/wtf_is_ai.jpg?resize=1200,675",
-        "publishedAt": "2025-03-06T20:42:03Z",
-        "content": "AI company founders have a reputation for making bold claims about the technology’s potential to reshape fields, particularly the sciences. But Thomas Wolf, Hugging Face’s co-founder and chief scienc… [+3191 chars]"
+        "title": "Colossal CEO Ben Lamm says humanity has a 'moral obligation' to pursue de-extinction tech - TechCrunch",
+        "description": "Colossal CEO Ben Lamm reaffirmed that the company has no plans to create a real-life Jurassic Park — and said that humanity must invest in de-extinction tech.",
+        "url": "https://techcrunch.com/2025/03/09/colossal-ceo-ben-lamm-says-humanity-has-a-moral-obligation-to-pursue-de-extinction-tech/",
+        "urlToImage": "https://techcrunch.com/wp-content/uploads/2025/03/Screenshot-2025-03-09-at-2.28.04PM.png?resize=1200,654",
+        "publishedAt": "2025-03-09T19:03:51Z",
+        "content": "The CEO of Colossal, a startup that aims to use genetic editing techniques to bring back extinct species, including the wooly mammoth, assured audiences at SXSW that the company has no plans to creat… [+3592 chars]"
     },
     {
         "source": {
             "id": null,
-            "name": "Outkick.com"
+            "name": "Stereogum"
         },
-        "author": "Matt Reigle",
-        "title": "New Version Of Monopoly Requires No Math (Will Still Probably Cause Arguments And Name-Calling) - Outkick",
-        "description": "A new version of Monopoly will finally do away with all of that pesky math.",
-        "url": "https://www.outkick.com/sports/new-version-monopoly-requires-no-math-will-still-probably-cause-arguments-name-calling",
-        "urlToImage": "https://static.outkick.com/www.outkick.com/content/uploads/2025/03/gettyimages-85991649-1.jpg",
-        "publishedAt": "2025-03-06T20:33:13Z",
-        "content": "Like the classic board game Monopoly, but hate math?\r\nWell, then you're probably going to like the latest version of the iconic game, which now tells tedious adding and subtracting to pound sand than… [+1772 chars]"
+        "author": "Abby Jones",
+        "title": "Imagine Dragons Song Lands On The Moon - Stereogum",
+        "description": "",
+        "url": "https://www.stereogum.com/2298393/imagine-dragons-moon-intuitive-machines-lander/news/",
+        "urlToImage": "https://static.stereogum.com/uploads/2025/03/imagine-dragons-on-the-moon-1741561616.png",
+        "publishedAt": "2025-03-09T17:40:00Z",
+        "content": "On Feb. 26, the space exploration company Intuitive Machines launched their IM-2 Freedom Payload mission, an effort to establish a data center on the lunar south pole designed and operated by Lonesta… [+3386 chars]"
     },
     {
         "source": {
-            "id": "ars-technica",
-            "name": "Ars Technica"
+            "id": null,
+            "name": "The Daily Galaxy --Great Discoveries Channel"
         },
-        "author": "Ryan Whitwam",
-        "title": "No one asked for this: Google is testing round keys in Gboard - Ars Technica",
-        "description": "A lot of Gboard beta users are suddenly remembering they joined the beta.",
-        "url": "https://arstechnica.com/google/2025/03/no-one-asked-for-this-google-is-testing-round-keys-in-gboard/",
-        "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2025/03/Gboard-round-1152x648-1741291300.jpg",
-        "publishedAt": "2025-03-06T20:32:01Z",
+        "author": null,
+        "title": "Ancient Trees Frozen For 6,000 Years Emerge From Ice - The Daily Galaxy --Great Discoveries Channel",
+        "description": "Buried beneath the ice for nearly 6,000 years, a lost forest of ancient trees has just been uncovered in the Rocky Mountains—and what it reveals about Earth's past and future is both fascinating and alarming",
+        "url": "https://dailygalaxy.com/2025/03/ancient-trees-frozen-emerge-from-ice/",
+        "urlToImage": "https://dailygalaxy.com/wp-content/uploads/2025/03/Ancient-Trees-Frozen-For-6000-Years-Emerge-From-Ice.jpg",
+        "publishedAt": "2025-03-09T17:20:00Z",
+        "content": "A recent discovery in the Rocky Mountains has given scientists an extraordinary look into the past, but it comes with an unsettling reminder of the effects of climate change. A 5,900-year-old forest … [+3001 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "The Daily Galaxy --Great Discoveries Channel"
+        },
+        "author": null,
+        "title": "Pony-sized Dinosaur Discovered On Isle Of Skye After 52 Years - The Daily Galaxy --Great Discoveries Channel",
+        "description": "Hidden for over 50 years, a pony-sized dinosaur fossil has finally been excavated from a remote sea cliff on the Isle of Skye. What makes this 166-million-year-old discovery so special, and what could it reveal about Scotland’s prehistoric past?",
+        "url": "https://dailygalaxy.com/2025/03/pony-sized-dinosaur-discovered/",
+        "urlToImage": "https://dailygalaxy.com/wp-content/uploads/2025/03/Pony-sized-Dinosaur-Discovered-On-Isle-Of-Skye-After-52-Years.jpg",
+        "publishedAt": "2025-03-09T16:40:00Z",
+        "content": "A fossilized dinosaur skeleton, first spotted in 1973 on the Isle of Skye, has finally been excavated and studied, revealing Scotlands most complete Middle Jurassic dinosaur find. The pony-sized herb… [+2840 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Forbes"
+        },
+        "author": "Alison Durkee",
+        "title": "Northern Lights Forecast: 15 States Could See Aurora Borealis Tonight - Forbes",
+        "description": "The northern lights could be visible in northern states along the U.S.-Canada border Sunday.",
+        "url": "https://www.forbes.com/sites/alisondurkee/2025/03/09/northern-lights-forecast-15-states-could-see-aurora-borealis-tonight/",
+        "urlToImage": "https://imageio.forbes.com/specials-images/imageserve/67cdbef068b48c9ffa62f70d/0x0.jpg?format=jpg&crop=1379,775,x0,y101,safe&height=900&width=1600&fit=bounds",
+        "publishedAt": "2025-03-09T16:27:10Z",
+        "content": "Americans in more than a dozen northern states could see the northern lights Sunday, as the National Oceanic and Atmospheric Administration predicts the aurora borealis will be more visible than usua… [+2881 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "The Daily Galaxy --Great Discoveries Channel"
+        },
+        "author": null,
+        "title": "Perseverance Crushes A Rock On Mars To Reveal Signs Of Past Water - The Daily Galaxy --Great Discoveries Channel",
+        "description": "NASA’s Perseverance rover just tried something never attempted before on Mars—crushing a rock to unlock hidden secrets beneath the surface. What it found could change how we study the Red Planet’s past",
+        "url": "https://dailygalaxy.com/2025/03/perseverance-crushes-rock-mars-water/",
+        "urlToImage": "https://dailygalaxy.com/wp-content/uploads/2025/03/Perseverance-Crushes-A-Rock-On-Mars-To-Reveal-Signs-Of-Past-Water.jpg",
+        "publishedAt": "2025-03-09T16:20:00Z",
+        "content": "NASA’s Perseverance rover has taken an unconventional approach to Martian explorationsmooshing a rock to reveal secrets beneath the surface. This unexpected yet effective experiment has provided valu… [+3010 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Futurism"
+        },
+        "author": "Frank Landymore",
+        "title": "Scientists Realize They Witnessed the Last Gasp of a Planet as It Met a Horrible Fate - Futurism",
+        "description": "Astronomers say that an x-ray signal is the \"death knell\" of a planet being ripped to shreds by a nearby star.",
+        "url": "https://futurism.com/the-byte/planet-horrible-fate",
+        "urlToImage": "https://wordpress-assets.futurism.com/2025/03/planet-horrible-fate.jpg",
+        "publishedAt": "2025-03-09T16:00:03Z",
+        "content": "Since they were first detected over four decades ago, unusually powerful x-ray emissions originating from the site of a dying star called the Helix Nebula have proved an enigma to astronomers.\r\nNow, … [+2925 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Space.com"
+        },
+        "author": "Robert Lea",
+        "title": "NASA switches off Voyager instruments to extend life of the two interstellar spacecraft: 'Every day could be our last.' - Livescience.com",
+        "description": "\"The Voyagers have been deep space rock stars since launch, and we want to keep it that way as long as possible!\"",
+        "url": "https://www.space.com/nasa-switches-off-voyager-instruments-to-extend-life-of-the-two-interstellar-spacecraft",
+        "urlToImage": "https://cdn.mos.cms.futurecdn.net/3n9Svtb48CRyBSpb6pwwjF-1200-80.jpg",
+        "publishedAt": "2025-03-09T16:00:00Z",
+        "content": "NASA engineers are turning off two instruments to ensure that the twin spacecraft, Voyager 1 and Voyager 2, can continue exploring space beyond the limits of the solar system.\r\nTo save energy for fur… [+4538 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "The Daily Galaxy --Great Discoveries Channel"
+        },
+        "author": null,
+        "title": "Golden Scaleless Cave Fish Discovered In China Reveals Evolution In Action - The Daily Galaxy --Great Discoveries Channel",
+        "description": "Scientists have uncovered a golden scaleless cave fish in China that appears to be evolving before our eyes. With its large eyes and lack of scales, this rare species offers a glimpse into how life adapts to the dark. But is it still transitioning—or has it f…",
+        "url": "https://dailygalaxy.com/2025/03/golden-scaleless-cave-fish-discovered/",
+        "urlToImage": "https://dailygalaxy.com/wp-content/uploads/2025/03/Golden-Scaleless-Cave-Fish-Discovered-In-China-Reveals-Evolution-In-Action.jpg",
+        "publishedAt": "2025-03-09T15:40:00Z",
+        "content": "A newly discovered golden cave fish in southwestern China is giving scientists an unprecedented look at evolution in action. The fish, known as the Xingren golden-line fish (Sinocyclocheilus xingrene… [+2910 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Live Science"
+        },
+        "author": "Peter Ray Allison",
+        "title": "Scientists discover simpler way to achieve Einstein's 'spooky action at a distance' thanks to AI breakthrough — bringing quantum internet closer to reality - Space.com",
+        "description": "AI has helped physicists discover a simpler way of achieving quantum entanglement. This finding could make it easier to develop quantum communication technologies.",
+        "url": "https://www.livescience.com/technology/computing/scientists-discover-simpler-way-to-achieve-einsteins-spooky-action-at-a-distance-thanks-to-ai-bringing-quantum-internet-closer-to-reality",
+        "urlToImage": "https://cdn.mos.cms.futurecdn.net/HD5YvLou3pppAA4BHSrsuS-1200-80.jpg",
+        "publishedAt": "2025-03-09T14:00:00Z",
+        "content": "Scientists have used AI to discover an easier method to form quantum entanglement between subatomic particles, paving the way for simpler quantum technologies.\r\nWhen particles such as photons become … [+3929 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Phys.Org"
+        },
+        "author": "Kimberly Hickok",
+        "title": "Record-setting electron beam: Five times more powerful than predecessors - Phys.org",
+        "description": "Scientists have created an ultrashort electron beam with five times more peak current than any other similar beam on Earth.",
+        "url": "https://phys.org/news/2025-03-electron-powerful-predecessors.html",
+        "urlToImage": "https://scx2.b-cdn.net/gfx/news/hires/2025/slac-scientists-create.jpg",
+        "publishedAt": "2025-03-09T13:10:04Z",
+        "content": "Scientists have created an ultrashort electron beam with five times more peak current than any other similar beam on Earth.\r\nDescribed in a paper published in Physical Review Letters, this achievemen… [+5144 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Space.com"
+        },
+        "author": "Alexander Cox",
+        "title": "Is there life out there? The existence of other technological species is highly likely - Yahoo",
+        "description": "Is there life out there? The existence of other technological species is highly likely",
+        "url": "https://www.space.com/space-exploration/search-for-life/is-there-life-out-there-the-existence-of-other-technological-species-is-highly-likely",
+        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/a6q6hhldJ_T.AUIAqDRZuQ--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD02ODg-/https://media.zenfs.com/en/space_311/a3a2f0c25d76528aa411fc9c06f291f2",
+        "publishedAt": "2025-03-09T13:00:00Z",
+        "content": "When you buy through links on our articles, Future and its syndication partners may earn a commission.\r\nCredit: ESA/Hubble &amp; NASA\r\nWe live in a golden age for space exploration. Scientists are ga… [+7298 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "The Daily Galaxy --Great Discoveries Channel"
+        },
+        "author": null,
+        "title": "X-37B Military Spaceplane Breaks New Ground with Advanced Orbital Maneuvers in 7th Mission - The Daily Galaxy --Great Discoveries Channel",
+        "description": "The X-37B spaceplane has completed its seventh mission, successfully demonstrating advanced orbital maneuvers, including aerobraking, and contributing to the U.S. Space Force’s expanding space capabilities.",
+        "url": "https://dailygalaxy.com/2025/03/x-37b-military-spaceplane-7th-mission/",
+        "urlToImage": "https://dailygalaxy.com/wp-content/uploads/2025/03/X-37B-Military-Spaceplane-Breaks-New-Ground-with-Advanced-Orbital-Maneuvers-in-7th-Mission.jpg",
+        "publishedAt": "2025-03-09T12:00:00Z",
+        "content": "The X-37B military spaceplane has successfully completed its seventh mission after spending 434 days in orbit, marking another significant achievement for the U.S. Space Force. The spacecraft, known … [+4213 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Orlando Sentinel"
+        },
+        "author": "Richard Tribou",
+        "title": "NASA, partners push to speed up launch of Artemis II - Orlando Sentinel",
+        "description": "NASA and its partners are pressing to speed up the timeline for the Artemis II launch that will fly humans to the moon for the first time in more than 50 years as the program competes with Trump an…",
+        "url": "http://www.orlandosentinel.com/2025/03/09/nasa-partners-push-to-speed-up-launch-of-artemis-ii/",
+        "urlToImage": "https://www.orlandosentinel.com/wp-content/uploads/2025/03/tos-l-artemis-media-day0389.jpg?w=1024&h=586",
+        "publishedAt": "2025-03-09T11:01:34Z",
+        "content": "KENNEDY SPACE CENTER — There’s a sense of urgency among NASA and its partners aiming for the first human spaceflight of the Artemis program.\r\nArtemis II is slated to launch four astronauts on an 10-d… [+10931 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Live Science"
+        },
+        "author": "Jamie Carter",
+        "title": "Space photo of the week: Hubble hunts a stellar 'imposter' hiding in the Great Bear - Livescience.com",
+        "description": "The legendary Hubble Space Telescope has turned its gaze to the Ursa Major-adjacent galaxy UGC 5460, revealing spiral arms, star clusters and a possible supernova \"imposter\".",
+        "url": "https://www.livescience.com/space/astronomy/space-photo-of-the-week-hubble-hunts-a-stellar-imposter-hiding-in-the-great-bear",
+        "urlToImage": "https://cdn.mos.cms.futurecdn.net/eFuBhc76QruE3Q6MP7PgFQ-1200-80.jpg",
+        "publishedAt": "2025-03-09T11:00:00Z",
+        "content": "What it is: The spiral galaxy UGC 5460\r\nWhere it is: 60 million light-years away in the constellation Ursa Major\r\nWhen it was shared: Feb. 21, 2025\r\nWhy it's so special: This stunning new image of a … [+2604 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "autoevolution"
+        },
+        "author": "Cristian Gnaticov",
+        "title": "Ford Mustang Dark Horse Proudly Shows Off Its New Vossen Wheels - autoevolution",
+        "description": "This Ford Mustang Dark Horse V8-powered muscle car rocks a set of fresh alloys and is a few mods away from looking like a Shelby",
+        "url": "https://www.autoevolution.com/news/ford-mustang-dark-horse-proudly-shows-off-its-new-vossen-wheels-248151.html",
+        "urlToImage": "https://s1.cdn.autoevolution.com/images/news/ford-mustang-dark-horse-proudly-shows-off-its-new-vossen-wheels-248151_1.jpg",
+        "publishedAt": "2025-03-09T10:01:17Z",
+        "content": "Nevertheless, one could order one of the new Shelbys should they want their S650 Ford Mustang to stand neck and neck with the Hellcat-powered beasts, yet if it was us, we would wait for the Blue Oval… [+2173 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "New York Post"
+        },
+        "author": "Christian Arnold",
+        "title": "Rays owner facing pressure from Rob Manfred, other owners to sell team after new stadium snag - New York Post ",
+        "description": "There’s growing pressure for Rays owner Stu Sternberg to sell the club amid consideration that he may back out of a stadium deal in St. Petersburg.",
+        "url": "https://nypost.com/2025/03/10/sports/stu-sternberg-facing-pressure-from-rob-manfred-owners-to-sell-rays/",
+        "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2025/03/newspress-collage-s0erkw4ic-1741581386974.jpg?quality=75&strip=all&1741567113&w=1024",
+        "publishedAt": "2025-03-10T05:39:00Z",
+        "content": "Theres growing pressure for Rays owner Stu Sternberg to sell the ballclub amid consideration that he may back out of a stadium deal in St. Petersburg. \r\nBoth MLB commissioner Rob Manfred and other ow… [+2908 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "CBS Sports"
+        },
+        "author": "",
+        "title": "NFL winners and losers from free agency eve: Myles Garrett, DK Metcalf cash in; Cowboys, Bengals stunned - CBS Sports",
+        "description": "A look at the winners and losers from Sunday's avalanche of NFL transactions",
+        "url": "https://www.cbssports.com/nfl/news/nfl-winners-and-losers-from-free-agency-eve-myles-garrett-dk-metcalf-cash-in-cowboys-bengals-stunned/",
+        "urlToImage": "https://sportshub.cbsistatic.com/i/r/2025/03/10/200aac24-e2f8-4460-876e-8c5c2dc75ed3/thumbnail/1200x675/94498ac03d24a09b2bdaf775fd43b136/mg.png",
+        "publishedAt": "2025-03-10T04:55:00Z",
+        "content": "The NFL's legal tampering period, the unofficial start to free agency when teams can begin meeting with and agreeing to deals with free agent players, kicks off on Monday.\r\nHowever, the league's 32 t… [+9682 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "New York Post"
+        },
+        "author": "Bryan Fonseca",
+        "title": "Geno Smith makes first comment since stunning trade to Raiders - New York Post ",
+        "description": "Geno Smith is excited to be with the Raiders after the Seahawks traded him Friday.",
+        "url": "https://nypost.com/2025/03/09/sports/geno-smith-makes-first-comment-since-stunning-trade-to-raiders/",
+        "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2025/03/GettyImages-2192545487-e1741557934924.jpg?quality=75&strip=all&w=1024",
+        "publishedAt": "2025-03-10T04:21:00Z",
+        "content": "Geno Smith is excited to be with the Raiders.\r\nThe multi-time Pro Bowl quarterback was dealt from the Seahawks to the Raiders.\r\nThe trade, finalized Friday, saw the Raiders send back a third-rounder … [+1643 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "lakingsinsider.com"
+        },
+        "author": "Zach Dooley For LAKingsInsider.com",
+        "title": "FINAL – Kings 6, Golden Knights 5 – Foegele, Clarke, Hiller - LA Kings Insider",
+        "description": "The LA Kings pulled out an entertaining victory in Las Vegas, skating to a 6-5 win over the Vegas Golden Knights on Sunday evening at T-Mobile Arena. The visitors opened the scoring through forward Anze Kopitar, who scored for the third time in four games to …",
+        "url": "https://lakingsinsider.com/2025/03/09/final-kings-6-golden-knights-5-foegele-clarke-hiller/",
+        "urlToImage": "https://lakingsinsider.com/wp-content/uploads/2025/03/GettyImages-2204239073.jpg",
+        "publishedAt": "2025-03-10T03:58:28Z",
+        "content": "The LA Kings pulled out an entertaining victory in Las Vegas, skating to a 6-5 win over the Vegas Golden Knights on Sunday evening at T-Mobile Arena. \r\nThe visitors opened the scoring through forward… [+14678 chars]"
+    },
+    {
+        "source": {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        "author": "ESPNcricinfo",
+        "title": "Kohli: India ready to take on the world for the next eight years - ESPNcricinfo",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOMTF5OUZjSy1Kei13eWs4RUU5alQzZ0JxQVl1TGFsRFZLWEd2alFvZHZvZkQ1eXlKMElyMWJISDBNaDN3dmthRGpZb0NpRVhpcVdDajBhVnh3NmJQNUNFZ09pMHlWdTAxQXprdU40N1ZEUHZPOTdPejN1Y29lNlFBMXZxZmhzelpGbWpTa1ZlemNQbmhWOTJaQzVhMDAwbm1NUlZDRlk3SENTN011QTRXS21CRy1hMWNaOF9xeXlLaUd1RjNKc1ZHa010NlNJbmJKMFZKN19WRnFzMTlZa0UwQTl30gHzAUFVX3lxTE43V2J2M1R6NjhnOTZxWm1YeElUZkMwNkVSWTBoSW1ENmdiM3hfOWw4RUZXRGpGOWRBLUJLTHBHSHJDRjZNbFl0X19weEoyRXNLUXgtMjFFSExOQmttbUF4UF84YWcyNFNtVENCUFpMTEI3b0stTExDYnNKbDNaaTJwYklhd3RaMnpHLUFSanFwR0lCSkpxcmZNTEdkZy00SkpPUGJRQlVPTXoxN2hoOGg5cnpGcGp0UHJMM05SdVZfWktMLU5QOG94Ni1DdG0yamlVbE54MmhWNFRIdVl5SXFGVWdEa0N6cG41ZkFHVFpYMmUwTQ?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T02:58:35Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": "espn",
+            "name": "ESPN"
+        },
+        "author": null,
+        "title": "Wisconsin's Moseley resigns after 4th losing year - ESPN",
+        "description": "Wisconsin women's basketball coach Marisa Moseley has stepped down after posting a 47-75 record in four seasons.",
+        "url": "https://www.espn.com/womens-college-basketball/story/_/id/44185485/wisconsin-marisa-moseley-stepping-fourth-straight-losing-season",
+        "urlToImage": "https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2025%2F0310%2Fr1461950_1023x575_16%2D9.jpg",
+        "publishedAt": "2025-03-10T02:27:00Z",
+        "content": "MADISON, Wis. -- Wisconsin women's basketball coach Marisa Moseley has stepped down after posting a 47-75 record in four seasons at a program that has been struggling to compete in the Big Ten for ov… [+3250 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "The Seattle Times"
+        },
+        "author": "Bob Condotta",
+        "title": "Seahawks expected to talk with QB Aaron Rodgers, report says - The Seattle Times",
+        "description": "Could Aaron Rodgers really become a factor in Seattle’s search to replace Geno Smith? The Seahawks are reportedly expected to talk with the veteran QB.",
+        "url": "https://www.seattletimes.com/sports/seahawks/seahawks-expected-to-talk-with-qb-aaron-rodgers-report-says/",
+        "urlToImage": "https://images.seattletimes.com/wp-content/uploads/2025/03/03092025_Seahawks-Rodgers_tzr_151843.jpg?d=1200x630",
+        "publishedAt": "2025-03-10T02:12:04Z",
+        "content": "Could Aaron Rodgers really become a factor in Seattles search to replace Geno Smith at quarterback?\r\nFrom the moment Smith was traded to the Raiders on Friday afternoon Rodgers name had been mentione… [+5010 chars]"
+    },
+    {
+        "source": {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        "author": "Yahoo Sports",
+        "title": "NASCAR: Christopher Bell wins his third straight race of 2025 at Phoenix - Yahoo Sports",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPNlJRN2llb05NVzlXZHpJNGxaRXZ2ZTJWQkZscEpMNlZFa3hzV1ctMGpiZG5DQUxvTGFIVEE5UXVQdDkxSnhYZWxSUHNhXzlXRUloeW1TSzloMmZtYTBfa2E1SUNEbXRHUkJ1LWcyeWQwMkhzUHhIOHBkclJZdnE4cW5PQ1J0QUhrdDZsR09iWlc5MnY4OHJQcjF0VVFyV3dxY1AyN2VYdzBDclUzd0d4ZkZYTndPMHh4c2xRQ3h4cG9fMWhW?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T01:56:00Z",
         "content": null
     },
     {
         "source": {
             "id": null,
-            "name": "Kotaku"
+            "name": "Pats Pulpit"
         },
-        "author": "Ethan Gach",
-        "title": "A Bunch Of Excellent Switch Games Are $20 Off For Mario Day - Kotaku",
-        "description": "Super Mario Bros. Wonder and more can be picked up at a big discount",
-        "url": "https://kotaku.com/switch-bundle-mario-day-sale-mk8-odyssey-wonder-1851768159",
-        "urlToImage": "https://i.kinja-img.com/image/upload/c_fill,h_675,pg_1,q_80,w_1200/e1c4975eba738fffb1c475509237067e.jpg",
-        "publishedAt": "2025-03-06T20:05:00Z",
-        "content": "The day of Mario is nearly upon us. In celebration of the overall-wearing plumber and his ongoing gaming franchise domination, Nintendo has marked down a bunch of Switch games that are normally $60. … [+2042 chars]"
+        "author": "Bernd Buchmasser, Taylor Kyles",
+        "title": "What signing Harold Landry in free agency means for the Patriots - Pats Pulpit",
+        "description": "Landry is joining the Patriots on a three-year contract.",
+        "url": "https://www.patspulpit.com/2025/3/9/24381811/patriots-signing-harold-landry-nfl-free-agency-analysis",
+        "urlToImage": "https://cdn.vox-cdn.com/thumbor/ha2l_giJsKXmuHF0k6tsyfd8XHk=/0x241:3306x1972/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/25904624/2190668433.jpg",
+        "publishedAt": "2025-03-10T01:54:27Z",
+        "content": "On the eve of the NFLs legal tampering window opening, the New England Patriots have made their first outside signing. Edge defender Harold Landry will join the team on a reported three-year, $43.5 m… [+5394 chars]"
     },
     {
         "source": {
             "id": null,
-            "name": "Android Central"
+            "name": "Flowrestling.org"
         },
-        "author": "Brady Snyder",
-        "title": "Pixel Camera 9.8 rolls out alongside the March Feature Drop with new tweaks - Android Central",
-        "description": "The minor update adds new toggles and support for new March Feature Drop capabilities.",
-        "url": "https://www.androidcentral.com/apps-software/pixel-camera-9-8-rolls-out-alongside-the-march-feature-drop-with-new-tweaks",
-        "urlToImage": "https://cdn.mos.cms.futurecdn.net/Ht5jhifqtAJ39edfQxtCwG-1200-80.jpg",
-        "publishedAt": "2025-03-06T19:51:22Z",
-        "content": "What you need to know\r\n<ul><li>Shortly after releasing the March Feature Drop with new camera upgrades, Pixel Camera 9.8 is rolling out.</li><li>The small update includes a toggle that lets users dis… [+2220 chars]"
+        "author": "R. R. Ellis",
+        "title": "Big Ten Wrestling Championship 2025 Results. Here's Every Champion - FloWrestling",
+        "description": "Penn State Wrestling won the team title at Big Ten Wrestling Championships 2025. Here's a recap with results, team scores, brackets and every 2025 champion.",
+        "url": "https://www.flowrestling.org/articles/13906782-big-ten-wrestling-championship-2025-results-heres-every-champion",
+        "urlToImage": "https://d2779tscntxxsw.cloudfront.net/67cd0ba49d878.png",
+        "publishedAt": "2025-03-10T01:18:45Z",
+        "content": "The 2025 Big Ten Wrestling Championships have come to a thrilling close, with Penn State Wrestling dominating the competition to claim the team title with an impressive 181.5 points.\r\nThe Nittany Lio… [+20098 chars]"
     },
     {
         "source": {
             "id": null,
-            "name": "GameSpot"
+            "name": "bleachernation.com"
         },
-        "author": "Jon Bitner",
-        "title": "Sony Launching The Last Of Us Limited Edition DualSense Controller - Preorders Open Soon - GameSpot",
-        "description": "The Last of Us DualSense releases on April 10, with preorders opening at 10 AM on March 14.",
-        "url": "https://www.gamespot.com/articles/sony-launching-the-last-of-us-limited-edition-dualsense-controller-preorders-open-soon/1100-6529950/",
-        "urlToImage": "https://www.gamespot.com/a/uploads/screen_kubrick/1702/17023653/4454901-347c097aca931d60f3998431277bea9a%281%29.jpg",
-        "publishedAt": "2025-03-06T19:35:07Z",
-        "content": "PlayStation is launching a gorgeous The Last of Us Limited Edition DualSense Controller on April 10, with preorders opening on March 14. Itll be available in limited quantities on PlayStation Direct,… [+1480 chars]"
+        "author": null,
+        "title": "Gerrit Cole Reportedly Has Been Advised to Undergo Tommy John Surgery - Bleacher Nation",
+        "description": "If Cole has to have surgery for his elbow injury, that'll be it for his season.",
+        "url": "https://www.bleachernation.com/cubs/2025/03/09/gerrit-cole-reportedly-has-been-advised-to-undergo-tommy-john-surgery/",
+        "urlToImage": "https://www.bleachernation.com/wp-content/uploads/2024/03/gerrit-cole-USATSI_21473158.jpg",
+        "publishedAt": "2025-03-10T00:59:18Z",
+        "content": "The early word on Gerrit Cole’s elbow scan is not good. Jim Bowden is reporting on X that results were such that Cole was advised that it’s time for Tommy John surgery, which would imply damage to th… [+1255 chars]"
     },
     {
         "source": {
-            "id": "ars-technica",
-            "name": "Ars Technica"
+            "id": "google-news",
+            "name": "Google News"
         },
-        "author": "Scharon Harding",
-        "title": "The most intriguing tech gadget prototypes demoed this week - Ars Technica",
-        "description": "Some of these ideas have genuine shots at making it into real products.",
-        "url": "https://arstechnica.com/gadgets/2025/03/the-most-intriguing-tech-gadget-prototypes-demoed-this-week/",
-        "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2025/03/M0i6bH6_KJ_20250303074829-1152x648.jpg",
-        "publishedAt": "2025-03-06T19:06:51Z",
+        "author": "NBC Sports",
+        "title": "Jake Matthews agrees to two-year extension with Falcons - NBC Sports",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPMk05LW5kNmtsMF9pRXgxOU0tSEI1Z21GTGtfM0F0M01SV21GNGMzb1hUcHRLT2s1OXNod1cyS2NoZHI4RjhjVjg2SDFjSldPZlE2d0xMWXB0ZlM2d3lZTGJLVlVvVWc1X24yZTJRVy1VdDRmVlN3Vm91aGxITVFONGtsVzA3ejVLN2Fnb2U0SmpaWHptUDVjMjFBOWdsNDAxM1pCNWtvanQtM21ROUUxSHU3NHktT2Fr?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T00:51:42Z",
         "content": null
     },
     {
         "source": {
             "id": null,
-            "name": "9to5Mac"
+            "name": "syracuse.com"
         },
-        "author": "Ryan Christoffel",
-        "title": "Rumor Replay: Major new foldable iPhone details, plus iOS 19 and Siri updates - 9to5Mac",
-        "description": "This week’s Rumor Replay covers major developments with Apple’s first foldable iPhone, plus iOS 19 and Siri updates.",
-        "url": "https://9to5mac.com/2025/03/06/rumor-replay-iphone-with-foldable-book-style-screen-plus-ios-19-and-siri-updates/",
-        "urlToImage": "https://i0.wp.com/9to5mac.com/wp-content/uploads/sites/6/2025/03/rumor-replay-folding-iphone.jpg?resize=1200%2C628&quality=82&strip=all&ssl=1",
-        "publishedAt": "2025-03-06T18:56:00Z",
-        "content": "This is Rumor Replay, a weekly column at 9to5Mac offering a quick rundown of the most recent Apple product rumors, with analysis and commentary. Today: big developments with Apples first foldable iPh… [+3222 chars]"
+        "author": "Ryan Talbot | rtalbot@nyup.com",
+        "title": "Buffalo Bills, NFL MVP QB Josh Allen reach agreement on record setting deal - syracuse.com",
+        "description": "Josh Allen is now signed with the Bills through 2030.",
+        "url": "https://www.syracuse.com/buffalo-bills/2025/03/buffalo-bills-nfl-mvp-qb-josh-allen-reach-agreement-on-record-setting-deal.html",
+        "urlToImage": "https://www.syracuse.com/resizer/v2/RJKHQOQ3ANGHRGFQGAUMXNY3DM.jpg?auth=afde017d6a0ad2b54d3e1fbcaadb190c9dca19bc269b55c4724b71ff4e7cd1f2&width=1280&quality=90",
+        "publishedAt": "2025-03-10T00:41:00Z",
+        "content": "Its Josh Allens world and were all living in it.\r\nOne month after being named NFL MVP, Allen and the Buffalo Bills agreed to terms on a contract that will keep the quarterback in Buffalo through 2030… [+1405 chars]"
+    },
+    {
+        "source": {
+            "id": "espn",
+            "name": "ESPN"
+        },
+        "author": "Stephen Holder",
+        "title": "UCLA finally bests USC as teams eye 4th meeting - ESPN",
+        "description": "Lauren Betts scored 13 of her 17 points in the second half Sunday and No. 4 UCLA allowed only four baskets over the final 12 minutes as the Bruins rallied from a 13-point deficit to beat No. 2 USC 72-67 in the Big Ten tournament championship game.",
+        "url": "https://www.espn.com/womens-college-basketball/story/_/id/44184002/ucla-women-basketball-rallies-usc-win-big-ten-tournament-championship",
+        "urlToImage": "https://a2.espncdn.com/combiner/i?img=%2Fphoto%2F2025%2F0309%2Fr1461879_1296x729_16%2D9.jpg",
+        "publishedAt": "2025-03-10T00:31:00Z",
+        "content": "INDIANAPOLIS -- Before the USC and UCLA women's basketball teams met in their much-anticipated first matchup of the season on Feb. 13, Trojans coach Lindsay Gottlieb made a hopeful statement to Bruin… [+3368 chars]"
+    },
+    {
+        "source": {
+            "id": "espn",
+            "name": "ESPN"
+        },
+        "author": "Brady Henderson",
+        "title": "Seahawks to re-sign key LB Jones, source says - ESPN",
+        "description": "The Seahawks have agreed to re-sign linebacker Ernest Jones IV to a three-year, $33 million deal that includes $15 million guaranteed, a source confirmed to ESPN.",
+        "url": "https://www.espn.com/nfl/story/_/id/44183564/source-seahawks-lb-ernest-jones-iv-agree-three-year-deal",
+        "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fphoto%2F2025%2F0102%2Fr1433853_1296x729_16%2D9.jpg",
+        "publishedAt": "2025-03-09T23:55:00Z",
+        "content": "Traded twice in two months last season, Ernest Jones IV has found a home in Seattle.\r\nThe Seahawks and the fifth-year linebacker agreed to terms Sunday on a three-year deal worth up to $33 million th… [+2235 chars]"
+    },
+    {
+        "source": {
+            "id": "associated-press",
+            "name": "Associated Press"
+        },
+        "author": "Stephen Whyno",
+        "title": "Ovechkin scores 886th career goal into an empty net to move 9 back of breaking Gretzky's NHL record - The Associated Press",
+        "description": "Alex Ovechkin scored his 886th career goal into an empty net to move nine back of breaking Wayne Gretzky's NHL record. Ovechkin backhanded the puck in from center ice to seal the Washington Capitals' 4-2 victory over the Seattle Kraken that extended their win…",
+        "url": "https://apnews.com/article/alex-ovechkin-886th-goal-dac66406a9d263a7720a213c3541d5c5",
+        "urlToImage": "https://dims.apnews.com/dims4/default/6a768d5/2147483647/strip/true/crop/3994x2247+0+208/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2F76%2Fb0%2F2bbecc1c0d29b38b3109df2ccdaa%2Fcca47c3deca145059c46957899ccfc55",
+        "publishedAt": "2025-03-09T23:09:00Z",
+        "content": "WASHINGTON (AP) Alex Ovechkin scored his 886th career goal into an empty net Sunday to move nine back of breaking Wayne Gretzkys NHL record.\r\nOvechkin backhanded the puck in from center ice with 1:29… [+2838 chars]"
     },
     {
         "source": {
             "id": null,
-            "name": "The Drive"
+            "name": "Vikings.com"
         },
-        "author": "Nico DeMattia",
-        "title": "Why Mark in 'Severance' Drives a 1997 Volvo, and More Answers from the Show's Car Coordinators - The Drive",
-        "description": "The hit show's meticulous use of 1980s and '90s cars has prompted countless theories, so we talked to the people who chose them to finally get some answers.",
-        "url": "https://www.thedrive.com/news/why-mark-in-severance-drives-a-1997-volvo-and-more-answers-from-the-shows-car-coordinators",
-        "urlToImage": "https://www.thedrive.com/wp-content/uploads/2025/03/Severance-mark-volvo-why.jpeg",
-        "publishedAt": "2025-03-06T18:31:34Z",
-        "content": "Severance isnt a car show. Apple TV+s hit series is a haunting sci-fi drama thats sometimes funny, sometimes scary, but acutely about its characters. Its close-quarter environments are largely based … [+15946 chars]"
+        "author": null,
+        "title": "Vikings Reach Deal to Return Running Back Aaron Jones, Sr. - Vikings.com",
+        "description": "",
+        "url": "https://www.vikings.com/news/aaron-jones-running-back-agrees-to-terms-contract-extension",
+        "urlToImage": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/vikings/perdxsysfc2ch4n1xkxu",
+        "publishedAt": "2025-03-09T22:01:14Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Sports Illustrated"
+        },
+        "author": "Logan Struck",
+        "title": "NBA Admits Mistake in Warriors vs Pistons Game - Sports Illustrated",
+        "description": "The NBA released the Last Two Minute Report for the Golden State Warriors vs Detroit Pistons game",
+        "url": "https://www.si.com/nba/warriors/news/nba-admits-mistake-in-warriors-vs-pistons-game-01jnycehtgq7",
+        "urlToImage": "https://images2.minutemediacdn.com/image/upload/c_crop,w_4874,h_2741,x_0,y_43/c_fill,w_1440,ar_16:9,f_auto,q_auto,g_auto/images/ImagnImages/mmsport/inside_the_warriors/01jnydw0pn65h0kyfr4e.jpg",
+        "publishedAt": "2025-03-09T21:46:11Z",
+        "content": "The Golden State Warriors have now won four consecutive games and 11 of their last 13 after beating the Detroit Pistons on Saturday night. The Warriors were led by superstar point guard Steph Curry w… [+1369 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Bigten.org"
+        },
+        "author": "Big Ten Communications",
+        "title": "Big Ten Announces 2025 TIAA Big Ten Men's Basketball Tournament Bracket - Big Ten Conference",
+        "description": "Big Ten Announces 2025 TIAA Big Ten Men's Basketball Tournament Bracket",
+        "url": "https://bigten.org/mbb/article/blt95a45437005de5f0/",
+        "urlToImage": "https://dxln3ux406vra.cloudfront.net/v3/assets/bltca750cef518bc6e4/blt27d3de1b68c9aa44/67cdffc3304ea953b08346d3/25BBT_Bracket_030935.png?auto=webpll",
+        "publishedAt": "2025-03-09T21:28:21Z",
+        "content": "ROSEMONT, Ill. The Big Ten Conference has announced the full bracket for the 2025 TIAA Big Ten Mens Basketball Tournament, set to take place March 12-16 at Gainbridge Fieldhouse in Indianapolis.\r\nAll… [+3518 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Block Club Chicago"
+        },
+        "author": "Charles Thrush",
+        "title": "Premier League Soccer Tournament Coming To Soldier Field This Summer - Block Club Chicago",
+        "description": "English clubs including Manchester United, West Ham United and Everton will play a double header at Soldier Field in July.",
+        "url": "https://blockclubchicago.org/2025/03/09/premier-league-soccer-tournament-coming-to-soldier-field-this-summer/",
+        "urlToImage": "https://bcc-newspack.s3.amazonaws.com/uploads/2023/10/FFC2.jpg",
+        "publishedAt": "2025-03-09T21:18:19Z",
+        "content": "SOUTH LOOP The Premier League is coming to Chicago this summer.\r\nThe English soccer league will host a double header July 30 at Soldier Field as part of the Premier League Summer Series, a pre-season… [+3274 chars]"
     }
 ]
