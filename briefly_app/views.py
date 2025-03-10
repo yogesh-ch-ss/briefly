@@ -32,7 +32,8 @@ from .forms import QuestionForm
 env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, '.env'))
 NEWS_API_KEY = env("NEWS_API_KEY", default=None)
-newsapi = NewsApiClient(api_key=NEWS_API_KEY)
+#replace hard-coded key with NEWS_API_KEY
+newsapi = NewsApiClient(api_key="833b467e009b40eb9aadcc6c049e2ad9")
 
 # QA page
 def qa(request):
@@ -307,11 +308,44 @@ def view_article(request, article_id):
         type = "viewed_article"
         if is_saved:
             type = "saved_article"
+        
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
+        
+        response = requests.get(article.Url, headers=headers, timeout=50)
+        response.raise_for_status()
+
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        content_text = ""
+
+        possible_tags = ['article', 'main', 'div']
+        try:
+            for tag in possible_tags:
+                current_tag = soup.find(tag)
+        
+                if current_tag:
+                    paragraphs = current_tag.find_all('p')
+                    if paragraphs:
+                        content_text = ' '.join([p.get_text() for p in paragraphs])
+                        break
+        except requests.HTTPError as http_err:
+            content_text = article.Content
+
+        if content_text != article.Content:
+            article.Content = content_text
+            article.save()
+            
+        ViewedNews.objects.create(User=request.user, News=article)
+        # Check if the article is in the saved articles
+        is_saved = SavedNews.objects.filter(User=request.user, News=article).exists()
+        type = "viewed_article"
+        if is_saved:
+            type = "saved_article"
 
         return render(request, './view_article.html', {
             'article': article,
-            "type" : type
-            })
+            "type": type
+        })
     except NewsArticle.DoesNotExist:
         return HttpResponse("Article not found.", status=404)
 
