@@ -438,12 +438,10 @@ def get_user_news(request):
         else:
             viewed_articles_data = []        
         viewed_article_ids = {article.NewsID for article in viewed_articles_data}
-        print(f"Viewed article IDs: {len(viewed_article_ids)}")
         # **Group articles by category**
         grouped_news = defaultdict(lambda: {"new": [], "viewed": []})
         for article in news_articles:
             if article["NewsID"] in viewed_article_ids:
-                print(f"Article {article['Title']} is viewed.")
                 grouped_news[article["CategoryName"]]["viewed"].append(article)
             else:
                 grouped_news[article["CategoryName"]]["new"].append(article)
@@ -455,23 +453,6 @@ def get_user_news(request):
             if category != "Saved News":
                 grouped_news[category]["new"] = [article for article in articles["new"] if article["NewsID"] not in saved_article_id]
                 grouped_news[category]["viewed"] = [article for article in articles["viewed"] if article["NewsID"] not in saved_article_id]
-        
-
-        for category, articles in grouped_news.items():
-            print(f"Category: {category}")
-            if category != "Saved News":
-                
-                print("new Articles:")
-                for article in articles["new"]:
-                    print(f" - {article['Title']}")
-                
-                print("Viewed Articles:")
-                for article in articles["viewed"]:
-                    print(f" - {article['Title']}")
-            else:
-                print("Saved Articles:")
-                for article in articles:
-                    print(f" - {article.Title}")
 
         context = {
             "username": user.username,

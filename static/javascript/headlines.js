@@ -36,6 +36,9 @@ $(document).ready(function() {
               console.error('Error saving article:', error);
           }
       });
-
   });
+});
+
+$('.title').on('click', function() {
+    $(this).closest('.headlines--category--titles').css('opacity', '0.7');
 });

@@ -26,7 +26,6 @@ class BrieflyUserSignupForm(forms.ModelForm):
         cleaned_data = super().clean()
         password = cleaned_data.get("password")
         password_confirmation = cleaned_data.get("password_confirmation")
-
         if password and password_confirmation and password != password_confirmation:
             self.add_error('password_confirmation', "Passwords do not match")
 
