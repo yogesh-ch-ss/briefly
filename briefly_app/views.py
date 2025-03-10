@@ -13,6 +13,7 @@ from django.db.models import F
 from rest_framework.permissions import IsAdminUser
 from django.db.models import Exists, OuterRef
 from django.utils.timezone import now, timedelta
+from datetime import date
 
 #Rest and News API integration into views
 from django.conf import settings
@@ -552,5 +553,23 @@ def delete_unsaved_news(request):
 
     # Count how many will be deleted
     deleted_count, _ = unsaved_news.delete()
+
+    return Response({"message": f"Deleted {deleted_count} unsaved news articles."})
+
+@api_view(['DELETE'])
+# @permission_classes([IsAdminUser])  # Ensure only admins can call this
+def delete_unsaved_news_other_days(request):
+    # Get today's date
+    today = date.today()
+
+
+    # Annotate is used to add a temp field "is_saved" to NewsArticle
+    # Get all news articles that are NOT saved by any user and are NOT from today
+    unsaved_old_news = NewsArticle.objects.annotate(
+        is_saved=Exists(SavedNews.objects.filter(News=OuterRef('pk')))
+    ).filter(is_saved=False).exclude(Date=today)  # Exclude today's news
+
+    # Count how many will be deleted
+    deleted_count, _ = unsaved_old_news.delete()
 
     return Response({"message": f"Deleted {deleted_count} unsaved news articles."})

@@ -28,4 +28,5 @@ urlpatterns = [
     path('saved_articles', views.saved_articles, name='saved_articles'),
     path('remove_saved_article', views.remove_saved_article, name='remove_saved_article'),
     path('delete-unsaved-news/', views.delete_unsaved_news, name="delete_unsaved_news"),
+    path('delete-unsaved-news-other-days/', views.delete_unsaved_news, name="delete_unsaved_news_other_days"),
 ]
