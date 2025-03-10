@@ -20,7 +20,8 @@ body {
   color: #3a3e46;
 }
 body img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 
@@ -506,7 +507,9 @@ select {
   margin-top: 1rem;
   margin-bottom: 1rem;
   box-shadow: 0 0 7px rgba(58, 62, 70, 0.4);
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   padding: 1rem;
   border: none;
   background-color: transparent;
@@ -521,7 +524,8 @@ select::after {
   width: 10px;
   height: 7px;
   background-color: #3a3e46;
-  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 50% 100%);
+          clip-path: polygon(0 0, 100% 0, 50% 100%);
   content: "";
   pointer-events: none;
 }
@@ -552,6 +556,7 @@ select:focus {
   flex-wrap: wrap;
 }
 #id_categories div label > input {
+  width: -moz-min-content;
   width: min-content;
   margin-right: 1rem;
 }
@@ -612,6 +617,4 @@ select:focus {
 .article--content p {
   margin-bottom: 1rem;
   background-position: 0%;
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */

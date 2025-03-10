@@ -1,4 +1,4 @@
-from briefly_app.models import BrieflyUser, Category, UserCategory, NewsArticle, SavedNews, COUNTRY_CHOICES, CATEGORY_CHOICES
+from briefly_app.models import BrieflyUser, Category, UserCategory, NewsArticle, SavedNews, COUNTRY_CHOICES, CATEGORY_CHOICES, ViewedNews
 from django.core.exceptions import ValidationError
 from django.db import IntegrityError
 
@@ -79,6 +79,79 @@ class TestUserCategory(TestCase):
         with self.assertRaises(ValueError):
             deleted_user_category = UserCategory(User=self.user, Category=self.category)
             deleted_user_category.save()
+
+class TestNewsArticle(TestCase):
+    def setUp(self):
+        self.category = Category.objects.create(CategoryName='technology')
+        self.article = NewsArticle.objects.create(
+            Title='Tech News',
+            Content='Latest in tech.',
+            Source='TechSource',
+            Category=self.category
+        )
+
+    def test_str(self):
+        self.assertEqual(str(self.article), 'Tech News')
+
+    def test_invalid_category(self):
+        with self.assertRaises(ValidationError):
+            invalid_article = NewsArticle(
+                Title='Invalid News',
+                Content='Invalid content.',
+                Source='InvalidSource',
+                Category=None
+            )
+            invalid_article.full_clean()
+
+    def test_duplicate_article(self):
+        with self.assertRaises(ValidationError):
+            duplicate_article = NewsArticle.objects.create(
+                Title='Tech News',
+                Content='Latest in tech.',
+                Source='TechSource',
+                Category=self.category
+            )
+            duplicate_article.full_clean()
+
+class TestViewedNews(TestCase):
+    def setUp(self):
+        self.user = BrieflyUser.objects.create(username='testuser', password='testpassword', country='us')
+        self.category = Category.objects.create(CategoryName='technology')
+        self.article = NewsArticle.objects.create(
+            Title='Tech News',
+            Content='Latest in tech.',
+            Source='TechSource',
+            Category=self.category
+        )
+        self.viewed_news = ViewedNews.objects.create(User=self.user, News=self.article)
+
+    def test_str(self):
+        self.assertEqual(str(self.viewed_news), 'testuser Tech News')
+
+    def test_duplicate_viewed_news(self):
+        with self.assertRaises(ValidationError):
+            duplicate_viewed_news = ViewedNews.objects.create(User=self.user, News=self.article)
+            duplicate_viewed_news.full_clean()
+
+class TestSavedNews(TestCase):
+    def setUp(self):
+        self.user = BrieflyUser.objects.create(username='testuser', password='testpassword', country='us')
+        self.category = Category.objects.create(CategoryName='technology')
+        self.article = NewsArticle.objects.create(
+            Title='Tech News',
+            Content='Latest in tech.',
+            Source='TechSource',
+            Category=self.category
+        )
+        self.saved_news = SavedNews.objects.create(User=self.user, News=self.article)
+
+    def test_str(self):
+        self.assertEqual(str(self.saved_news), 'testuser Tech News')
+
+    def test_duplicate_saved_news(self):
+        with self.assertRaises(ValidationError):
+            duplicate_saved_news = SavedNews.objects.create(User=self.user, News=self.article)
+            duplicate_saved_news.full_clean()
 
 # test case for BrieflyUserSignupForm
 class TestBrieflyUserSignupForm(TestCase):
@@ -201,9 +274,6 @@ class TestBrieflyUserProfileForm(TestCase):
         self.assertListEqual(form.fields['categories'].initial, ['business', 'technology'])
         
 # This test case is for the NewsArticle model.
-# test case for the ViewedNews model
-# test case for SavedNews model
-
 class UserViewsTestCases(TestCase):
     def setUp(self):
         self.user = BrieflyUser.objects.create_user(username="testuser", email="test@email.com", password="testpassword")
@@ -235,37 +305,32 @@ class UserViewsTestCases(TestCase):
         }
         
         response = self.client.post(reverse('briefly:user_signup'), form_data)
-        
-        # print(response.content.decode())  # Print the rendered HTML response
-        # print(response.context['user_signup_form'].errors)  # Print form errors
-
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse('briefly:user_login'))
 
         print("\n---\nSUCCESS: test_user_signup \n---")
 
 
-    # def test_user_signup(self):
-    #     response = self.client.get(reverse('briefly:user_signup'))
-    #     self.assertEqual(response.status_code, 200)
-    #     self.assertTemplateUsed(response, 'signup.html')
+    def test_user_signup(self):
+        self.client.logout()
+        response = self.client.get(reverse('briefly:user_signup'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'signup.html')
 
     def test_user_login(self):
-
+        self.client.logout()
         url = reverse('briefly:user_login')
         form_data = {
             'username': 'testuser',
             'password': 'testpassword'
         }
-
         response = self.client.post(url, form_data)
+        print(response.status_code)
         self.assertEqual(response.status_code, 302)  # 302 - redirect after successful login
-        self.assertRedirects(response, reverse('briefly:top_page'))
-
+        self.assertRedirects(response, reverse('briefly:user_news'))
         print("\n---\nSUCCESS: test_user_login \n---")
 
     def test_user_logout(self):
-
         self.client.login(username="testuser", password="testpassword")
         url = reverse('briefly:user_logout')
         response = self.client.post(url)
@@ -275,58 +340,87 @@ class UserViewsTestCases(TestCase):
         print("\n---\nSUCCESS: test_user_logout \n---")
 
     def test_user_delete_account(self):
-
         self.client.login(username="testuser", password="testpassword")
         url = reverse('briefly:user_delete_account')
         response = self.client.post(url)
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse('briefly:top_page'))
-
         print("\n---\nSUCCESS: test_user_delete_account \n---")
 
+    # user_profile_setting
+    def test_user_profile_setting(self):
+        self.client.login(username="testuser", password="testpassword")
+        url = reverse('briefly:user_profile_setting')
+        form_data = {
+            'username': 'testuser',
+            'email': '',
+            'country': 'us',
+            'categories': ['technology']
+        }
+        response = self.client.post(url, form_data)
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('briefly:user_news'))
+        print("\n---\nSUCCESS: test_user_profile_setting \n---")
 
 
     def test_get_user_news(self):
-
         self.client.login(username="testuser", password="testpassword")
-        url = reverse('briefly:user_news', kwargs={'username': self.user.username})
+        url = reverse('briefly:user_news')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
-        response_data = response.json()
-        self.assertIn('grouped_news', response_data)
-
+        self.assertTemplateUsed(response, 'headlines.html')
         print("\n---\nSUCCESS: test_get_user_news \n---")
 
-    def test_get_user_news_other_user(self):
-
-        other_user = BrieflyUser.objects.create_user(username="otheruser", email="other@email.com", password="otherpassword")
-        self.client.login(username='otheruser', password='otherpassword')
-        print("\n|- other user logged in, trying to access self user url \n")
-
-
-        url = reverse('briefly:user_news', kwargs={'username': self.user.username}) # other user trying to access self user url
-        response = self.client.get(url)
-        self.assertEqual(response.status_code, 403) # 403 - forbidden
-        response_data = response.json()
-        self.assertIn('error', response_data)
-
-        print("\n---\nSUCCESS: test_get_user_news_other_user \n---")
-
-
-    def test_saved_articles(self):
-
+    # test save_article
+    def test_save_article(self):
         self.client.login(username="testuser", password="testpassword")
-        saved_article = NewsArticle.objects.create(
+        save_article = NewsArticle.objects.create(
             Title="Sample News",
             Content="Saple content",
             Source="SampleSource",
             Category=self.category
         )
+        url = reverse('briefly:save_article')
+        form_data = {
+            'article_id': save_article.NewsID,
+            'user_id': self.user.id
+        }
+        response = self.client.post(url, form_data)
+        self.assertEqual(response.status_code, 204)  # No Content
+        self.assertTrue(SavedNews.objects.filter(User=self.user, News=save_article).exists())
+        print("\n---\nSUCCESS: test_save_article \n---")
 
+    def test_saved_articles(self):
+        self.client.login(username="testuser", password="testpassword")
+        saved_article = NewsArticle.objects.create(
+            Title="Sample News",
+            Content="Sample content",
+            Source="SampleSource",
+            Category=self.category
+        )
         SavedNews.objects.create(User=self.user, News=saved_article)
         url = reverse('briefly:saved_articles')
         response = self.client.get(url)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, "Sample News")
-
         print("\n---\nSUCCESS: test_saved_articles \n---")
+
+    def test_remove_saved_article(self):
+        self.client.login(username="testuser", password="testpassword")
+        saved_article = NewsArticle.objects.create(
+            Title="Sample News",
+            Content="Sample content",
+            Source="SampleSource",
+            Category=self.category
+        )
+        saved_news = SavedNews.objects.create(User=self.user, News=saved_article)
+        url = reverse('briefly:remove_saved_article')
+        form_data = {
+            'article_id': saved_article.NewsID,
+            'user_id': self.user.id
+        }
+        response = self.client.post(url, form_data)
+        self.assertEqual(response.status_code, 204)
+        self.assertFalse(SavedNews.objects.filter(User=self.user, News=saved_article).exists())
+        print("\n---\nSUCCESS: test_remove_saved_article \n---")
+    

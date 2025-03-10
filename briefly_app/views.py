@@ -93,7 +93,7 @@ def user_login(request):
             if user.is_active:
                 login(request, user)
                 try:
-                    print("fetch_news(user)")
+                    #API call (check corresponding method implemenation)
                     fetch_news(user)
                 except Exception as e:
                     print(f"Error fetching news: {e}")
@@ -188,7 +188,13 @@ def saved_articles(request, response_type="html"):
         # Get NewsArticle objects related to the SavedNews objects
         if response_type != "html":
             return Response({"saved_articles": list(saved_articles)})
-        return render(request, 'saved_articles.html', {'saved_articles': saved_articles})
+
+        mid_index = len(saved_articles) // 2
+        saved_articles1 = saved_articles[:mid_index]
+        saved_articles2 = saved_articles[mid_index:]
+        return render(request, 'saved_articles.html', {
+            'saved_articles1': saved_articles1,
+            'saved_articles2': saved_articles2,})
     else:
         return redirect('briefly:user_login')
     
@@ -248,7 +254,7 @@ def view_article(request, article_id):
         type = "viewed_article"
         if is_saved:
             type = "saved_article"
-        
+
         return render(request, './view_article.html', {
             'article': article,
             "type": type,
@@ -294,12 +300,6 @@ def top_page(request):
 
     return render(request, './top_page.html', {
     })
-
-def add_category(request):
-    return render(request, './template_category.html')
-
-def headlines(request):
-    return render(request, './template_headlines.html')
 
 def fetch_news(user):
     try:
@@ -482,7 +482,7 @@ def get_user_news(request):
     
     except BrieflyUser.DoesNotExist:
         return Response({"error": f"User '{user.username}' does not exist."}, status=404)
-    
+
 
 def delete_old_unsaved_news():
     """Delete all unsaved news articles that are not from today."""

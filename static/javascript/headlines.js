@@ -13,7 +13,7 @@ $(document).ready(function() {
               parentDiv.remove();
               parentDiv.find('.button.save').remove();
               if (lastCategory.children('.headlines--category--titles').length < 5) {
-                  lastCategory.append(parentDiv);
+                lastCategory.find('a.jump-to-saved-article').before(parentDiv);
               }
               parentDiv.fadeIn(1000);
           });

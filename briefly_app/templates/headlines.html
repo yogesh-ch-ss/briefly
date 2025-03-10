@@ -15,9 +15,7 @@
                         </div>
                     </div>
                     {% endfor %}
-                    {% if articles|length > 5 %}
-                        <a href="{% url 'briefly:saved_articles' %}" class="jump-to-saved-article"><b>...More</b></a>            
-                    {% endif %}
+                    <a href="{% url 'briefly:saved_articles' %}" class="jump-to-saved-article"><b>...More</b></a>            
                 {% else %}
                     {% for article in articles.new|slice:":5"|add:articles.viewed|slice:":5" %}
                     <div class="headlines--category--titles">
