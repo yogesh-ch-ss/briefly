@@ -1,4 +1,5 @@
 from collections import defaultdict
+import time
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from briefly_app.email import send_to_admin, send_to_user
@@ -32,7 +33,10 @@ from .forms import QuestionForm
 env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, '.env'))
 NEWS_API_KEY = env("NEWS_API_KEY", default=None)
-newsapi = NewsApiClient(api_key=NEWS_API_KEY)
+#replace hard-coded key with NEWS_API_KEY
+newsapi = NewsApiClient(api_key="833b467e009b40eb9aadcc6c049e2ad9")
+#temp API key
+#833b467e009b40eb9aadcc6c049e2ad9
 
 # QA page
 def qa(request):
@@ -123,7 +127,6 @@ def user_profile_setting(request):
     if request.method == 'POST':
         # Pass both request.POST and the user instance to the form
         user_profile_form = BrieflyUserProfileForm(data=request.POST, instance=user)
-        
         # Check if the form is valid
         if user_profile_form.is_valid():
             # Extract cleaned data
@@ -301,17 +304,54 @@ def viewed_articles(request):
 def view_article(request, article_id):
     try:
         article = NewsArticle.objects.get(NewsID=article_id)
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'}
+        try:
+            response = requests.get(article.Url, headers=headers, timeout=10)
+            response.raise_for_status()
+        except requests.RequestException:
+            error_message = "Unable to load content"
+        #Scrapper initialisation
+        soup = BeautifulSoup(response.text, 'html.parser')
+        #To store original text (not scrapped)
+        content_text = article.Content
+        updated = False
+        #To store scrapped text
+        scrapped_text = None
+        #Called in HTML
+        link = article.Url
+        #loop through possible tags that contain news content. If content is found, break looping through this list.
+        possible_tags = ['article', 'main', 'div']
+        try:
+            for tag in possible_tags:
+                current_tag = soup.find(tag)
+                if current_tag:
+                    paragraphs = current_tag.find_all('p')
+                    if paragraphs:
+                        scrapped_text = ' '.join([p.get_text() for p in paragraphs])
+                        if scrapped_text:
+                            article.Content = scrapped_text
+                            article.save(update_fields=['Content'])
+                            article.refresh_from_db()
+                            updated = True
+                        else:
+                            continue
+                        break
+        except requests.HTTPError:
+            scrapped_text = None
         ViewedNews.objects.create(User=request.user, News=article)
         # Check if the article is in the saved articles
         is_saved = SavedNews.objects.filter(User=request.user, News=article).exists()
         type = "viewed_article"
         if is_saved:
             type = "saved_article"
-
+        
         return render(request, './view_article.html', {
             'article': article,
-            "type" : type
-            })
+            "type": type,
+            "updated": updated,
+            "content": article.Content,
+            "link": link
+        })
     except NewsArticle.DoesNotExist:
         return HttpResponse("Article not found.", status=404)
 
@@ -399,17 +439,19 @@ def fetch_news(user):
                         # (Models has been modified to take URL attribute as unique)
                         title = article.get('title', 'No title')
                         url = article.get('url')
-                        content = article.get('content')
-                        if not content:
-                            #1st fallback for null content
-                            content = article.get('description')
-                            #2nd fallback for null content
-                        if not content:
-                            content = "No Preview Content Available: Click on Link to view Original Article"
+                        content = article.get('description')
+                        #Mar-10 update: Store description instead of API content in models
+                        # if not content:
+                        #     #1st fallback for null content
+                        #     content = article.get('description')
+                        #     #2nd fallback for null content
+                        # if not content:
+                        #     content = "No Preview Content Available: Click on Link to view Original Article"
                         source_name = article.get('source', {}).get('name', 'Unknown source')
                         
-                        # Check for duplicates before saving
-                        if not NewsArticle.objects.filter(Title=title).exists():
+                        # Check for duplicates before saving and filter unwanted sources
+                        unallowed_sources = ["ABC News", "The Washington Post", "Phys.Org"]
+                        if not NewsArticle.objects.filter(Title=title).exists() and source_name not in unallowed_sources:
                             NewsArticle.objects.create(
                                 Category=category_obj,
                                 Title=title,
@@ -418,7 +460,7 @@ def fetch_news(user):
                                 Source=source_name,
                                 Region=user.country
                             )
-                        i += 1
+                            i += 1
             except Exception as e:
                 print(f"Error fetching news for category {category_name}: {e}")
                 continue
