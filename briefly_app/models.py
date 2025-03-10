@@ -1,3 +1,4 @@
+from django.utils import timezone
 from django.db import models
 from django.conf import settings
 from django.core.exceptions import ValidationError
@@ -78,7 +79,8 @@ class NewsArticle(models.Model):
     Category = models.ForeignKey(Category, on_delete=models.CASCADE)
     Url = models.CharField(max_length=255, blank=True)
     Title = models.CharField(max_length=255)
-    Date = models.DateField(auto_now_add=True)
+    # Date = models.DateField(auto_now_add=True)
+    Date = models.DateField(default=timezone.now)
     Content = models.TextField()
     Region = models.TextField(max_length=2, null=True)
     Source = models.CharField(max_length=255)

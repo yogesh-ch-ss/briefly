@@ -15,6 +15,8 @@ class BrieflyUserAdmin(UserAdmin):
 
 class NewsArticleAdmin(admin.ModelAdmin):
     list_display = ('NewsID', 'Title', 'Category', 'Url', 'Date', 'Region', 'Source')
+    fields = ('Title', 'Category', 'Url', 'Date', 'Region', 'Source')  # Ensure Date is included
+    # readonly_fields = ('Date',)  
 
 
 class ViewedNewsAdmin(admin.ModelAdmin):
