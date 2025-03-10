@@ -9,8 +9,10 @@ from django.views.decorators.http import require_POST
 from django.contrib.auth.decorators import login_required
 from briefly_app.models import Category, SavedNews, UserCategory, BrieflyUser, NewsArticle, UserCategory, ViewedNews
 from django.db.models import F
-from bs4 import BeautifulSoup
-
+# from bs4 import BeautifulSoup
+from rest_framework.permissions import IsAdminUser
+from django.db.models import Exists, OuterRef
+from django.utils.timezone import now, timedelta
 
 #Rest and News API integration into views
 from django.conf import settings
@@ -534,3 +536,21 @@ def get_user_news(request):
     
     except BrieflyUser.DoesNotExist:
         return Response({"error": f"User '{user.username}' does not exist."}, status=404)
+    
+
+@api_view(['DELETE'])
+@permission_classes([IsAdminUser])  # Ensure only admins can call this
+def delete_unsaved_news(request):
+    # Get today's date
+    today = now().date()
+
+    # Get all news articles that are not saved by any user
+    # Annotate is used to add a temp field "is_saved" to NewsArticle
+    unsaved_news = NewsArticle.objects.annotate(
+        is_saved=Exists(SavedNews.objects.filter(News=OuterRef('pk')))
+    ).filter(is_saved=False, Date=today)  # Only delete today's unsaved news
+
+    # Count how many will be deleted
+    deleted_count, _ = unsaved_news.delete()
+
+    return Response({"message": f"Deleted {deleted_count} unsaved news articles."})

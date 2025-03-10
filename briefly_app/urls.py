@@ -1,7 +1,6 @@
 from django.urls import path
 from . import views
 #API Integration with .views
-from .views import fetch_news, get_user_news
 
 app_name = 'briefly'
 urlpatterns = [
@@ -27,5 +26,6 @@ urlpatterns = [
     path('view_article/<int:article_id>/', views.view_article, name='view_article'),
     path('save_article', views.save_article, name='save_article'),
     path('saved_articles', views.saved_articles, name='saved_articles'),
-    path('remove_saved_article', views.remove_saved_article, name='remove_saved_article')
+    path('remove_saved_article', views.remove_saved_article, name='remove_saved_article'),
+    path('delete-unsaved-news/', views.delete_unsaved_news, name="delete_unsaved_news"),
 ]
