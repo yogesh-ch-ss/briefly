@@ -1,6 +1,357 @@
 [
     {
         "source": {
+            "id": null,
+            "name": "CNBC"
+        },
+        "author": "Jesse Pound",
+        "title": "Dow futures drop 300 points as selling continues on Wall Street: Live updates - CNBC",
+        "description": "The stock market is off to a rough start in March, and key economic data is due out this week.",
+        "url": "https://www.cnbc.com/2025/03/09/stock-market-news-today-live-updates.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/108112754-1741363586692-gettyimages-2203810302-tariffs597253_6feyhmpx.jpeg?v=1741363628&w=1920&h=1080",
+        "publishedAt": "2025-03-10T09:53:00Z",
+        "content": "Stock futures dropped on Monday as the selling pressures that dragged Wall Street last week persisted, while investors braced for a slew of economic data reports this week.\r\nFutures tied to the Dow J… [+2092 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Motley Fool"
+        },
+        "author": "Adria Cimino",
+        "title": "Has Nvidia Stock Become Too Cheap to Ignore? - The Motley Fool",
+        "description": "",
+        "url": "https://www.fool.com/investing/2025/03/10/has-nvidia-stock-become-too-cheap-to-ignore/",
+        "urlToImage": "https://g.foolcdn.com/editorial/images/810340/gettyimages-1276837766.jpg",
+        "publishedAt": "2025-03-10T08:45:00Z",
+        "content": "Nvidia(NVDA 1.92%) has become a stock market giant thanks to its dominance in one of today's highest-growth markets: artificial intelligence (AI), a $200 billion market that analysts say is heading f… [+4961 chars]"
+    },
+    {
+        "source": {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        "author": "Daily Mail",
+        "title": "Revealed: What witnesses saw inside Fort Knox as Trump and Musk suggest America's gold could be gone - Daily Mail",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQcWExRXRCZjFVekM1LU1kSWlnd2VRR2xmRVVzMG5BZS1mOUs5eUhNUF9zaE14alpRTXR5ZEJoOGpaMnBPb2RsTUpMc3lXY2dqVWRIZzVuNHJlY3Q2ejgzUjJiUjRrTHFoQUZtbDlHakJWaHdubW9mdGlzeTFNY1p2cGtEVm9jUzFpcUJfYUZ3QjJJVUg2QnZNVlY3WHN4aU9TRmlhanBGbkthZ3RXRlkwUnVPYjFCeE00SENacDJsWGMtX19RZm1F?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T08:07:08Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "BBC News"
+        },
+        "author": null,
+        "title": "Trump says US economy in 'transition' as trade war escalates - BBC.com",
+        "description": "New retaliatory tariffs from China targeting some US farm products came into effect on Monday.",
+        "url": "https://www.bbc.com/news/articles/cz61nn99eg1o",
+        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1251/live/d7fca240-fd4a-11ef-a555-336cd2341958.jpg",
+        "publishedAt": "2025-03-10T07:58:54Z",
+        "content": "João da SilvaBusiness reporter, BBC News\r\nNew tit-for-tat tariffs from China, which target some US farm products, came into effect on Monday\r\nUS President Donald Trump has refused to say whether the … [+3152 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Investing.com"
+        },
+        "author": "Reuters",
+        "title": "Stocks slip, yen gains on Trump trade war, China deflationary woes By Reuters - Investing.com",
+        "description": "Stocks slip, yen gains on Trump trade war, China deflationary pressure",
+        "url": "https://www.investing.com/news/stock-market-news/us-stock-futures-sink-yen-gains-on-china-deflationary-pressures-trade-war-3916613",
+        "urlToImage": "https://i-invdn-com.investing.com/news/LYNXMPECBE0OL_L.jpg",
+        "publishedAt": "2025-03-10T06:22:30Z",
+        "content": "By Nell Mackenzie and Kevin Buckland\r\nLONDON (Reuters) -European shares dipped to their lowest in almost a month on Monday and world stocks followed as building deflationary pressure in China added t… [+3957 chars]"
+    },
+    {
+        "source": {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        "author": "CoinDesk",
+        "title": "Spain's Second Largest Bank Gets Green Light to Offer Bitcoin and Ether Trading: Report - CoinDesk",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNb04zUTVVc2hKNnBHZmJIRFN2aFhrU3NULW1qeDNDYm1UVWhUb2hFb0pySFFzNXY0eExUQTBhWlZod1NfaVFmeVlqVTdIQ3FoRDlpV2Z1Tl9uYnQyQ1N0UFdHd21yUjd3NTNrZW5FbzN2UkxDQ0k2WUs4TnlnQmhSUlJKeDVvOHhEaHBveHZybGNNUFBUZ3cxSXg0MTJXaExwUjVBV3FDX2U1SV9TOWRYcjZSTQ?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T06:01:00Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Decrypt"
+        },
+        "author": "Decrypt",
+        "title": "Five Key Moves in March the White House Has Made on Crypto - Decrypt",
+        "description": null,
+        "url": "https://decrypt.co/309281/five-key-moves-in-march-the-white-house-has-made-for-crypto",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T04:36:48Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Ambcrypto.com"
+        },
+        "author": "Clinton Otieno",
+        "title": "Ethereum’s market strength: What draws investors back to ETH, time and again - AMBCrypto News",
+        "description": "ETH demonstrated strong resilience, always rebounding from past downturns.",
+        "url": "https://ambcrypto.com/ethereums-market-strength-what-draws-investors-back-to-eth-time-and-again/",
+        "urlToImage": "https://ambcrypto.com/wp-content/uploads/2025/03/xfhbj-1000x600.png",
+        "publishedAt": "2025-03-10T04:02:57Z",
+        "content": "<ul><li>Ethereum’s price history reflected resilience in the latest percentage drawdown.</li><li>The altcoin’s resilience hinged on navigating volatility, supported by the 2024 Dencun upgrade and ETF… [+3494 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Bitcoin.com"
+        },
+        "author": "Jamie Redman",
+        "title": "The US Government’s Liquidation of High-Value Crypto Could Net Another 5,000 BTC - Bitcoin.com News",
+        "description": "Sacks insisted the \"government will not acquire additional assets for the Stockpile beyond those obtained through forfeiture proceedings.\"",
+        "url": "https://news.bitcoin.com/the-us-governments-liquidation-of-high-value-crypto-could-net-another-5000-btc/",
+        "urlToImage": "https://static.news.bitcoin.com/wp-content/uploads/2025/03/vvod.png",
+        "publishedAt": "2025-03-10T03:30:51Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "CNBC"
+        },
+        "author": "Arjun Kharpal",
+        "title": "Bitcoin falls as much as 6.5% as volatility continues after Trump's bitcoin reserve plan - CNBC",
+        "description": "President Donald Trump's executive order to create a U.S. strategic bitcoin reserve disappointed investors.",
+        "url": "https://www.cnbc.com/2025/03/10/bitcoin-falls-as-volatility-continues-after-trumps-bitcoin-reserve-plan.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/108112693-1741359002550-gettyimages-2202592326-raa-cryptocr250303_npQOY.jpeg?v=1741359111&w=1920&h=1080",
+        "publishedAt": "2025-03-10T01:45:00Z",
+        "content": "Bitcoin fell on Monday as volatility in the price of the world's largest cryptocurrency continues following an executive order signed by President Donald Trump to create a strategic bitcoin reserve f… [+2014 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "BBC News"
+        },
+        "author": null,
+        "title": "What happens when a plane passenger dies during a flight? - BBC.com",
+        "description": "Crews will try to shield passengers from the body by using empty aisles, blankets and dim lighting.",
+        "url": "https://www.bbc.com/news/articles/cz9nj075yggo",
+        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/f40b/live/1a9db6d0-fcd2-11ef-9e61-71ee71f26eb1.jpg",
+        "publishedAt": "2025-03-10T01:34:28Z",
+        "content": "Plane aisles are narrow and space can be tight\r\nIf a passenger dies on board a flight, cabin crew members like Jay Robert have to think fast.\r\n\"We go from service to lifesaving to mortician, dealing … [+7794 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "CNBC"
+        },
+        "author": "Yeo Boon Ping",
+        "title": "CNBC Daily Open: The effect of Trump policies will sway Fed’s interest rate moves - CNBC",
+        "description": "U.S. President Donald Trump's policies to reshape the U.S. and its economy are so drastic that the Federal Reserve is taking note.",
+        "url": "https://www.cnbc.com/2025/03/10/cnbc-daily-open-trump-policies-will-sway-feds-interest-rate-moves.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/108101412-17393783552025-02-12t154441z_1818274945_rc23tcao6izy_rtrmadp_0_usa-fed-powell.jpeg?v=1739378381&w=1920&h=1080",
+        "publishedAt": "2025-03-10T01:22:00Z",
+        "content": "The U.S. nonfarm payrolls report for February was weaker than expected, but the silver lining is that the number of jobs added for the month was higher than in January. That said, the layoff of feder… [+3978 chars]"
+    },
+    {
+        "source": {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        "author": "Investor's Business Daily",
+        "title": "Wall Street Hopes For Trump-Google Antitrust Deal Take A Blow - Investor's Business Daily",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQzNhYWdXYWZJMUFuMWY1VjhtYlFqbThRdkRReU1lMDBRN19RRDZUaWNCb3Q2RVdGOG1pS1pXOWxWRDFvbFlGUVJvVlAtTFdZN25NcGx5NmpQeTF4RlJFTHN2R1ladWl2QkowQkdYaXRhWkl2UzBGSHF1aFlRSF9xQzVtVFNjN1dWZ05BMk5VQVdvUm0tTlZXSlFCVWFoVlFackxyVmVRV1kxUQ?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T01:14:00Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "BBC News"
+        },
+        "author": null,
+        "title": "North Korean hackers cash out hundreds of millions from $1.5bn ByBit hack - BBC.com",
+        "description": "Hackers from the infamous Lazarus Group are in a cat-and-mouse game to launder their stolen funds from the ByBit heist.",
+        "url": "https://www.bbc.com/news/articles/c2kgndwwd7lo",
+        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/29fa/live/8d521bb0-fb62-11ef-896e-d7e7fb1719a4.png",
+        "publishedAt": "2025-03-10T01:11:47Z",
+        "content": "Joe TidyCyber correspondent, BBC World Service\r\nHackers thought to be working for the North Korean regime have successfully converted at least $300m (£232m) of their record-breaking $1.5bn crypto hei… [+4644 chars]"
+    },
+    {
+        "source": {
+            "id": "google-news",
+            "name": "Google News"
+        },
+        "author": "Cointelegraph",
+        "title": "Utah’s Senate passes Bitcoin bill — but scraps key provision - Cointelegraph",
+        "description": null,
+        "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOc3BxV1RPRkdJZTR5dDkza3NxRzl2czg3amlNbXF4TUFWSDd6MS1UWEQ5amk5aDlOQy1pblh0aEluTmo1OTlyU1JxeXdLMXlMcWxKSnRydVlUaWlBMDdoN2UtQXB0ZlZHb2phX2lWRzJMVEVXTnpHRG1yZjBNQjF6VC1wVHVjbVZHTkRud2dBN2JFZjA?oc=5",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T00:09:53Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "CNBC"
+        },
+        "author": "Jim Cramer",
+        "title": "What to do while waiting for stock market-minded Trump to say enough is enough - CNBC",
+        "description": "Don't close your eyes. Just keep looking. Maybe the cavalry is on the horizon, it's just the rhetorical smoke that's blocking it.",
+        "url": "https://www.cnbc.com/2025/03/09/jim-cramer-what-to-do-while-waiting-for-market-minded-trump-to-say-enough.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/108075145-1734020399071-Cramer-1.jpg?v=1734020408&w=1920&h=1080",
+        "publishedAt": "2025-03-10T00:09:00Z",
+        "content": "Our president, Donald Trump , tells us that \"what we are doing is big,\" so there might be economic consequences to come that we don't like. But he can't change the plan, whatever the heck the plan is… [+12280 chars]"
+    },
+    {
+        "source": {
+            "id": "fortune",
+            "name": "Fortune"
+        },
+        "author": "Michael Mackenzie, Liz Capo McCormick, Bloomberg",
+        "title": "The bond market’s Trump trade is looking like a recession trade - Fortune",
+        "description": "“Recession risk is definitely higher because of the sequence of Trump’s policies – tariffs first, tax cuts later.”",
+        "url": "https://fortune.com/2025/03/09/bond-market-trump-trade-recession-outlook-treasury-yields-tariffs/",
+        "urlToImage": "https://fortune.com/img-assets/wp-content/uploads/2025/03/GettyImages-157672005-e1741561698511.jpg?resize=1200,600",
+        "publishedAt": "2025-03-09T23:15:00Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": "fortune",
+            "name": "Fortune"
+        },
+        "author": "Jason Ma",
+        "title": "The Wall Street strategist who nailed the stock market's recent mega-rallies sees a 10%-15% jump in the coming months - Fortune",
+        "description": "\"I think it’s very possible that March, April, May could actually be one of these huge rally months where we’re rallying 10-15%.\"",
+        "url": "https://fortune.com/2025/03/09/stock-market-outlook-sp500-rebound-selloff-trump-tariffs-fed-put/",
+        "urlToImage": "https://fortune.com/img-assets/wp-content/uploads/2025/03/GettyImages-2197428464-e1741553058891.jpg?resize=1200,600",
+        "publishedAt": "2025-03-09T22:18:00Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "CNBC"
+        },
+        "author": "Jesse Pound",
+        "title": "Dow futures drop 300 points as selling continues on Wall Street: Live updates - CNBC",
+        "description": "The stock market is off to a rough start in March, and key economic data is due out this week.",
+        "url": "https://www.cnbc.com/2025/03/09/stock-market-news-today-live-updates.html",
+        "urlToImage": "https://image.cnbcfm.com/api/v1/image/108112754-1741363586692-gettyimages-2203810302-tariffs597253_6feyhmpx.jpeg?v=1741363628&w=1920&h=1080",
+        "publishedAt": "2025-03-10T09:53:00Z",
+        "content": "Stock futures dropped on Monday as the selling pressures that dragged Wall Street last week persisted, while investors braced for a slew of economic data reports this week.\r\nFutures tied to the Dow J… [+2092 chars]"
+    },
+    {
+        "source": {
+            "id": "abc-news",
+            "name": "ABC News"
+        },
+        "author": "ABC News",
+        "title": "Small plane crashes with 5 aboard in Pennsylvania - ABC News",
+        "description": null,
+        "url": "https://abcnews.go.com/US/small-plane-crashes-pennsylvania/story?id\\\\u003d119615364",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T09:49:28Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Motley Fool"
+        },
+        "author": "Adria Cimino",
+        "title": "Has Nvidia Stock Become Too Cheap to Ignore? - The Motley Fool",
+        "description": "",
+        "url": "https://www.fool.com/investing/2025/03/10/has-nvidia-stock-become-too-cheap-to-ignore/",
+        "urlToImage": "https://g.foolcdn.com/editorial/images/810340/gettyimages-1276837766.jpg",
+        "publishedAt": "2025-03-10T08:45:00Z",
+        "content": "Nvidia(NVDA 1.92%) has become a stock market giant thanks to its dominance in one of today's highest-growth markets: artificial intelligence (AI), a $200 billion market that analysts say is heading f… [+4961 chars]"
+    },
+    {
+        "source": {
+            "id": "abc-news",
+            "name": "ABC News"
+        },
+        "author": "ABC News",
+        "title": "US 'just about' ready to lift Ukraine intel freeze, Trump says ahead of Saudi meet - ABC News",
+        "description": null,
+        "url": "https://abcnews.go.com/International/us-lifts-ukraine-intel-freeze-trump-ahead-saudi/story?id\\\\u003d119624605",
+        "urlToImage": null,
+        "publishedAt": "2025-03-10T08:25:30Z",
+        "content": null
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "BBC News"
+        },
+        "author": null,
+        "title": "Trump says US economy in 'transition' as trade war escalates - BBC.com",
+        "description": "New retaliatory tariffs from China targeting some US farm products came into effect on Monday.",
+        "url": "https://www.bbc.com/news/articles/cz61nn99eg1o",
+        "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/1251/live/d7fca240-fd4a-11ef-a555-336cd2341958.jpg",
+        "publishedAt": "2025-03-10T07:58:54Z",
+        "content": "João da SilvaBusiness reporter, BBC News\r\nNew tit-for-tat tariffs from China, which target some US farm products, came into effect on Monday\r\nUS President Donald Trump has refused to say whether the … [+3152 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Vatican News"
+        },
+        "author": "Vatican News",
+        "title": "Pope had quiet night, continues to rest at Gemelli hospital - Vatican News",
+        "description": "Pope Francis had a quiet night and is resting, as he recovers from bilateral pneumonia at Rome's Gemelli Hospital, according to the Holy See Press Office on Monday morning.",
+        "url": "https://www.vaticannews.va/en/pope/news/2025-03/pope-francis-health-update-gemelli-monday.html",
+        "urlToImage": "https://www.vaticannews.va/content/dam/vaticannews/agenzie/images/afp/2025/03/09/18/1741540690094.jpg/_jcr_content/renditions/cq5dam.thumbnail.cropped.1500.844.jpeg",
+        "publishedAt": "2025-03-10T07:44:31Z",
+        "content": "By Vatican News\r\nThe Holy See Press Office released a statement on Monday morning to provide an update on the Pope's recovery.\r\n\"The Pope had a quiet night, and is resting,\" read the statement.\r\nOn S… [+920 chars]"
+    },
+    {
+        "source": {
+            "id": "cnn",
+            "name": "CNN"
+        },
+        "author": "Rafael Romo, Susannah Cullinane, José Álvarez",
+        "title": "Sudiksha Konanki: Search launched for University of Pittsburgh student missing in Dominican Republic - CNN",
+        "description": "Authorities in the Dominican Republic are interviewing a young man believed to have been with a missing student from the University of Pittsburgh right before her disappearance in Punta Cana, a local police source told CNN.",
+        "url": "https://www.cnn.com/2025/03/09/us/sudiksha-konanki-missing-punta-cana/index.html",
+        "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/482920714-18071160541818506-3363789177669153238-n.jpg?c=16x9&q=w_800,c_fill",
+        "publishedAt": "2025-03-10T07:26:00Z",
+        "content": "Authorities in the Dominican Republic are interviewing a young man believed to have been with a missing student from the University of Pittsburgh right before her disappearance in Punta Cana, a local… [+5289 chars]"
+    },
+    {
+        "source": {
+            "id": "the-washington-post",
+            "name": "The Washington Post"
+        },
+        "author": "Lauren Lumpkin",
+        "title": "Md. confirms measles case; Dulles Airport travelers may have been exposed - The Washington Post",
+        "description": "The health department said there may have been exposures at Dulles’s international arrivals area and a Howard County pediatric emergency department.",
+        "url": "https://www.washingtonpost.com/dc-md-va/2025/03/09/measles-maryland-howard-dulles/",
+        "urlToImage": "https://www.washingtonpost.com/wp-apps/imrs.php?src=https://arc-anglerfish-washpost-prod-washpost.s3.amazonaws.com/public/OVVGK2F2RVLDRSSQO6KGJEDXZA.JPG&w=1440",
+        "publishedAt": "2025-03-10T07:02:47Z",
+        "content": "A positive case of measles was identified in Maryland, public health officials said Sunday.\r\nThe highly contagious virus was detected in a Howard County resident who had recently traveled internation… [+2861 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Financial Times"
+        },
+        "author": "Ryan McMorrow, Nian Liu, Joe Leahy",
+        "title": "China hits US farm goods with tariffs as trade war escalates - Financial Times",
+        "description": "Beijing’s latest measures target $22bn of American agriculture products as well as timber",
+        "url": "https://www.ft.com/content/da80beaf-d916-4125-a9bc-040a1f15942e",
+        "urlToImage": "https://www.ft.com/__origami/service/image/v2/images/raw/https%3A%2F%2Fd1e00ek4ebabms.cloudfront.net%2Fproduction%2F7799dfd8-a877-4b8e-97b7-df56e55a392c.jpg?source=next-barrier-page",
+        "publishedAt": "2025-03-10T06:28:16Z",
+        "content": "White House Watch newsletter\r\nRegister for your free guide to the new US administration, with cabinet announcements, policy plans and exclusive election insights.\r\nUS Presidential Election 2024 hub\r\n… [+357 chars]"
+    },
+    {
+        "source": {
             "id": "google-news",
             "name": "Google News"
         },
@@ -40,6 +391,19 @@
     },
     {
         "source": {
+            "id": "associated-press",
+            "name": "Associated Press"
+        },
+        "author": "Jake Offenhartz",
+        "title": "Immigration agents arrest Palestinian activist who helped lead Columbia University protests - The Associated Press",
+        "description": "A prominent Palestinian activist who helped lead last spring's protests at Columbia University has been arrested by federal immigration agents. Mahmoud Khalil's lawyer says he was arrested at his apartment near the university by agents who claimed they were a…",
+        "url": "https://apnews.com/article/columbia-university-mahmoud-khalil-ice-15014bcbb921f21a9f704d5acdcae7a8",
+        "urlToImage": "https://dims.apnews.com/dims4/default/d0e2272/2147483647/strip/true/crop/5760x3240+0+300/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fe3%2F4a%2Fdbe2adabd18d50263c96544ac315%2Fbabe1346a9e24c468072193f9ecc77b2",
+        "publishedAt": "2025-03-10T03:37:00Z",
+        "content": "NEW YORK (AP) Federal immigration authorities arrested a Palestinian activist Saturday who played a prominent role in Columbia Universitys protests against Israel, a significant escalation in the Tru… [+4884 chars]"
+    },
+    {
+        "source": {
             "id": "cnn",
             "name": "CNN"
         },
@@ -63,6 +427,16 @@
         "urlToImage": "https://www.indiewire.com/wp-content/uploads/2025/03/TRG_401_061924_CC_0046_r.jpg?w=650",
         "publishedAt": "2025-03-10T02:40:00Z",
         "content": "[Editor’s note: The following interview contains spoilers for the Season 4 premiere of “The Righteous Gemstones.”]\r\nThroughout all four seasons of HBO‘s “The Righteous Gemstones,” series creator Dann… [+4123 chars]"
+            "id": "espn",
+            "name": "ESPN"
+        },
+        "author": null,
+        "title": "Wisconsin's Moseley resigns after 4th losing year - ESPN",
+        "description": "Wisconsin women's basketball coach Marisa Moseley has stepped down after posting a 47-75 record in four seasons.",
+        "url": "https://www.espn.com/womens-college-basketball/story/_/id/44185485/wisconsin-marisa-moseley-stepping-fourth-straight-losing-season",
+        "urlToImage": "https://a1.espncdn.com/combiner/i?img=%2Fphoto%2F2025%2F0310%2Fr1461950_1023x575_16%2D9.jpg",
+        "publishedAt": "2025-03-10T02:27:00Z",
+        "content": "MADISON, Wis. -- Wisconsin women's basketball coach Marisa Moseley has stepped down after posting a 47-75 record in four seasons at a program that has been struggling to compete in the Big Ten for ov… [+3250 chars]"
     },
     {
         "source": {
@@ -220,19 +594,7 @@
         "publishedAt": "2025-03-09T17:48:40Z",
         "content": null
     },
-    {
-        "source": {
-            "id": "google-news",
-            "name": "Google News"
-        },
-        "author": "Boxoffice Pro",
-        "title": "Weekend Box Office: MICKEY 17 Rockets to Top Spot with $19M Debut - Boxoffice Pro",
-        "description": null,
-        "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQZ0tjT1JBaEdxay16MmlJR190X1ZQQkdLTHJkZmFncDlhbE02NE9nS1BkQXpHZXZmWVJKMmtGTEgxMkxjbUs5TkJxSFRMSmRtTUJnODlxbE85SUl3MVNPTEZUQnZ1d0hXUUsxT0tZUG1Gb28tWW1lOERVUGdPZFZKU040bC1PcjdVbnpPSmc3ZEZ0SEIwZ1loMA?oc=5",
-        "urlToImage": null,
-        "publishedAt": "2025-03-09T17:46:38Z",
-        "content": null
-    },
+
     {
         "source": {
             "id": null,
