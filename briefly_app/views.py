@@ -248,7 +248,9 @@ def view_article(request, article_id):
                         break
         except requests.HTTPError:
             scrapped_text = None
-        ViewedNews.objects.create(User=request.user, News=article)
+        
+        if not ViewedNews.objects.filter(User=request.user, News=article).exists():
+            ViewedNews.objects.create(User=request.user, News=article)
         # Check if the article is in the saved articles
         is_saved = SavedNews.objects.filter(User=request.user, News=article).exists()
         type = "viewed_article"
