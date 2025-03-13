@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 import os
 from pathlib import Path
+#import News API
+from newsapi import NewsApiClient
+import environ
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -31,9 +36,16 @@ MEDIA_ROOT = MEDIA_DIR
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-^p2^&_5ba2e7tz=ive+8_nd_%j81*em7#xk1$m^%&6gpgap*f9'
 
-# SECURITY WARNING: don't run with debug turned on in production!
+# SECRET_KEY = 'django-insecure-^p2^&_5ba2e7tz=ive+8_nd_%j81*em7#xk1$m^%&6gpgap*f9'
+
+# SECURITY WARNING: API key must NOT be shared
+env = environ.Env()
+env.read_env(os.path.join(BASE_DIR, '.env'))
+NEWS_API_KEY = env("NEWS_API_KEY", default=None)
+newsapi_client = NewsApiClient(api_key=NEWS_API_KEY)
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
+
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -49,6 +61,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'briefly_app',
+    #YW: Rest
+    'rest_framework',
+    #YW: NewsAPI Integration
+    # 'newsapi-python',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +75,31 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+PASSWORD_HASHERS = (
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.BCryptPasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+)
+
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {
+            'min_length': 8,
+        }
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    }
 ]
 
 ROOT_URLCONF = 'briefly.urls'
@@ -95,8 +136,6 @@ DATABASES = {
 
 # To use the BrieflyUser Model for admin access as well.
 AUTH_USER_MODEL = "briefly_app.BrieflyUser"
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -138,3 +177,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
+EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')

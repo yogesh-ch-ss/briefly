@@ -1,33 +1,33 @@
-{% extends "./briefly_layout.html" %} {% load static %} {% block body %}
-<div class="categories">
-  <a href="/template_headlines/template_add_category">
-    <button class="button">Edit Categories</button>
-  </a>
-</div>
+{% extends "./briefly_layout.html" %}
+{% load static %}
+{% block body %}
+<meta name="csrf-token" content="{{ csrf_token }}">
 <div class="headlines">
   <div class="headlines--category">
     <h3 class="headlines--category--name">&#9724; Business</h3>
+  
     <div class="headlines--category--titles">
       <a class="title" href="/template_headlines/template_view_article"
         >Tesla unveils Revolutionary Battery Technology, stock soars 15%</a
       >
       <div class="headlines--category--titles--info">
         <span class="publisher">Financial Times Global</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
+
     <div class="headlines--category--titles">
       <a class="title" href="">Amazon announces new delivery drone service</a>
       <div class="headlines--category--titles--info">
         <span class="publisher">TechCrunch</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
       <a class="title" href="">Apple reports record earnings for Q3</a>
       <div class="headlines--category--titles--info">
         <span class="publisher">Wall Street Journal</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
@@ -37,7 +37,7 @@
       >
       <div class="headlines--category--titles--info">
         <span class="publisher">Forbes</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
@@ -47,27 +47,26 @@
       >
       <div class="headlines--category--titles--info">
         <span class="publisher">Bloomberg</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
   </div>
   <div class="headlines--category">
     <h3 class="headlines--category--name">&#9724; Technology</h3>
-
     <div class="headlines--category--titles">
       <a class="title" href=""
         >Elon Musk's Neuralink gets FDA approval for human trials</a
       >
       <div class="headlines--category--titles--info">
         <span class="publisher">TechCrunch</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
       <a class="title" href="">Apple unveils new AR glasses</a>
       <div class="headlines--category--titles--info">
         <span class="publisher">The Verge</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
@@ -76,7 +75,7 @@
       >
       <div class="headlines--category--titles--info">
         <span class="publisher">Wired</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
@@ -85,14 +84,14 @@
       >
       <div class="headlines--category--titles--info">
         <span class="publisher">BBC News</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
       <a class="title" href="">Samsung announces new foldable phone</a>
       <div class="headlines--category--titles--info">
         <span class="publisher">CNET</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
   </div>
@@ -105,14 +104,14 @@
       >
       <div class="headlines--category--titles--info">
         <span class="publisher">Nature</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
       <a class="title" href="">WHO declares end to Ebola outbreak in Congo</a>
       <div class="headlines--category--titles--info">
         <span class="publisher">Reuters</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
@@ -121,7 +120,7 @@
       >
       <div class="headlines--category--titles--info">
         <span class="publisher">CNN</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
@@ -130,14 +129,14 @@
       >
       <div class="headlines--category--titles--info">
         <span class="publisher">Harvard Health</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
       <a class="title" href="">New fitness trend takes the world by storm</a>
       <div class="headlines--category--titles--info">
         <span class="publisher">Men's Health</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
   </div>
@@ -148,14 +147,14 @@
       <a class="title" href="">Marvel announces new Avengers movie</a>
       <div class="headlines--category--titles--info">
         <span class="publisher">Variety</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
       <a class="title" href="">Grammy Awards 2023: Full list of winners</a>
       <div class="headlines--category--titles--info">
         <span class="publisher">Billboard</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
@@ -164,21 +163,21 @@
       >
       <div class="headlines--category--titles--info">
         <span class="publisher">Hollywood Reporter</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
       <a class="title" href="">Beyoncé announces world tour dates</a>
       <div class="headlines--category--titles--info">
         <span class="publisher">Rolling Stone</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
       <a class="title" href="">Oscar nominations 2023: Complete list</a>
       <div class="headlines--category--titles--info">
         <span class="publisher">Entertainment Weekly</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
   </div>
@@ -189,7 +188,7 @@
       <a class="title" href="">Olympics 2024: Paris prepares for grand event</a>
       <div class="headlines--category--titles--info">
         <span class="publisher">ESPN</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
@@ -198,7 +197,7 @@
       >
       <div class="headlines--category--titles--info">
         <span class="publisher">BBC Sport</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
@@ -207,25 +206,25 @@
       >
       <div class="headlines--category--titles--info">
         <span class="publisher">The Guardian</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
       <a class="title" href="">NFL season kicks off with thrilling opener</a>
       <div class="headlines--category--titles--info">
         <span class="publisher">Sports Illustrated</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
     <div class="headlines--category--titles">
       <a class="title" href="">NBA Finals 2023: Warriors vs. Lakers</a>
       <div class="headlines--category--titles--info">
         <span class="publisher">Bleacher Report</span>
-        <a class="button" href="">Save</a>
+        <a class="button save" href="">Save</a>
       </div>
     </div>
   </div>
-  <div class="headlines--category">
+  <div class="headlines--category saved-articles">
     <h3 class="headlines--category--name">&#9724; Saved Articles</h3>
     <div class="headlines--category--titles">
       <a class="title" href=""
@@ -233,7 +232,7 @@
       >
       <div class="headlines--category--titles--info">
         <span class="publisher">National Geographic</span>
-        <a class="button" href="">Read Now</a>
+        <a class="button save" href="">Read Now</a>
       </div>
     </div>
     <div class="headlines--category--titles">
@@ -242,7 +241,7 @@
       >
       <div class="headlines--category--titles--info">
         <span class="publisher">Scientific American</span>
-        <a class="button" href="">Read Now</a>
+        <a class="button save" href="">Read Now</a>
       </div>
     </div>
     <div class="headlines--category--titles">
@@ -251,9 +250,10 @@
       >
       <div class="headlines--category--titles--info">
         <span class="publisher">Nature</span>
-        <a class="button" href="">Read Now</a>
+        <a class="button save" href="">Read Now</a>
       </div>
     </div>
   </div>
 </div>
+<script src="{% static 'javascript/headlines.js' %}"></script>
 {% endblock %}

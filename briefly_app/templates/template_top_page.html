@@ -1,4 +1,7 @@
-{% extends "./briefly_layout.html" %} {% load static %} {% block body %}
+{% extends "./briefly_layout.html" %} {% load static %} {% block body %} {% if
+user.is_authenticated %}
+<!-- {% include "template_headlines.html" %} -->
+{% include "headlines.html" %} {% else %}
 <div class="banner">
   <div class="banner--message">
     <div class="banner--message--headline">
@@ -8,14 +11,19 @@
     </div>
     <div class="banner--message--subheadline">
       <h3 class="banner--message--subheadline--text">
-        Away from the mess of the word. Start of your day with less than 25
+        Away from the mess of the word. Start of your day with the selected news
         articles.
       </h3>
     </div>
     <div>
-      <a href="/template_login" class="button">Login</a>
+      <a href="{% url 'briefly:user_login' %}" class="button">Login</a>
     </div>
   </div>
+  <div class="qa-link">
+    <a href="{% url 'briefly:qa' %}">Have a question?</a>
+  </div>
+  <!--update top-page content to sample hard-coded article-->
   {% include "template_article.html" %}
 </div>
-{% endblock %}
+{% endif %} {% endblock %}
+<div class="curtains"></div>

@@ -2,19 +2,21 @@
 
 .article{
     @include ColJustifyStartFlexbox;
-    @include BoxShadow;
+    @include BoxShadowOnArticle;
     @include Padding5rem;
     @include MarginBottom3rem;
     max-width: 80rem;
     margin: 3rem auto;
 
     @include smartphone{
-        max-width: 50rem;
+        max-width: 60rem;
+        @include Padding3rem;
     }
 
     &--title{
         p{
             font-weight: bold;
+            font-size: 2.0rem;
         }
     }
 
