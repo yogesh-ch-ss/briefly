@@ -230,7 +230,8 @@ def view_article(request, article_id):
                 if current_tag:
                     paragraphs = current_tag.find_all('p')
                     if paragraphs:
-                        scrapped_text = ' '.join([p.get_text() for p in paragraphs])
+                        scrapped_text = '\n'.join([p.get_text() for p in paragraphs])
+                        
                         if scrapped_text:
                             article.Content = scrapped_text
                             article.save(update_fields=['Content'])
@@ -354,7 +355,7 @@ def fetch_news(user):
                         source_name = article.get('source', {}).get('name', 'Unknown source')
                         
                         # Check for duplicates before saving and filter unwanted sources
-                        unallowed_sources = ["ABC News", "The Washington Post", "Phys.Org"]
+                        unallowed_sources = ["ABC News", "The Washington Post", "Phys.Org", "Financial Times"]
                         if not NewsArticle.objects.filter(Title=title).exists() and source_name not in unallowed_sources:
                             NewsArticle.objects.create(
                                 Category=category_obj,
