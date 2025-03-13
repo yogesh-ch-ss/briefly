@@ -19,6 +19,9 @@
     </div>
     <div class="q-and-a--email">
         <h3 class="headline">Ask questions to Briefly. team</h3>
+        {% if message %}
+        <p>{{message}}</p>
+        {% endif %}
         <div class="login--form">
             <form method="POST" action="{% url 'briefly:question_answer' %}" enctype="multipart/form-data">
               {% csrf_token %}

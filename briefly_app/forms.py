@@ -16,7 +16,7 @@ class BrieflyUserSignupForm(forms.ModelForm):
             'country': forms.Select(choices=COUNTRY_CHOICES),
         }
         initial = {
-            'country': 'uk',
+            'country': 'us',
         }
         help_texts = {
             'username': None,
@@ -54,6 +54,9 @@ class BrieflyUserProfileForm(forms.ModelForm):
         fields = ['username', 'email', 'country', 'categories']
         widgets = {
             'country': forms.Select(choices=COUNTRY_CHOICES),
+        }
+        initial = {
+            'country': 'us',
         }
         help_texts = {
             'username': None,

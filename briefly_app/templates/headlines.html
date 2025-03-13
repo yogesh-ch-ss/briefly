@@ -17,7 +17,7 @@
                     {% endfor %}
                     <a href="{% url 'briefly:saved_articles' %}" class="jump-to-saved-article"><b>...More</b></a>            
                 {% else %}
-                    {% for article in articles.new|slice:":5"|add:articles.viewed|slice:":5" %}
+                    {% for article in articles.new|slice:":5" %}
                     <div class="headlines--category--titles">
                         <a class="title" href="{% url 'briefly:view_article' article.NewsID %}">{{ article.Title }}</a>
                         <div class="headlines--category--titles--info">

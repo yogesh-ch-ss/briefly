@@ -53,12 +53,17 @@ def question_answer(request):
             send_to_admin(question,user_email)
             send_to_user(question, user_email)
             # Send email to admin
-            return redirect(original_source_url)
+            return render(request, './question_answer.html', {
+                'question_form': question_form,
+                'message' : 'your email has been sent'
+            })
         else:
             return redirect(original_source_url)
     else:
         question_form = QuestionForm()
-    return render(request, './question_answer.html', {'question_form': question_form})
+    return render(request, './question_answer.html', {
+        'question_form': question_form
+        })
 
 # Signup, Login, Logout, Signout
 # check if user is authenticated or not
@@ -156,7 +161,11 @@ def user_profile_setting(request):
         for category in categories:
             category, created = Category.objects.get_or_create(CategoryName=category)
             UserCategory.objects.create(User=user, Category=category)
-        return redirect('briefly:user_profile_setting')
+        response = redirect('briefly:user_news')
+        response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+        response['Pragma'] = 'no-cache'
+        response['Expires'] = '0'
+        return response
     else:
         user_profile_form = BrieflyUserProfileForm(instance=user)
         return render(request, 'user_profile.html', {
@@ -307,7 +316,7 @@ def fetch_news(user):
     try:
         # Get user's category preferences
         user_categories = UserCategory.objects.filter(User=user)
-        
+        user_country = BrieflyUser.objects.get(username=user.username).country
         #Handler for user error, shouldn't trigger unless user has selected no categories
         if not user_categories.exists():
             print(f"No categories selected for user {user.username}")
@@ -323,6 +332,9 @@ def fetch_news(user):
         # Fetch news for each of the user's categories
         for user_category in user_categories:
             category_name = user_category.Category.CategoryName
+            if NewsArticle.objects.filter(Category__CategoryName=category_name, Region=user_country).exists():
+                print(f"News articles for category {category_name} and region {user_country} already exist in the database.")
+                continue
             try:
                 # Make API call to News API, assign to api_response
                 api_response = newsapi.get_top_headlines(

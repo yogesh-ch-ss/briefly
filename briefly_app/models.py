@@ -81,7 +81,7 @@ class NewsArticle(models.Model):
     Title = models.CharField(max_length=255)
     # Date = models.DateField(auto_now_add=True)
     Date = models.DateField(default=timezone.now)
-    Content = models.TextField()
+    Content = models.TextField(null=True, blank=True)
     Region = models.TextField(max_length=2, null=True)
     Source = models.CharField(max_length=255)
 
