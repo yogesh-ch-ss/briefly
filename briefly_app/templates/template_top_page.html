@@ -1,10 +1,7 @@
-{% extends "./briefly_layout.html" %} 
-{% load static %} 
-{% block body %}
-{% if user.is_authenticated %}
+{% extends "./briefly_layout.html" %} {% load static %} {% block body %} {% if
+user.is_authenticated %}
 <!-- {% include "template_headlines.html" %} -->
-{% include "headlines.html" %}
-{% else %}
+{% include "headlines.html" %} {% else %}
 <div class="banner">
   <div class="banner--message">
     <div class="banner--message--headline">
@@ -22,11 +19,11 @@
       <a href="{% url 'briefly:user_login' %}" class="button">Login</a>
     </div>
   </div>
-  <div class="qa-link" >
+  <div class="qa-link">
     <a href="{% url 'briefly:qa' %}">Have a question?</a>
   </div>
+  <!--update top-page content to sample hard-coded article-->
   {% include "template_article.html" %}
 </div>
-{% endif %}
-
-{% endblock %}
+{% endif %} {% endblock %}
+<div class="curtains"></div>

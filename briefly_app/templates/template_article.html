@@ -24,7 +24,7 @@
   </div>
   <div class="article--content">
     {% if article and updated %}
-    <p>{{content}}</p>
+    <p>{{ article.Content|linebreaksbr }}</p>
     {%elif not updated%}
     <p>{{content}}</p>
     <p>
