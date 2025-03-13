@@ -16,7 +16,7 @@ class BrieflyUserSignupForm(forms.ModelForm):
             'country': forms.Select(choices=COUNTRY_CHOICES),
         }
         initial = {
-            'country': 'uk',
+            'country': 'us',
         }
         help_texts = {
             'username': None,
@@ -26,7 +26,6 @@ class BrieflyUserSignupForm(forms.ModelForm):
         cleaned_data = super().clean()
         password = cleaned_data.get("password")
         password_confirmation = cleaned_data.get("password_confirmation")
-
         if password and password_confirmation and password != password_confirmation:
             self.add_error('password_confirmation', "Passwords do not match")
 
@@ -55,6 +54,9 @@ class BrieflyUserProfileForm(forms.ModelForm):
         fields = ['username', 'email', 'country', 'categories']
         widgets = {
             'country': forms.Select(choices=COUNTRY_CHOICES),
+        }
+        initial = {
+            'country': 'us',
         }
         help_texts = {
             'username': None,

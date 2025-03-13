@@ -13,8 +13,7 @@
         </div>
         <div class="banner--message--subheadline">
             <h3 class="banner--message--subheadline--text">
-                Away from the mess of the word. Start of your day with less than
-                25 articles.
+                Away from the mess of the word. Clear your minds with the selected news articles.
             </h3>
         </div>
         <div>
@@ -24,6 +23,6 @@
     {% include "template_article.html" %}
 </div>
 <div class="qa-link" >
-    <a href="{% url 'briefly:qa' %}">Have a question?</a>
+    <a href="{% url 'briefly:question_answer' %}">Have a question?</a>
 </div>
 {% endif %} {% endblock %}

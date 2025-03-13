@@ -25,8 +25,10 @@
   <div class="article--content">
     {% if article and updated %}
     <p>{{ article.Content|linebreaksbr }}</p>
-    {%elif not updated%}
+
+    {%elif article and not updated%}
     <p>{{content}}</p>
+
     <p>
       <em>
         Sorry, we couldn't fetch the entire content of the article. View the
@@ -36,6 +38,7 @@
         >
       </em>
     </p>
+
     {% else %}
     <p>
       Briefly, the latest news curation app, was launched in March 2025 with a

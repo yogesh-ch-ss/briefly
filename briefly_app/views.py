@@ -42,7 +42,7 @@ newsapi = NewsApiClient(api_key="833b467e009b40eb9aadcc6c049e2ad9")
 #833b467e009b40eb9aadcc6c049e2ad9
 
 # QA page
-def qa(request):
+def question_answer(request):
     original_source_url = request.META.get('HTTP_REFERER', '/')
     if request.method == 'POST':
         question_form = QuestionForm(request.POST)
@@ -53,12 +53,17 @@ def qa(request):
             send_to_admin(question,user_email)
             send_to_user(question, user_email)
             # Send email to admin
-            return redirect(original_source_url)
+            return render(request, './question_answer.html', {
+                'question_form': question_form,
+                'message' : 'your email has been sent'
+            })
         else:
             return redirect(original_source_url)
     else:
         question_form = QuestionForm()
-    return render(request, './question_answer.html', {'question_form': question_form})
+    return render(request, './question_answer.html', {
+        'question_form': question_form
+        })
 
 # Signup, Login, Logout, Signout
 # check if user is authenticated or not
@@ -93,7 +98,7 @@ def user_login(request):
             if user.is_active:
                 login(request, user)
                 try:
-                    print("fetch_news(user)")
+                    #API call (check corresponding method implemenation)
                     fetch_news(user)
                 except Exception as e:
                     print(f"Error fetching news: {e}")
@@ -156,7 +161,11 @@ def user_profile_setting(request):
         for category in categories:
             category, created = Category.objects.get_or_create(CategoryName=category)
             UserCategory.objects.create(User=user, Category=category)
-        return redirect('briefly:user_profile_setting')
+        response = redirect('briefly:user_news')
+        response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+        response['Pragma'] = 'no-cache'
+        response['Expires'] = '0'
+        return response
     else:
         user_profile_form = BrieflyUserProfileForm(instance=user)
         return render(request, 'user_profile.html', {
@@ -188,7 +197,13 @@ def saved_articles(request, response_type="html"):
         # Get NewsArticle objects related to the SavedNews objects
         if response_type != "html":
             return Response({"saved_articles": list(saved_articles)})
-        return render(request, 'saved_articles.html', {'saved_articles': saved_articles})
+
+        mid_index = len(saved_articles) // 2
+        saved_articles1 = saved_articles[:mid_index]
+        saved_articles2 = saved_articles[mid_index:]
+        return render(request, 'saved_articles.html', {
+            'saved_articles1': saved_articles1,
+            'saved_articles2': saved_articles2,})
     else:
         return redirect('briefly:user_login')
     
@@ -242,13 +257,15 @@ def view_article(request, article_id):
                         break
         except requests.HTTPError:
             scrapped_text = None
-        ViewedNews.objects.create(User=request.user, News=article)
+        
+        if not ViewedNews.objects.filter(User=request.user, News=article).exists():
+            ViewedNews.objects.create(User=request.user, News=article)
         # Check if the article is in the saved articles
         is_saved = SavedNews.objects.filter(User=request.user, News=article).exists()
         type = "viewed_article"
         if is_saved:
             type = "saved_article"
-        
+
         return render(request, './view_article.html', {
             'article': article,
             "type": type,
@@ -295,17 +312,11 @@ def top_page(request):
     return render(request, './top_page.html', {
     })
 
-def add_category(request):
-    return render(request, './template_category.html')
-
-def headlines(request):
-    return render(request, './template_headlines.html')
-
 def fetch_news(user):
     try:
         # Get user's category preferences
         user_categories = UserCategory.objects.filter(User=user)
-        
+        user_country = BrieflyUser.objects.get(username=user.username).country
         #Handler for user error, shouldn't trigger unless user has selected no categories
         if not user_categories.exists():
             print(f"No categories selected for user {user.username}")
@@ -321,6 +332,9 @@ def fetch_news(user):
         # Fetch news for each of the user's categories
         for user_category in user_categories:
             category_name = user_category.Category.CategoryName
+            if NewsArticle.objects.filter(Category__CategoryName=category_name, Region=user_country).exists():
+                print(f"News articles for category {category_name} and region {user_country} already exist in the database.")
+                continue
             try:
                 # Make API call to News API, assign to api_response
                 api_response = newsapi.get_top_headlines(
@@ -438,12 +452,10 @@ def get_user_news(request):
         else:
             viewed_articles_data = []        
         viewed_article_ids = {article.NewsID for article in viewed_articles_data}
-        print(f"Viewed article IDs: {len(viewed_article_ids)}")
         # **Group articles by category**
         grouped_news = defaultdict(lambda: {"new": [], "viewed": []})
         for article in news_articles:
             if article["NewsID"] in viewed_article_ids:
-                print(f"Article {article['Title']} is viewed.")
                 grouped_news[article["CategoryName"]]["viewed"].append(article)
             else:
                 grouped_news[article["CategoryName"]]["new"].append(article)
@@ -455,23 +467,6 @@ def get_user_news(request):
             if category != "Saved News":
                 grouped_news[category]["new"] = [article for article in articles["new"] if article["NewsID"] not in saved_article_id]
                 grouped_news[category]["viewed"] = [article for article in articles["viewed"] if article["NewsID"] not in saved_article_id]
-        
-
-        for category, articles in grouped_news.items():
-            print(f"Category: {category}")
-            if category != "Saved News":
-                
-                print("new Articles:")
-                for article in articles["new"]:
-                    print(f" - {article['Title']}")
-                
-                print("Viewed Articles:")
-                for article in articles["viewed"]:
-                    print(f" - {article['Title']}")
-            else:
-                print("Saved Articles:")
-                for article in articles:
-                    print(f" - {article.Title}")
 
         context = {
             "username": user.username,
@@ -482,7 +477,7 @@ def get_user_news(request):
     
     except BrieflyUser.DoesNotExist:
         return Response({"error": f"User '{user.username}' does not exist."}, status=404)
-    
+
 
 def delete_old_unsaved_news():
     """Delete all unsaved news articles that are not from today."""

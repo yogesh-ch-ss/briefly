@@ -6,7 +6,7 @@
 <div class="headlines headlines--saved">
   <div class="headlines--category">
     <h3 class="headlines--category--name">&#9724; Saved Articles</h3>
-    {% for article in saved_articles %}
+    {% for article in saved_articles2 %}
       <div class="headlines--category--titles">
         <a class="title" href="{% url 'briefly:view_article' article.NewsID %}">{{ article.Title }}</a>
         <div class="headlines--category--titles--info">
@@ -16,10 +16,24 @@
       </div>
     {% empty %}
       <div class="headlines--category--titles">
-        <a class="title" href="">No saved articles</a>
+        {% if saved_articles2|length == 0 and saved_articles1|length == 0 %}
+          <a class="title" href="">No saved articles</a>
+        {% endif %}
       </div>
     {% endfor %}
   </div>
+  <div class="headlines--category">
+    <h3 class="headlines--category--name hide">&#9724; Saved Articles</h3>
+    {% for article in saved_articles1 %}
+      <div class="headlines--category--titles">
+        <a class="title" href="{% url 'briefly:view_article' article.NewsID %}">{{ article.Title }}</a>
+        <div class="headlines--category--titles--info">
+          <span class="publisher">{{article.Source}}</span>
+          <a id="{{article.NewsID}}" class="button remove-saved-article" data-user-id="{{ user.id }}" href="">remove</a>
+        </div>
+      </div>
+    {% empty %}
+    {% endfor %}
 </div>
 <script src="{% static 'javascript/saved_article.js' %}"></script>
 {% endblock %}

@@ -13,7 +13,7 @@ $(document).ready(function() {
               parentDiv.remove();
               parentDiv.find('.button.save').remove();
               if (lastCategory.children('.headlines--category--titles').length < 5) {
-                  lastCategory.append(parentDiv);
+                lastCategory.find('a.jump-to-saved-article').before(parentDiv);
               }
               parentDiv.fadeIn(1000);
           });
@@ -36,6 +36,9 @@ $(document).ready(function() {
               console.error('Error saving article:', error);
           }
       });
-
   });
+});
+
+$('.title').on('click', function() {
+    $(this).closest('.headlines--category--titles').css('opacity', '0.7');
 });

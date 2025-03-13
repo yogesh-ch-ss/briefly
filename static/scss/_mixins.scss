@@ -1,4 +1,4 @@
-@use 'base' as *;;
+@use 'base' as *;
 
 // responsive design
 @mixin smartphone {
@@ -47,6 +47,11 @@
 // box shadow using text-color variable
 @mixin BoxShadow {
     box-shadow: 0 0 7px rgba($text-color, 0.40);
+}
+
+@mixin BoxShadowOnArticle{
+    // box-shadow: 14px 0 14px -14px rgba($text-color, 0.40), -14px 0 14px -14px rgba($text-color, 0.40);
+    box-shadow: 14px 0 14px -14px rgba($text-color, 0.40), -14px 0 14px -14px rgba($text-color, 0.40), 0 0 0 rgba($text-color, 0), 0 0 0 rgba($text-color, 0);
 }
 
 // button down and up

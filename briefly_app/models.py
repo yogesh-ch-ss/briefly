@@ -81,7 +81,7 @@ class NewsArticle(models.Model):
     Title = models.CharField(max_length=255)
     # Date = models.DateField(auto_now_add=True)
     Date = models.DateField(default=timezone.now)
-    Content = models.TextField()
+    Content = models.TextField(null=True, blank=True)
     Region = models.TextField(max_length=2, null=True)
     Source = models.CharField(max_length=255)
 
@@ -99,6 +99,12 @@ class ViewedNews(models.Model):
 
     class Meta:
         verbose_name_plural = "ViewedNews"
+        constraints = [
+            models.UniqueConstraint(fields=['User','News'], name='unique_user_news')
+        ]
+    def __str__(self):
+        return f"{self.User.username} {self.News.Title}"
+
 
 class SavedNews(models.Model):
     # User - NewsArticle mapping. NewsArticles saved by the user.
@@ -107,4 +113,8 @@ class SavedNews(models.Model):
 
     class Meta:
         verbose_name_plural = "SavedNews"
-
+        constraints = [
+            models.UniqueConstraint(fields=['User','News'], name='unique_user_saved_news')
+        ]
+    def __str__(self):
+        return f"{self.User.username} {self.News.Title}"
