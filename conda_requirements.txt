@@ -41,7 +41,7 @@ argon2-cffi=21.3.0=pyhd3eb1b0_0
 argon2-cffi-bindings=21.2.0=py312h80987f9_0
 arrow=1.2.3=py312hca03da5_1
 arrow-cpp=16.1.0=hbc20fb2_0
-asgiref=3.8.1=py312hca03da5_0
+asgiref=3.8.1=pypi_0
 astroid=2.14.2=py312hca03da5_0
 astropy=6.1.3=py312h80987f9_0
 astropy-iers-data=0.2024.9.2.0.33.23=py312hca03da5_0
@@ -65,8 +65,8 @@ aws-checksums=0.1.13=h80987f9_0
 aws-crt-cpp=0.18.16=h313beb8_0
 aws-sdk-cpp=1.10.55=h313beb8_0
 babel=2.11.0=py312hca03da5_0
-bcrypt=3.2.0=py312h80987f9_1
-beautifulsoup4=4.12.3=py312hca03da5_0
+bcrypt=4.2.1=pypi_0
+beautifulsoup4=4.13.3=pypi_0
 binaryornot=0.4.4=pyhd3eb1b0_1
 black=24.8.0=py312hca03da5_0
 blas=1.0=openblas
@@ -82,10 +82,11 @@ brotli=1.0.9=h80987f9_8
 brotli-bin=1.0.9=h80987f9_8
 brotli-python=1.0.9=py312h313beb8_8
 brunsli=0.1=hc377ac9_1
+bs4=0.0.2=pypi_0
 bzip2=1.0.8=h80987f9_6
 c-ares=1.19.1=h80987f9_0
 c-blosc2=2.12.0=h7df6c2f_0
-ca-certificates=2024.12.31=hca03da5_0
+ca-certificates=2025.2.25=hca03da5_0
 cachetools=5.3.3=py312hca03da5_0
 cctools=949.0.1=hc179dcd_25
 cctools_osx-arm64=949.0.1=h332cad3_25
@@ -94,7 +95,7 @@ cffi=1.17.1=py312h3eb5a62_0
 cfitsio=3.470=h7f6438f_7
 chardet=4.0.0=py312hca03da5_1003
 charls=2.2.0=hc377ac9_0
-charset-normalizer=3.3.2=pyhd3eb1b0_0
+charset-normalizer=3.4.1=pypi_0
 click=8.1.7=py312hca03da5_0
 cloudpickle=3.0.0=py312hca03da5_0
 colorama=0.4.6=py312hca03da5_0
@@ -131,7 +132,9 @@ diff-match-patch=20200713=pyhd3eb1b0_0
 dill=0.3.8=py312hca03da5_0
 distributed=2024.8.2=py312hca03da5_0
 distro=1.9.0=py312hca03da5_0
-django=5.1.3=py312hca03da5_0
+django=5.1.6=pypi_0
+django-environ=0.12.0=pypi_0
+djangorestframework=3.15.2=pypi_0
 dmglib=0.9.5=py312hca03da5_0
 docstring-to-markdown=0.11=py312hca03da5_0
 docutils=0.18.1=py312hca03da5_3
@@ -169,7 +172,7 @@ httpx=0.27.0=py312hca03da5_0
 hvplot=0.11.0=py312hca03da5_0
 hyperlink=21.0.0=pyhd3eb1b0_0
 icu=73.1=h313beb8_0
-idna=3.7=py312hca03da5_0
+idna=3.10=pypi_0
 imagecodecs=2023.1.23=py312h75b721f_1
 imageio=2.33.1=py312hca03da5_0
 imagesize=1.4.1=py312hca03da5_0
@@ -220,7 +223,7 @@ kiwisolver=1.4.4=py312h313beb8_0
 krb5=1.20.1=hf3e1bf2_1
 lazy-object-proxy=1.10.0=py312h80987f9_0
 lazy_loader=0.4=py312hca03da5_0
-lcms2=2.16=he93ba84_0
+lcms2=2.12=hba8e193_0
 ld64=530=hb29bf3f_25
 ld64_osx-arm64=530=h001ce53_25
 ldid=2.1.5=h20b2a84_3
@@ -314,7 +317,7 @@ numpydoc=1.7.0=py312hca03da5_0
 oniguruma=6.9.7.1=h1a28f6b_0
 openjpeg=2.5.2=h54b8e55_0
 openpyxl=3.1.5=py312h80987f9_0
-openssl=3.0.15=h80987f9_0
+openssl=3.0.16=h02f6b3c_0
 orc=2.0.1=h937ddfc_0
 overrides=7.4.0=py312hca03da5_0
 packaging=24.1=py312hca03da5_0
@@ -331,7 +334,7 @@ patsy=0.5.6=py312hca03da5_0
 pcre2=10.42=hb066dcc_1
 pexpect=4.8.0=pyhd3eb1b0_3
 pickleshare=0.7.5=pyhd3eb1b0_1003
-pillow=11.1.0=py312h84e58ab_0
+pillow=10.4.0=py312h80987f9_0
 pip=24.2=py312hca03da5_0
 pkce=1.0.3=py312hca03da5_0
 pkginfo=1.10.0=py312hca03da5_0
@@ -386,7 +389,7 @@ pytables=3.10.1=py312h905a39b_0
 pytest=7.4.4=py312hca03da5_0
 python=3.12.7=h99e199e_0
 python-dateutil=2.9.0post0=py312hca03da5_2
-python-dotenv=0.21.0=py312hca03da5_0
+python-dotenv=1.0.1=pypi_0
 python-fastjsonschema=2.16.2=py312hca03da5_0
 python-json-logger=2.0.7=py312hca03da5_0
 python-libarchive-c=5.1=pyhd3eb1b0_0
@@ -418,7 +421,7 @@ referencing=0.30.2=py312hca03da5_0
 regex=2024.9.11=py312h80987f9_0
 reproc=14.2.4=h313beb8_2
 reproc-cpp=14.2.4=h313beb8_2
-requests=2.32.3=py312hca03da5_1
+requests=2.32.3=py312hca03da5_0
 requests-file=1.5.1=pyhd3eb1b0_0
 requests-toolbelt=1.0.0=py312hca03da5_0
 rfc3339-validator=0.1.4=py312hca03da5_0
@@ -450,7 +453,7 @@ snappy=1.2.1=h313beb8_0
 sniffio=1.3.0=py312hca03da5_0
 snowballstemmer=2.2.0=pyhd3eb1b0_0
 sortedcontainers=2.4.0=pyhd3eb1b0_0
-soupsieve=2.5=py312hca03da5_0
+soupsieve=2.6=pypi_0
 sphinx=7.3.7=py312hca03da5_0
 sphinxcontrib-applehelp=1.0.2=pyhd3eb1b0_0
 sphinxcontrib-devhelp=1.0.2=pyhd3eb1b0_0
@@ -462,10 +465,10 @@ spyder=5.5.1=py312hca03da5_4
 spyder-kernels=2.5.0=py312hca03da5_0
 sqlalchemy=2.0.34=py312hbe2cdee_0
 sqlite=3.45.3=h80987f9_0
-sqlparse=0.5.2=py312hca03da5_0
+sqlparse=0.5.3=pypi_0
 stack_data=0.2.0=pyhd3eb1b0_0
 statsmodels=0.14.2=py312ha86b861_0
-streamlit=1.41.1=py312hca03da5_0
+streamlit=1.37.1=py312hca03da5_0
 sympy=1.13.2=py312hca03da5_0
 tabulate=0.9.0=py312hca03da5_0
 tapi=1100.0.11=h8754e6a_1
@@ -491,15 +494,14 @@ traitlets=5.14.3=py312hca03da5_0
 truststore=0.8.0=py312hca03da5_0
 twisted=23.10.0=py312hca03da5_0
 typer=0.9.0=py312hca03da5_0
-typing-extensions=4.11.0=py312hca03da5_0
-typing_extensions=4.11.0=py312hca03da5_0
+typing-extensions=4.12.2=pypi_0
 tzdata=2024b=h04d1e81_0
 uc-micro-py=1.0.1=py312hca03da5_0
 ujson=5.10.0=py312h313beb8_0
 unicodedata2=15.1.0=py312h80987f9_0
 unidecode=1.3.8=py312hca03da5_0
 unixodbc=2.3.11=h1a28f6b_0
-urllib3=2.2.3=py312hca03da5_0
+urllib3=2.3.0=pypi_0
 utf8proc=2.6.1=h80987f9_1
 w3lib=2.1.2=py312hca03da5_0
 watchdog=4.0.1=py312h80987f9_0
