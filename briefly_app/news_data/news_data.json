@@ -2,6 +2,58 @@
     {
         "source": {
             "id": null,
+            "name": "TMZ"
+        },
+        "author": "TMZ Staff",
+        "title": "Channing Tatum and Inka Williams Grab Dinner Together with Friends, Dogs - TMZ",
+        "description": "Channing Tatum and Inka Williams are keeping their romance going ... grabbing a late dinner in L.A. -- and, the duo upped the cuteness in this interaction by bringing out their dogs.",
+        "url": "https://www.tmz.com/2025/03/23/channing-tatum-inka-williams-dinner-date/",
+        "urlToImage": "https://imagez.tmz.com/image/c8/16by9/2025/03/23/c8abd1eaf4ef49b885e7fb1add34578b_xl.jpg",
+        "publishedAt": "2025-03-23T20:32:55Z",
+        "content": "Channing Tatum and Inka Williams are keeping their romance going ... grabbing a late dinner in L.A. -- and, the duo upped the cuteness in this interaction by bringing out their dogs.\r\nThe actor and h… [+1308 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Variety"
+        },
+        "author": "Jack Dunn",
+        "title": "Rosie O’Donnell Questions ‘Why’ Donald Trump Won Every Swing State Considering He Is ‘Best Friends’ With a ‘Man Who Owns and Runs the Internet’: ‘I Would Hope that Would be Investigated’ - Yahoo",
+        "description": "Rosie O’Donnell is questioning how Donald Trump won every swing state in the 2024 presidential election considering his biggest supporter. During an...",
+        "url": "https://variety.com/2025/tv/news/rosie-odonnell-questions-donald-trump-elon-musk-1236345948/",
+        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/pa0QXXLX4JEnyuN_8Xsa_Q--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/variety.com/0cb8da5071962138e508754ba88db62b",
+        "publishedAt": "2025-03-23T20:00:46Z",
+        "content": "Rosie ODonnell is questioning how Donald Trump won every swing state in the 2024 presidential election considering his biggest supporter.\r\nDuring an interview with RTÉ Ones The Late Late Show, ODonne… [+2060 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Billboard"
+        },
+        "author": "Melinda Sheckells",
+        "title": "NJZ Debuts New Song ‘Pit Stop’ at ComplexCon Hong Kong, Announces Hiatus - Billboard",
+        "description": "K-Pop supergroup NJZ (formerly NewJeans) announced at ComplexCon Hong Kong on March 23 that this might be their last performance for a while.",
+        "url": "http://www.billboard.com/music/music-news/njz-announces-hiatus-complexcon-hong-kong-performs-pit-stop-1235929389/",
+        "urlToImage": "https://www.billboard.com/wp-content/uploads/2024/06/NewJeans-2024-ADOR-bb-japan-billboard-1548.jpg?w=1024",
+        "publishedAt": "2025-03-23T19:40:10Z",
+        "content": "K-Pop supergroup NJZ, formerly known as NewJeans, announced during a show at ComplexCon Hong Kong on Sunday (March 23) night that “this might be our last performance for a little while.”\r\nIt was the … [+5396 chars]"
+    },
+    {
+        "source": {
+            "id": null,
+            "name": "Deadline"
+        },
+        "author": "Glenn Garner",
+        "title": "Graydon Carter Reveals Why Harvey Weinstein Was “Banned” For Life From ‘Vanity Fair’ Oscars Party - Deadline",
+        "description": "Although Harvey Weinstein isn't attending any red carpet events these days, one exclusive event took him off the guest list before his scandal.",
+        "url": "http://deadline.com/2025/03/why-harvey-weinstein-banned-vanity-fair-oscars-party-1236347368/",
+        "urlToImage": "https://deadline.com/wp-content/uploads/2025/03/Harvey-Weinstein-Vanity-Fair-593386294.jpg?w=1024",
+        "publishedAt": "2025-03-23T19:23:00Z",
+        "content": "Although Harvey Weinstein isn’t attending any red carpet events these days, one exclusive event took him off the guest list before his fall from grace.\r\nIn his new book When the Going Was Good, forme… [+1518 chars]"
+    },
+    {
+        "source": {
+            "id": null,
             "name": "BBC News"
         },
         "author": null,
@@ -11,19 +63,6 @@
         "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_news/46ed/live/808df110-0805-11f0-97d3-37df2b293ed1.jpg",
         "publishedAt": "2025-03-23T19:07:20Z",
         "content": "Princess Beatrice has described the premature birth of her daughter as \"humbling\". \r\nHer daughter Athena Elizabeth Rose was born several weeks premature at London's Chelsea and Westminster Hospital o… [+2394 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "TooFab"
-        },
-        "author": "Toofab Staff",
-        "title": "Rosie O'Donnell Questions If Trump Won Election Legitimately in First Irish TV Appearance Since Moving - TooFab",
-        "description": "Marking her first TV appearance on Ireland's Late Late Show, Rosie O'Donnell unpacks her long-standing feud Trump that led to her moving out of the United States, as well as his recent comments about her to Ireland's prime minister, Connor McGregor's White Ho…",
-        "url": "https://toofab.com/2025/03/23/rosie-odonnell-questions-trump-won-election-ireland-late-late-show/",
-        "urlToImage": "https://images.toofab.com/image/40/16by9/2025/03/23/40ceafb78d9347bfa1430536f7877939_xl.jpg",
-        "publishedAt": "2025-03-23T18:46:00Z",
-        "content": "Rosie O'Donnell no longer lives in the United States after famously announcing she'd moved to Ireland in response to Donald Trump winning the presidency for the second time in 2024 -- and now she's s… [+6089 chars]"
     },
     {
         "source": {
@@ -66,16 +105,29 @@
     },
     {
         "source": {
+            "id": "cnn",
+            "name": "CNN"
+        },
+        "author": "Alli Rosenbloom",
+        "title": "Robert De Niro, Oscar winner and toddler dad, is apparently a ‘Ms. Rachel’ fan - CNN",
+        "description": "Robert De Niro is embracing all that fatherhood has to offer as he spends time with his two-year-old daughter Gia.",
+        "url": "https://www.cnn.com/2025/03/23/entertainment/robert-de-niro-ms-rachel/index.html",
+        "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/gettyimages-2157848158.jpg?c=16x9&q=w_800,c_fill",
+        "publishedAt": "2025-03-23T18:04:00Z",
+        "content": "Robert De Niro is embracing all that fatherhood has to offer as he spends time with his two-year-old daughter Gia.\r\nThe Oscar winner opened up about spending quality time with his daughter, revealing… [+1236 chars]"
+    },
+    {
+        "source": {
             "id": null,
             "name": "New York Post"
         },
         "author": "Eric Todisco",
-        "title": "‘Impractical Jokers’ star Joe Gatto responds to sexual assault allegation: ‘I have used poor judgment’ - New York Post ",
-        "description": "Joe Gatto denied the sexual assault claim but admitted he “used poor judgment.”",
-        "url": "https://nypost.com/2025/03/23/entertainment/impractical-jokers-star-joe-gatto-denies-sexual-assault-allegations/",
-        "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2025/03/100935097.jpg?quality=75&strip=all&w=1024",
-        "publishedAt": "2025-03-23T17:56:09Z",
-        "content": "Former “Impractical Jokers” star Joe Gatto has been accused of sexual assault.\r\nTikTok user Joozyb claimed in a March 20 video that she was sexually assaulted by the comedian, 48, when she was 19 yea… [+3234 chars]"
+        "title": "Amanda Seyfried slams ‘Jennifer’s Body’ marketing team who ‘ruined’ the film - New York Post ",
+        "description": "Amanda Seyfried blames the marketing team for “Jennifer’s Body” flopping in movie theaters.",
+        "url": "https://nypost.com/2025/03/23/entertainment/amanda-seyfried-says-marketing-team-ruined-jennifers-body/",
+        "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2025/03/100985892.jpg?quality=75&strip=all&w=1024",
+        "publishedAt": "2025-03-23T17:08:00Z",
+        "content": "Amanda Seyfried is pointing fingers.\r\nIn a new GQ interview, the 39-year-old actress revealed who she blames for “Jennifer’s Body” flopping at the box office when it came out in 2009.\r\n“If the critic… [+2840 chars]"
     },
     {
         "source": {
@@ -118,6 +170,19 @@
     },
     {
         "source": {
+            "id": "nbc-news",
+            "name": "NBC News"
+        },
+        "author": "Francesca Gariano, TODAY",
+        "title": "Hallmark star Brennan Elliott announces death of wife Camilla Row after stomach cancer battle - AOL",
+        "description": "Hallmark star Brennan Elliott shared that his wife, Camilla Row, died after a yearslong battle with Stage 4 gastric cancer.",
+        "url": "https://www.nbcnews.com/news/us-news/hallmark-star-brennan-elliott-announces-death-wife-camilla-row-rcna197672",
+        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/I2mRAQGWKqbyPFLEpLYzHg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://media.zenfs.com/en/aol_nbc_universal_184/b292134ef3eeb975f7f7c93a2b3b01a1",
+        "publishedAt": "2025-03-23T16:26:06Z",
+        "content": "Brennan Elliot, left, his wife, Camilla Row, and their children.\r\nHallmark star Brennan Elliott shared that his wife, Camilla Row, died after a yearslong battle with Stage 4 gastric cancer.\r\nElliott … [+4725 chars]"
+    },
+    {
+        "source": {
             "id": null,
             "name": "Page Six"
         },
@@ -132,28 +197,15 @@
     {
         "source": {
             "id": null,
-            "name": "allkpop"
+            "name": "Wrestletalk.com"
         },
-        "author": "Janie-Reign",
-        "title": "NJZ announces temporary hiatus following court decision - allkpop",
-        "description": "NJZ has announced a temporary hiatus.On the final day of ComplexCon in Hong Kong, the five members announced that they will be taking a temporary …",
-        "url": "https://www.allkpop.com/article/2025/03/njz-announces-temporary-hiatus-following-court-decision",
-        "urlToImage": "https://www.allkpop.com/upload/2025/03/content/231146/web_data/allkpop_1742744870_njz.jpg",
-        "publishedAt": "2025-03-23T16:11:00Z",
-        "content": "NJZ has announced a temporary hiatus.\r\nOn the final day of ComplexCon in Hong Kong, the five members announced that they will be taking a temporary hiatus following the court's decision to block the … [+849 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "New York Post"
-        },
-        "author": "Eric Todisco",
-        "title": "Music legend Larry Tamblyn dead at 82 - New York Post ",
-        "description": "Larry Tamblyn formed the rock band The Standells in the ’60s.",
-        "url": "https://nypost.com/2025/03/23/entertainment/larry-tamblyn-dies-the-standells-founder-dead-at-82/",
-        "urlToImage": "https://nypost.com/wp-content/uploads/sites/2/2025/03/l-legs-mcneil-dinner-following-100983999.jpg?quality=75&strip=all&w=1024",
-        "publishedAt": "2025-03-23T16:05:00Z",
-        "content": "Larry Tamblyn, a founding member of the band The Standells, has died. He was 82. \r\nThe musician’s death was announced by his nephew, Dennis Tamblyn, on Facebook Friday.\r\nMy uncle Larry Tamblyn passed… [+2956 chars]"
+        "author": "Jamie Toolan",
+        "title": "Big Championship Match Announced For WWE Raw In Glasgow - https://wrestletalk.com/",
+        "description": "A big WWE championship match has been officially announced for Monday Night Raw in Glasgow, Scotland (March 24).",
+        "url": "https://wrestletalk.com/news/big-championship-match-announced-wwe-raw-in-glasgow/",
+        "urlToImage": "https://cdn.wrestletalk.com/wp-content/uploads/2025/01/raw-logo-january-7-a.jpg",
+        "publishedAt": "2025-03-23T16:16:42Z",
+        "content": "WWE\r\nA big WWE championship match has been officially announced for Monday Night Raw in Glasgow, Scotland (March 24).\r\nAs WWE enters the final week of its Road to WrestleMania 41 European tour, the s… [+1587 chars]"
     },
     {
         "source": {
@@ -171,28 +223,15 @@
     {
         "source": {
             "id": null,
-            "name": "Page Six"
+            "name": "SheKnows"
         },
-        "author": "Tamantha Ryan",
-        "title": "Fans think ‘genuine’ Gwyneth Paltrow is throwing shade at Meghan Markle in new cooking video - Page Six",
-        "description": "The “Iron Man” actress shared a video on Instagram of herself making breakfast in her kitchen while dressed in striped pajamas.",
-        "url": "https://pagesix.com/2025/03/23/celebrity-news/fans-think-gwyneth-paltrow-is-throwing-shade-at-meghan-markle-in-new-cooking-video/",
-        "urlToImage": "https://pagesix.com/wp-content/uploads/sites/3/2025/03/100982504.jpg?quality=75&strip=all&w=1024",
-        "publishedAt": "2025-03-23T14:40:00Z",
-        "content": "Fans believe Gwyneth Paltrow threw shade at Meghan Markle in her new cooking video.\r\nOn Saturday, the makeup-free “Iron Man” actress shared a video on Instagram of herself making breakfast in her kit… [+3948 chars]"
-    },
-    {
-        "source": {
-            "id": "usa-today",
-            "name": "USA Today"
-        },
-        "author": "Brendan Morrow",
-        "title": "Hallmark star Brennan Elliott's wife Camilla Row dies after cancer battle: 'My soulmate' - USA TODAY",
-        "description": "Hallmark star Brennan Elliott has announced the death of his wife Camilla Row after her battle with gastric cancer. \"Our babies and I lost our rock.\"",
-        "url": "https://www.usatoday.com/story/entertainment/celebrities/2025/03/23/camilla-row-dead-brennan-elliott-wife-cancer/82623311007/",
-        "urlToImage": "https://www.usatoday.com/gcdn/authoring/authoring-images/2025/03/23/USAT/82623451007-1435150770.jpg?crop=5993,3363,x0,y301&width=3200&height=1796&format=pjpg&auto=webp",
-        "publishedAt": "2025-03-23T14:29:01Z",
-        "content": "Brennan Elliott is mourning the death of his wife after her years-long battle with cancer.\r\nIn an emotional Instagram post on Saturday, the Hallmark star, 49, announced \"with a soul crushing devastat… [+3546 chars]"
+        "author": "Kristyn Burtt",
+        "title": "Ashton Kutcher & Mila Kunis Might Be Embracing a New Chapter After Multiple Controversies - Yahoo Entertainment",
+        "description": "Are Ashton Kutcher and Mila Kunis high-tailing it out of Los Angeles? While there have been rumors they were considering a move overseas amid their multiple ...",
+        "url": "https://www.sheknows.com/entertainment/articles/1234859245/ashton-kutcher-mila-kunis-rebuilding-carpinteria-estate/",
+        "urlToImage": "https://s.yimg.com/ny/api/res/1.2/CwDTlPsq7MI.pv7XpAZ7Fg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD05MDA-/https://media.zenfs.com/en/sheknows_79/c633bb70d22a79d5e50e3a4551f16db7",
+        "publishedAt": "2025-03-23T14:36:32Z",
+        "content": "Are Ashton Kutcher and Mila Kunis high-tailing it out of Los Angeles? While there have been rumors they were considering a move overseas amid their multiple controversies, they might be relocating to… [+3087 chars]"
     },
     {
         "source": {
@@ -209,19 +248,6 @@
     },
     {
         "source": {
-            "id": "business-insider",
-            "name": "Business Insider"
-        },
-        "author": "Ayomikun Adekaiyero",
-        "title": "7 facts about Rachel Zegler, the star of Disney's controversial live-action 'Snow White' movie - Business Insider",
-        "description": "Rachel Zegler is starring in Disney's \"Snow White\" remake. Here's what to know about the rising star.",
-        "url": "https://www.businessinsider.com/7-facts-disney-live-action-snow-white-rachel-zegler-2025-3",
-        "urlToImage": "https://i.insider.com/67dd873c69253ccddf99f40a?width=1200&format=jpeg",
-        "publishedAt": "2025-03-23T12:30:00Z",
-        "content": null
-    },
-    {
-        "source": {
             "id": "abc-news",
             "name": "ABC News"
         },
@@ -232,31 +258,5 @@
         "urlToImage": "https://i.abcnewsfe.com/a/29ece288-776f-46cf-bd72-078b71ed114d/wirestory_77ee76e54f8075a2f6c872302df07294_16x9.jpg?w=1600",
         "publishedAt": "2025-03-23T12:24:23Z",
         "content": "WASHINGTON -- WASHINGTON (AP) Conan O'Brien is set to receive the Mark Twain Prize on Sunday night at the John F. Kennedy Center for the Performing Arts, where the backstage drama of the host institu… [+3546 chars]"
-    },
-    {
-        "source": {
-            "id": null,
-            "name": "Page Six"
-        },
-        "author": "Nicki Gostin",
-        "title": "Ex Vanity Fair editor Graydon Carter disses Oscars and dishes on Tom Cruise, Princess Diana and Meghan Markle: ‘adrift on reality’ - Page Six",
-        "description": "In an interview with Page Six, former Vanity Fair editor Graydon Carter talks about his new memoir, “When the Going Was Good” and the magazine’s Oscars party and cover stars.",
-        "url": "https://pagesix.com/2025/03/23/celebrity-news/graydon-carter-disses-oscars-says-meghan-markle-adrift-on-reality/",
-        "urlToImage": "https://pagesix.com/wp-content/uploads/sites/3/2025/03/graydon-carter-new-book_720.jpg?quality=75&strip=all&w=720",
-        "publishedAt": "2025-03-23T12:10:59Z",
-        "content": "Graydon Carter’s position as the editor of Vanity Fair was shaky when he launched the magazine’s now-famous Oscars party.\r\nThe Canadian-born Carter, 75, took over the glossy Condé Nast monthly in Jul… [+8624 chars]"
-    },
-    {
-        "source": {
-            "id": "entertainment-weekly",
-            "name": "Entertainment Weekly"
-        },
-        "author": "https://www.facebook.com/entertainmentweekly",
-        "title": "Pretty Woman turns 35! See Julia Roberts and her costars from the classic rom-com, then and now - Entertainment Weekly News",
-        "description": "It’s been 35 years since Julia Roberts showed that stuffy salesperson who's boss. Here’s where the ‘Pretty Woman’ cast is now.",
-        "url": "https://ew.com/pretty-woman-cast-then-and-now-11701666",
-        "urlToImage": "https://ew.com/thmb/kcO4HAPUbW5Of7mOPWrwkwonApM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/pretty-woman-031725-77acccbaf17a465bac55b71c3a5718f3.jpg",
-        "publishedAt": "2025-03-23T12:00:00Z",
-        "content": "Julia Roberts in 'Pretty Woman'; Julia Roberts.Everett Collection; Getty\r\nJulia Roberts flashes her $20 million smile as Vivian, the working woman with a heart of gold who goes from street to chic.\r\n… [+14613 chars]"
     }
 ]
