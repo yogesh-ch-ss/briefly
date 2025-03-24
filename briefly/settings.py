@@ -46,6 +46,7 @@ NEWS_API_KEY = env("NEWS_API_KEY", default=None)
 newsapi_client = NewsApiClient(api_key=NEWS_API_KEY)
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
+
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -134,14 +135,22 @@ WSGI_APPLICATION = 'briefly.wsgi.application'
 #     }
 # }
 
+DB_ENGINE = env("DB_ENGINE", default=None)
+DB_NAME = env("DB_NAME", default=None)
+DB_USER = env("DB_USER", default=None)
+DB_PASSWORD = env("DB_PASSWORD", default=None)
+DB_HOST = env("DB_HOST", default=None)
+DB_PORT = env("DB_PORT", default=None)
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'briefly_psql',
-        'USER': 'postgres',
-        'PASSWORD': 'Briefly#123',
-        'HOST':'database-2.cjieqw8cauc6.eu-west-2.rds.amazonaws.com',
-        'PORT': '5432',
+        'ENGINE': DB_ENGINE,
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PASSWORD,
+        'HOST': DB_HOST,
+        'PORT': DB_PORT,
     }
 }
 
