@@ -37,7 +37,7 @@ env = environ.Env()
 env.read_env(os.path.join(BASE_DIR, '.env'))
 NEWS_API_KEY = env("NEWS_API_KEY", default=None)
 #replace hard-coded key with NEWS_API_KEY
-newsapi = NewsApiClient(api_key="833b467e009b40eb9aadcc6c049e2ad9")
+newsapi = NewsApiClient(api_key="NEWS_API_KEY")
 #temp API key
 #833b467e009b40eb9aadcc6c049e2ad9
 
