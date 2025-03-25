@@ -25,6 +25,11 @@ TEMPLATE_DIR = os.path.join(BASE_DIR, '/templates')
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
+
+# Production: Collect all static files into this directory
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Development: Where Django looks for additional static files
 STATICFILES_DIRS = [STATIC_DIR, ]
 
 # Media files
