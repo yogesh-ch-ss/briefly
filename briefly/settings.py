@@ -49,7 +49,7 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['35.177.7.28', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['3.10.215.134', 'localhost', '127.0.0.1']
 
 
 # Application definition
