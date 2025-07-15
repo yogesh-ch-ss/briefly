@@ -39,7 +39,6 @@ NEWS_API_KEY = env("NEWS_API_KEY", default=None)
 #replace hard-coded key with NEWS_API_KEY
 newsapi = NewsApiClient(api_key=NEWS_API_KEY)
 #temp API key
-#833b467e009b40eb9aadcc6c049e2ad9
 
 # QA page
 def question_answer(request):
